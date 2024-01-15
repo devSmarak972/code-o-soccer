@@ -40,6 +40,8 @@ bool invert_field=FIELD_IS_INVERTED;
   tempy = SGN(-invert_field+0.5)*(1-y)*HALF_FIELD_MAXY;
   x = tempx;
   y = tempy;
+  printf("in transform %d %f %f\n",HALF_FIELD_MAXX,x,y);
+
   newangle = !invert_field?normalizeAngle(newangle+PI):newangle;
   
 }
@@ -961,7 +963,6 @@ namespace Strategy
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
-       // printf("newxy : %d %d\n", newx, newy);
         
         #if GR_SIM_COMM || FIRASSL_COMM
         linearTransform(newx, newy, newangle);
@@ -970,6 +971,8 @@ namespace Strategy
         botcenterTransform(newx, newy, newangle);
         #endif
         double           delTime = timeCapture - homeLastUpdateTime[id];
+        printf("newxy : %f %f\n", newx, newy);
+
 		double timeMs = delTime ; //(nowTime - bsQ.front().second)*1000.0;
 		if(timeMs <= 0){
 			timeMs = 0.001;
@@ -983,7 +986,6 @@ namespace Strategy
         float lastAngularV       = homeOmega[id];
 		homePose[id].x = newx;
 		homePose[id].y = newy;
-
     std::cout<<"HOMEPOSE KALMAN 123 "<<homePose[id].x<<" "<<homePose[id].y<<std::endl;
 		homeAngle[id] = newangle;
 		homeVelocity[id].x = (newx - lastPoseX)/delTime;

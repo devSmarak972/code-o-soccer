@@ -75,7 +75,8 @@ SkillSet::SkillSet(const BeliefState* state, const int botID) :
 	traj = NULL;
 	sCount = 0;
 	sTrack =0 ;
-	 myfileX.open ("/home/robocup/ballInterceptVel.txt");
+	printf("init skillset %d\n",state->homePos[1].x);
+   myfileX.open ("/home/robocup/ballInterceptVel.txt");
 } // SkillSet
 SkillSet::~SkillSet()
 {

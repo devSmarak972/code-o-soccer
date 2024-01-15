@@ -1,3 +1,4565 @@
-g++ -c  "/home/smarak/krssg/mirosot/modified-korea/Strategy/main.cpp" -g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UGR_SIM_COMM -UVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -URUN_REFBOX -DUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   -D_DEBUG  -o ./Debug/main.o "-I../common/include" "-I../common/gpb/proto/cpp" "-I../common/dlib" "-ITactics" "-ISkills" "-IPlays/core" "-IPlays/playbook" "-IUtils" "-ILearning" "-IHAL" "-ICore" "-I." "-I/usr/include/qt4" "-I/usr/include/opencv4" "-I." "-I/usr/include"  
-g++ -c  "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tactic.cpp" -g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UGR_SIM_COMM -UVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -URUN_REFBOX -DUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   -D_DEBUG  -o ./Debug/Tactics_tactic.o "-I../common/include" "-I../common/gpb/proto/cpp" "-I../common/dlib" "-ITactics" "-ISkills" "-IPlays/core" "-IPlays/playbook" "-IUtils" "-ILearning" "-IHAL" "-ICore" "-I." "-I/usr/include/qt4" "-I/usr/include/opencv4" "-I." "-I/usr/include"  
-g++ -c  "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tExec.cpp" -g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UGR_SIM_COMM -UVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -URUN_REFBOX -DUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   -D_DEBUG  -o ./Debug/Tactics_tExec.o "-I../common/include" "-I../common/gpb/proto/cpp" "-I../common/dlib" "-ITactics" "-ISkills" "-IPlays/core" "-IPlays/playbook" "-IUtils" "-ILearning" "-IHAL" "-ICore" "-I." "-I/usr/include/qt4" "-I/usr/include/opencv4" "-I." "-I/usr/include"  
+Inside firacomm 1
+Inside main
+INSIDE START GAME
+init skillset -394066873
+Vision UDP network successfully configured. (Multicast address: 224.5.23.2:10020)
+after ball
+here
+start
+1: state update
+Home Pose Kalman: 0 6550 4700
+Home Pose Kalman: 1 6550 4700
+Home Pose Kalman: 2 6550 4700
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (0.000000, 0.000000), vision pos = (6550, 4700)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.741777 -0.566383
+Robot1 -0.741777 -0.566383
+in transform 2975 5181.787433 3211.086004
+newxy : 5181.787433 3211.086004
+HOMEPOSE KALMAN 123 5181.79 3211.09
+Robot2 -1 -2.6944e-18
+Robot2 -1 -2.6944e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 2.05535 VELR 3.35178
+Bot Velocity(firacomm) 1: 2 3
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5181 3211
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000000, -0.000000), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.739274 -0.571673
+Robot1 -0.739274 -0.571673
+in transform 2975 5174.341163 3221.929486
+newxy : 5174.341163 3221.929486
+HOMEPOSE KALMAN 123 5174.34 3221.93
+Robot2 -1 -2.84931e-18
+Robot2 -1 -2.84931e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 4.11071 VELR 6.70357
+Bot Velocity(firacomm) 1: 4 6
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5174 3221
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000106, -0.000106), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.73716 -0.575845
+Robot1 -0.73716 -0.575845
+in transform 2975 5168.051022 3230.482687
+newxy : 5168.051022 3230.482687
+HOMEPOSE KALMAN 123 5168.05 3230.48
+Robot2 -1 -2.77453e-18
+Robot2 -1 -2.77453e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 6.16607 VELR 10.0554
+Bot Velocity(firacomm) 1: 6 10
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5168 3230
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000120, -0.000120), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.735887 -0.57819
+Robot1 -0.735887 -0.57819
+in transform 2975 5164.265295 3235.289253
+newxy : 5164.265295 3235.289253
+HOMEPOSE KALMAN 123 5164.27 3235.29
+Robot2 -1 -2.64983e-18
+Robot2 -1 -2.64983e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 8.22142 VELR 13.4071
+Bot Velocity(firacomm) 1: 8 13
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5164 3235
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.735221 -0.579355
+Robot1 -0.735221 -0.579355
+in transform 2975 5162.282899 3237.678018
+newxy : 5162.282899 3237.678018
+HOMEPOSE KALMAN 123 5162.28 3237.68
+Robot2 -1 -2.88999e-18
+Robot2 -1 -2.88999e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 10.2768 VELR 16.7589
+Bot Velocity(firacomm) 1: 10 16
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5162 3237
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.734554 -0.580508
+Robot1 -0.734554 -0.580508
+in transform 2975 5160.296809 3240.041420
+newxy : 5160.296809 3240.041420
+HOMEPOSE KALMAN 123 5160.3 3240.04
+Robot2 -1 -2.78386e-18
+Robot2 -1 -2.78386e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 12.3321 VELR 20.1107
+Bot Velocity(firacomm) 1: 12 20
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5160 3240
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.733718 -0.581937
+Robot1 -0.733718 -0.581937
+in transform 2975 5157.811111 3242.970174
+newxy : 5157.811111 3242.970174
+HOMEPOSE KALMAN 123 5157.81 3242.97
+Robot2 -1 -2.68386e-18
+Robot2 -1 -2.68386e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 14.3875 VELR 23.4625
+Bot Velocity(firacomm) 1: 14 23
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5157 3242
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.732707 -0.583646
+Robot1 -0.732707 -0.583646
+in transform 2975 5154.802500 3246.473376
+newxy : 5154.802500 3246.473376
+HOMEPOSE KALMAN 123 5154.8 3246.47
+Robot2 -1 -2.6491e-18
+Robot2 -1 -2.6491e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 16.4428 VELR 26.8143
+Bot Velocity(firacomm) 1: 16 26
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5154 3246
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.731517 -0.585632
+Robot1 -0.731517 -0.585632
+in transform 2975 5151.264176 3250.545155
+newxy : 5151.264176 3250.545155
+HOMEPOSE KALMAN 123 5151.26 3250.55
+Robot2 -1 -2.60923e-18
+Robot2 -1 -2.60923e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 18.4982 VELR 30.1661
+Bot Velocity(firacomm) 1: 18 30
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5151 3250
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.730148 -0.587894
+Robot1 -0.730148 -0.587894
+in transform 2975 5147.189277 3255.181746
+newxy : 5147.189277 3255.181746
+HOMEPOSE KALMAN 123 5147.19 3255.18
+Robot2 -1 -2.83149e-18
+Robot2 -1 -2.83149e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 20.5535 VELR 33.5178
+Bot Velocity(firacomm) 1: 20 33
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5147 3255
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.728595 -0.590429
+Robot1 -0.728595 -0.590429
+in transform 2975 5142.571360 3260.380115
+newxy : 5142.571360 3260.380115
+HOMEPOSE KALMAN 123 5142.57 3260.38
+Robot2 -1 -2.76863e-18
+Robot2 -1 -2.76863e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 22.6089 VELR 36.8696
+Bot Velocity(firacomm) 1: 22 36
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5142 3260
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000103, -0.000103), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.726859 -0.593237
+Robot1 -0.726859 -0.593237
+in transform 2975 5137.406606 3266.135295
+newxy : 5137.406606 3266.135295
+HOMEPOSE KALMAN 123 5137.41 3266.14
+Robot2 -1 -2.61876e-18
+Robot2 -1 -2.61876e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 24.6643 VELR 40.2214
+Bot Velocity(firacomm) 1: 24 40
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5137 3266
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000137, -0.000137), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.72494 -0.59631
+Robot1 -0.72494 -0.59631
+in transform 2975 5131.697674 3272.434527
+newxy : 5131.697674 3272.434527
+HOMEPOSE KALMAN 123 5131.7 3272.43
+Robot2 -1 -2.81201e-18
+Robot2 -1 -2.81201e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 26.7196 VELR 43.5732
+Bot Velocity(firacomm) 1: 26 43
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5131 3272
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.722837 -0.599645
+Robot1 -0.722837 -0.599645
+in transform 2975 5125.440205 3279.271803
+newxy : 5125.440205 3279.271803
+HOMEPOSE KALMAN 123 5125.44 3279.27
+Robot2 -1 -2.84234e-18
+Robot2 -1 -2.84234e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 28.775 VELR 46.925
+Bot Velocity(firacomm) 1: 28 46
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5125 3279
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.720547 -0.603241
+Robot1 -0.720547 -0.603241
+in transform 2975 5118.627364 3286.643603
+newxy : 5118.627364 3286.643603
+HOMEPOSE KALMAN 123 5118.63 3286.64
+Robot2 -1 -2.74339e-18
+Robot2 -1 -2.74339e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5118 3286
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.718068 -0.607096
+Robot1 -0.718068 -0.607096
+in transform 2975 5111.252100 3294.546658
+newxy : 5111.252100 3294.546658
+HOMEPOSE KALMAN 123 5111.25 3294.55
+Robot2 -1 -2.70161e-18
+Robot2 -1 -2.70161e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5111 3294
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.715439 -0.611139
+Robot1 -0.715439 -0.611139
+in transform 2975 5103.430966 3302.835436
+newxy : 5103.430966 3302.835436
+HOMEPOSE KALMAN 123 5103.43 3302.84
+Robot2 -1 -2.81003e-18
+Robot2 -1 -2.81003e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5103 3302
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.712675 -0.615314
+Robot1 -0.712675 -0.615314
+in transform 2975 5095.207735 3311.392792
+newxy : 5095.207735 3311.392792
+HOMEPOSE KALMAN 123 5095.21 3311.39
+Robot2 -1 -2.80818e-18
+Robot2 -1 -2.80818e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5095 3311
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.709756 -0.619606
+Robot1 -0.709756 -0.619606
+in transform 2975 5086.524307 3320.192790
+newxy : 5086.524307 3320.192790
+HOMEPOSE KALMAN 123 5086.52 3320.19
+Robot2 -1 -2.7178e-18
+Robot2 -1 -2.7178e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5086 3320
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000121, -0.000121), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.706662 -0.624003
+Robot1 -0.706662 -0.624003
+in transform 2975 5077.319683 3329.206994
+newxy : 5077.319683 3329.206994
+HOMEPOSE KALMAN 123 5077.32 3329.21
+Robot2 -1 -2.64903e-18
+Robot2 -1 -2.64903e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5077 3329
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000105, -0.000105), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.703372 -0.628489
+Robot1 -0.703372 -0.628489
+in transform 2975 5067.531353 3338.401755
+newxy : 5067.531353 3338.401755
+HOMEPOSE KALMAN 123 5067.53 3338.4
+Robot2 -1 -2.8515e-18
+Robot2 -1 -2.8515e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5067 3338
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.699864 -0.633043
+Robot1 -0.699864 -0.633043
+in transform 2975 5057.094787 3347.738287
+newxy : 5057.094787 3347.738287
+HOMEPOSE KALMAN 123 5057.09 3347.74
+Robot2 -1 -2.74823e-18
+Robot2 -1 -2.74823e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5057 3347
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000113, -0.000113), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.696164 -0.63759
+Robot1 -0.696164 -0.63759
+in transform 2975 5046.086691 3357.059402
+newxy : 5046.086691 3357.059402
+HOMEPOSE KALMAN 123 5046.09 3357.06
+Robot2 -1 -2.66491e-18
+Robot2 -1 -2.66491e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5046 3357
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000129, -0.000129), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.692341 -0.642031
+Robot1 -0.692341 -0.642031
+in transform 2975 5034.713898 3366.163446
+newxy : 5034.713898 3366.163446
+HOMEPOSE KALMAN 123 5034.71 3366.16
+Robot2 -1 -2.8412e-18
+Robot2 -1 -2.8412e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5034 3366
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.688402 -0.646361
+Robot1 -0.688402 -0.646361
+in transform 2975 5022.994703 3375.039379
+newxy : 5022.994703 3375.039379
+HOMEPOSE KALMAN 123 5022.99 3375.04
+Robot2 -1 -2.68192e-18
+Robot2 -1 -2.68192e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5022 3375
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.684346 -0.65058
+Robot1 -0.684346 -0.65058
+in transform 2975 5010.930044 3383.688027
+newxy : 5010.930044 3383.688027
+HOMEPOSE KALMAN 123 5010.93 3383.69
+Robot2 -1 -2.86974e-18
+Robot2 -1 -2.86974e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 5010 3383
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000129, -0.000129), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.680177 -0.654685
+Robot1 -0.680177 -0.654685
+in transform 2975 4998.526089 3392.105259
+newxy : 4998.526089 3392.105259
+HOMEPOSE KALMAN 123 4998.53 3392.11
+Robot2 -1 -2.86247e-18
+Robot2 -1 -2.86247e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4998 3392
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.675896 -0.658676
+Robot1 -0.675896 -0.658676
+in transform 2975 4985.791761 3400.285030
+newxy : 4985.791761 3400.285030
+HOMEPOSE KALMAN 123 4985.79 3400.28
+Robot2 -1 -2.81356e-18
+Robot2 -1 -2.81356e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4985 3400
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.671508 -0.662547
+Robot1 -0.671508 -0.662547
+in transform 2975 4972.736673 3408.221145
+newxy : 4972.736673 3408.221145
+HOMEPOSE KALMAN 123 4972.74 3408.22
+Robot2 -1 -2.71232e-18
+Robot2 -1 -2.71232e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4972 3408
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.667015 -0.666296
+Robot1 -0.667015 -0.666296
+in transform 2975 4959.370653 3415.907593
+newxy : 4959.370653 3415.907593
+HOMEPOSE KALMAN 123 4959.37 3415.91
+Robot2 -1 -2.68419e-18
+Robot2 -1 -2.68419e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4959 3415
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000129, -0.000129), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.662421 -0.669921
+Robot1 -0.662421 -0.669921
+in transform 2975 4945.703727 3423.338560
+newxy : 4945.703727 3423.338560
+HOMEPOSE KALMAN 123 4945.7 3423.34
+Robot2 -1 -2.5544e-18
+Robot2 -1 -2.5544e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4945 3423
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000105, -0.000105), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.65773 -0.673419
+Robot1 -0.65773 -0.673419
+in transform 2975 4931.746153 3430.508427
+newxy : 4931.746153 3430.508427
+HOMEPOSE KALMAN 123 4931.75 3430.51
+Robot2 -1 -2.80754e-18
+Robot2 -1 -2.80754e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4931 3430
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.652944 -0.676786
+Robot1 -0.652944 -0.676786
+in transform 2975 4917.508429 3437.411785
+newxy : 4917.508429 3437.411785
+HOMEPOSE KALMAN 123 4917.51 3437.41
+Robot2 -1 -2.71096e-18
+Robot2 -1 -2.71096e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4917 3437
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.648068 -0.680021
+Robot1 -0.648068 -0.680021
+in transform 2975 4903.001287 3444.043446
+newxy : 4903.001287 3444.043446
+HOMEPOSE KALMAN 123 4903 3444.04
+Robot2 -1 -2.67837e-18
+Robot2 -1 -2.67837e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4903 3444
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000120, -0.000120), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.643104 -0.683121
+Robot1 -0.643104 -0.683121
+in transform 2975 4888.235676 3450.398448
+newxy : 4888.235676 3450.398448
+HOMEPOSE KALMAN 123 4888.24 3450.4
+Robot2 -1 -2.62278e-18
+Robot2 -1 -2.62278e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4888 3450
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.638058 -0.686084
+Robot1 -0.638058 -0.686084
+in transform 2975 4873.222732 3456.472049
+newxy : 4873.222732 3456.472049
+HOMEPOSE KALMAN 123 4873.22 3456.47
+Robot2 -1 -2.83165e-18
+Robot2 -1 -2.83165e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4873 3456
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000110, -0.000110), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.632932 -0.688907
+Robot1 -0.632932 -0.688907
+in transform 2975 4857.973756 3462.259705
+newxy : 4857.973756 3462.259705
+HOMEPOSE KALMAN 123 4857.97 3462.26
+Robot2 -1 -2.75627e-18
+Robot2 -1 -2.75627e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4857 3462
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000129, -0.000129), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.627731 -0.691589
+Robot1 -0.627731 -0.691589
+in transform 2975 4842.500205 3467.757067
+newxy : 4842.500205 3467.757067
+HOMEPOSE KALMAN 123 4842.5 3467.76
+Robot2 -1 -2.62096e-18
+Robot2 -1 -2.62096e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4842 3467
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.622458 -0.694127
+Robot1 -0.622458 -0.694127
+in transform 2975 4826.813689 3472.959979
+newxy : 4826.813689 3472.959979
+HOMEPOSE KALMAN 123 4826.81 3472.96
+Robot2 -1 -2.8494e-18
+Robot2 -1 -2.8494e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4826 3472
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.617118 -0.696519
+Robot1 -0.617118 -0.696519
+in transform 2975 4810.925976 3477.864490
+newxy : 4810.925976 3477.864490
+HOMEPOSE KALMAN 123 4810.93 3477.86
+Robot2 -1 -2.7123e-18
+Robot2 -1 -2.7123e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4810 3477
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.611714 -0.698764
+Robot1 -0.611714 -0.698764
+in transform 2975 4794.849006 3482.466875
+newxy : 4794.849006 3482.466875
+HOMEPOSE KALMAN 123 4794.85 3482.47
+Robot2 -1 -2.6573e-18
+Robot2 -1 -2.6573e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4794 3482
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000127, -0.000127), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.60625 -0.70086
+Robot1 -0.60625 -0.70086
+in transform 2975 4778.594878 3486.763657
+newxy : 4778.594878 3486.763657
+HOMEPOSE KALMAN 123 4778.59 3486.76
+Robot2 -1 -2.82872e-18
+Robot2 -1 -2.82872e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4778 3486
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000116, -0.000116), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.600731 -0.702806
+Robot1 -0.600731 -0.702806
+in transform 2975 4762.175841 3490.751615
+newxy : 4762.175841 3490.751615
+HOMEPOSE KALMAN 123 4762.18 3490.75
+Robot2 -1 -2.70098e-18
+Robot2 -1 -2.70098e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4762 3490
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.595161 -0.704599
+Robot1 -0.595161 -0.704599
+in transform 2975 4745.604270 3494.427779
+newxy : 4745.604270 3494.427779
+HOMEPOSE KALMAN 123 4745.6 3494.43
+Robot2 -1 -2.89553e-18
+Robot2 -1 -2.89553e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.589544 -0.706239
+Robot1 -0.589544 -0.706239
+in transform 2975 4728.892643 3497.789416
+newxy : 4728.892643 3497.789416
+HOMEPOSE KALMAN 123 4728.89 3497.79
+Robot2 -1 -2.76185e-18
+Robot2 -1 -2.76185e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4728 3497
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+BOTID 1 VELL 29.226 VELR 47.6606
+0Bot Velocity(firacomm) 1: 29 47
+ 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.583884 -0.707724
+Robot11: state update
+ -0.583884 -0.707724
+in transform 2975 4712.053532 3500.834016
+newxy : 4712.053532 3500.834016
+HOMEPOSE KALMAN 123 4712.05 3500.83
+Robot2 -1 -2.72222e-18
+Robot2 -1 -2.72222e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4712 3500
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.578185 -0.709053
+Robot1 -0.578185 -0.709053
+in transform 2975 4695.099588 3503.559282
+newxy : 4695.099588 3503.559282
+HOMEPOSE KALMAN 123 4695.1 3503.56
+Robot2 -1 -2.67486e-18
+Robot2 -1 -2.67486e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4695 3503
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.572452 -0.710226
+Robot1 -0.572452 -0.710226
+in transform 2975 4678.043552 3505.963141
+newxy : 4678.043552 3505.963141
+HOMEPOSE KALMAN 123 4678.04 3505.96
+Robot2 -1 -2.61057e-18
+Robot2 -1 -2.61057e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4678 3505
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.566688 -0.711241
+Robot1 -0.566688 -0.711241
+in transform 2975 4660.898246 3508.043752
+newxy : 4660.898246 3508.043752
+HOMEPOSE KALMAN 123 4660.9 3508.04
+Robot2 -1 -2.5701e-18
+Robot2 -1 -2.5701e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4660 3508
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.5609 -0.712097
+Robot1 -0.5609 -0.712097
+in transform 2975 4643.676574 3509.799534
+newxy : 4643.676574 3509.799534
+HOMEPOSE KALMAN 123 4643.68 3509.8
+Robot2 -1 -2.84538e-18
+Robot2 -1 -2.84538e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4643 3509
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.55509 -0.712795
+Robot1 -0.55509 -0.712795
+in transform 2975 4626.391501 3511.229172
+newxy : 4626.391501 3511.229172
+HOMEPOSE KALMAN 123 4626.39 3511.23
+Robot2 -1 -2.76477e-18
+Robot2 -1 -2.76477e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4626 3511
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.549263 -0.713332
+Robot1 -0.549263 -0.713332
+in transform 2975 4609.056041 3512.331620
+newxy : 4609.056041 3512.331620
+HOMEPOSE KALMAN 123 4609.06 3512.33
+Robot2 -1 -2.67803e-18
+Robot2 -1 -2.67803e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4609 3512
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.543423 -0.71371
+Robot1 -0.543423 -0.71371
+in transform 2975 4591.683236 3513.106081
+newxy : 4591.683236 3513.106081
+HOMEPOSE KALMAN 123 4591.68 3513.11
+Robot2 -1 -2.61259e-18
+Robot2 -1 -2.61259e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4591 3513
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000104, -0.000104), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.537575 -0.713928
+Robot1 -0.537575 -0.713928
+in transform 2975 4574.286146 3513.551994
+newxy : 4574.286146 3513.551994
+HOMEPOSE KALMAN 123 4574.29 3513.55
+Robot2 -1 -2.83447e-18
+Robot2 -1 -2.83447e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4574 3513
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000138, -0.000138), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.531724 -0.713985
+Robot1 -0.531724 -0.713985
+in transform 2975 4556.877844 3513.669021
+newxy : 4556.877844 3513.669021
+HOMEPOSE KALMAN 123 4556.88 3513.67
+Robot2 -1 -2.75412e-18
+Robot2 -1 -2.75412e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4556 3513
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000110, -0.000110), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.525873 -0.713881
+Robot1 -0.525873 -0.713881
+in transform 2975 4539.471417 3513.457043
+newxy : 4539.471417 3513.457043
+HOMEPOSE KALMAN 123 4539.47 3513.46
+Robot2 -1 -2.6809e-18
+Robot2 -1 -2.6809e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4539 3513
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.520027 -0.713618
+Robot1 -0.520027 -0.713618
+in transform 2975 4522.079958 3512.916180
+newxy : 4522.079958 3512.916180
+HOMEPOSE KALMAN 123 4522.08 3512.92
+Robot2 -1 -2.87863e-18
+Robot2 -1 -2.87863e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4522 3512
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000108, -0.000108), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.51419 -0.713194
+Robot1 -0.51419 -0.713194
+in transform 2975 4504.716564 3512.046805
+newxy : 4504.716564 3512.046805
+HOMEPOSE KALMAN 123 4504.72 3512.05
+Robot2 -1 -2.74907e-18
+Robot2 -1 -2.74907e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4504 3512
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.508368 -0.71261
+Robot1 -0.508368 -0.71261
+in transform 2975 4487.394313 3510.849565
+newxy : 4487.394313 3510.849565
+HOMEPOSE KALMAN 123 4487.39 3510.85
+Robot2 -1 -2.86942e-18
+Robot2 -1 -2.86942e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4487 3510
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.502563 -0.711866
+Robot1 -0.502563 -0.711866
+in transform 2975 4470.126248 3509.325381
+newxy : 4470.126248 3509.325381
+HOMEPOSE KALMAN 123 4470.13 3509.33
+Robot2 -1 -2.75657e-18
+Robot2 -1 -2.75657e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4470 3509
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.496782 -0.710964
+Robot1 -0.496782 -0.710964
+in transform 2975 4452.925359 3507.475442
+newxy : 4452.925359 3507.475442
+HOMEPOSE KALMAN 123 4452.93 3507.48
+Robot2 -1 -2.90892e-18
+Robot2 -1 -2.90892e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4452 3507
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.491027 -0.709903
+Robot1 -0.491027 -0.709903
+in transform 2975 4435.804572 3505.301178
+newxy : 4435.804572 3505.301178
+HOMEPOSE KALMAN 123 4435.8 3505.3
+Robot2 -1 -2.86686e-18
+Robot2 -1 -2.86686e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4435 3505
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000139, -0.000139), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.485303 -0.708685
+Robot1 -0.485303 -0.708685
+in transform 2975 4418.776747 3502.804245
+newxy : 4418.776747 3502.804245
+HOMEPOSE KALMAN 123 4418.78 3502.8
+Robot2 -1 -2.81809e-18
+Robot2 -1 -2.81809e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4418 3502
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000121, -0.000121), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.479615 -0.70731
+Robot1 -0.479615 -0.70731
+in transform 2975 4401.854682 3499.986513
+newxy : 4401.854682 3499.986513
+HOMEPOSE KALMAN 123 4401.85 3499.99
+Robot2 -1 -2.70448e-18
+Robot2 -1 -2.70448e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4401 3499
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.473967 -0.705781
+Robot1 -0.473967 -0.705781
+in transform 2975 4385.051105 3496.850069
+newxy : 4385.051105 3496.850069
+HOMEPOSE KALMAN 123 4385.05 3496.85
+Robot2 -1 -2.68726e-18
+Robot2 -1 -2.68726e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4385 3496
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.468363 -0.704096
+Robot1 -0.468363 -0.704096
+in transform 2975 4368.378671 3493.397239
+newxy : 4368.378671 3493.397239
+HOMEPOSE KALMAN 123 4368.38 3493.4
+Robot2 -1 -2.64773e-18
+Robot2 -1 -2.64773e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4368 3493
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.462807 -0.702259
+Robot1 -0.462807 -0.702259
+in transform 2975 4351.849939 3489.630595
+newxy : 4351.849939 3489.630595
+HOMEPOSE KALMAN 123 4351.85 3489.63
+Robot2 -1 -2.58318e-18
+Robot2 -1 -2.58318e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4351 3489
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.457303 -0.70027
+Robot1 -0.457303 -0.70027
+in transform 2975 4335.477355 3485.552973
+newxy : 4335.477355 3485.552973
+HOMEPOSE KALMAN 123 4335.48 3485.55
+Robot2 -1 -2.84762e-18
+Robot2 -1 -2.84762e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4335 3485
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000129, -0.000129), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.451857 -0.69813
+Robot1 -0.451857 -0.69813
+in transform 2975 4319.273234 3481.167462
+newxy : 4319.273234 3481.167462
+HOMEPOSE KALMAN 123 4319.27 3481.17
+Robot2 -1 -2.71374e-18
+Robot2 -1 -2.71374e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4319 3481
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.446471 -0.695843
+Robot1 -0.446471 -0.695843
+in transform 2975 4303.249749 3476.477392
+newxy : 4303.249749 3476.477392
+HOMEPOSE KALMAN 123 4303.25 3476.48
+Robot2 -1 -2.61366e-18
+Robot2 -1 -2.61366e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4303 3476
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.441149 -0.693408
+Robot1 -0.441149 -0.693408
+in transform 2975 4287.418936 3471.486311
+newxy : 4287.418936 3471.486311
+HOMEPOSE KALMAN 123 4287.42 3471.49
+Robot2 -1 -2.83442e-18
+Robot2 -1 -2.83442e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4287 3471
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.435897 -0.690828
+Robot1 -0.435897 -0.690828
+in transform 2975 4271.792693 3466.197971
+newxy : 4271.792693 3466.197971
+HOMEPOSE KALMAN 123 4271.79 3466.2
+Robot2 -1 -2.74675e-18
+Robot2 -1 -2.74675e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4271 3466
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.430717 -0.688106
+Robot1 -0.430717 -0.688106
+in transform 2975 4256.382781 3460.616330
+newxy : 4256.382781 3460.616330
+HOMEPOSE KALMAN 123 4256.38 3460.62
+Robot2 -1 -2.60949e-18
+Robot2 -1 -2.60949e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4256 3460
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.425614 -0.685242
+Robot1 -0.425614 -0.685242
+in transform 2975 4241.200817 3454.745556
+newxy : 4241.200817 3454.745556
+HOMEPOSE KALMAN 123 4241.2 3454.75
+Robot2 -1 -2.83534e-18
+Robot2 -1 -2.83534e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4241 3454
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.420591 -0.682239
+Robot1 -0.420591 -0.682239
+in transform 2975 4226.258246 3448.590046
+newxy : 4226.258246 3448.590046
+HOMEPOSE KALMAN 123 4226.26 3448.59
+Robot2 -1 -2.76326e-18
+Robot2 -1 -2.76326e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4226 3448
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.415653 -0.6791
+Robot1 -0.415653 -0.6791
+in transform 2975 4211.566325 3442.154429
+newxy : 4211.566325 3442.154429
+HOMEPOSE KALMAN 123 4211.57 3442.15
+Robot2 -1 -2.69825e-18
+Robot2 -1 -2.69825e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4211 3442
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000127, -0.000127), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.410802 -0.675826
+Robot1 -0.410802 -0.675826
+in transform 2975 4197.136099 3435.443570
+newxy : 4197.136099 3435.443570
+HOMEPOSE KALMAN 123 4197.14 3435.44
+Robot2 -1 -2.8573e-18
+Robot2 -1 -2.8573e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4197 3435
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.406043 -0.672421
+Robot1 -0.406043 -0.672421
+in transform 2975 4182.978394 3428.462549
+newxy : 4182.978394 3428.462549
+HOMEPOSE KALMAN 123 4182.98 3428.46
+Robot2 -1 -2.84274e-18
+Robot2 -1 -2.84274e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4182 3428
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.401379 -0.668886
+Robot1 -0.401379 -0.668886
+in transform 2975 4169.103824 3421.216647
+newxy : 4169.103824 3421.216647
+HOMEPOSE KALMAN 123 4169.1 3421.22
+Robot2 -1 -2.62852e-18
+Robot2 -1 -2.62852e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4169 3421
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000137, -0.000137), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.396814 -0.665225
+Robot1 -0.396814 -0.665225
+in transform 2975 4155.522799 3413.711321
+newxy : 4155.522799 3413.711321
+HOMEPOSE KALMAN 123 4155.52 3413.71
+Robot2 -1 -2.81819e-18
+Robot2 -1 -2.81819e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4155 3413
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000110, -0.000110), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.392351 -0.66144
+Robot1 -0.392351 -0.66144
+in transform 2975 4142.245532 3405.952202
+newxy : 4142.245532 3405.952202
+HOMEPOSE KALMAN 123 4142.25 3405.95
+Robot2 -1 -2.76876e-18
+Robot2 -1 -2.76876e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4142 3405
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.387994 -0.657534
+Robot1 -0.387994 -0.657534
+in transform 2975 4129.282040 3397.945095
+newxy : 4129.282040 3397.945095
+HOMEPOSE KALMAN 123 4129.28 3397.95
+Robot2 -1 -2.60691e-18
+Robot2 -1 -2.60691e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4129 3397
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.383745 -0.65351
+Robot1 -0.383745 -0.65351
+in transform 2975 4116.642114 3389.695991
+newxy : 4116.642114 3389.695991
+HOMEPOSE KALMAN 123 4116.64 3389.7
+Robot2 -1 -2.87027e-18
+Robot2 -1 -2.87027e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4116 3389
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000127, -0.000127), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.379609 -0.649371
+Robot1 -0.379609 -0.649371
+in transform 2975 4104.335302 3381.211080
+newxy : 4104.335302 3381.211080
+HOMEPOSE KALMAN 123 4104.34 3381.21
+Robot2 -1 -2.79523e-18
+Robot2 -1 -2.79523e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4104 3381
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.375587 -0.64512
+Robot1 -0.375587 -0.64512
+in transform 2975 4092.370877 3372.496749
+newxy : 4092.370877 3372.496749
+HOMEPOSE KALMAN 123 4092.37 3372.5
+Robot2 -1 -2.71366e-18
+Robot2 -1 -2.71366e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4092 3372
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.371683 -0.640761
+Robot1 -0.371683 -0.640761
+in transform 2975 4080.757821 3363.559579
+newxy : 4080.757821 3363.559579
+HOMEPOSE KALMAN 123 4080.76 3363.56
+Robot2 -1 -2.66795e-18
+Robot2 -1 -2.66795e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4080 3363
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.367901 -0.636296
+Robot1 -0.367901 -0.636296
+in transform 2975 4069.504834 3354.406318
+newxy : 4069.504834 3354.406318
+HOMEPOSE KALMAN 123 4069.5 3354.41
+Robot2 -1 -2.60303e-18
+Robot2 -1 -2.60303e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4069 3354
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.364242 -0.631729
+Robot1 -0.364242 -0.631729
+in transform 2975 4058.620342 3345.043872
+newxy : 4058.620342 3345.043872
+HOMEPOSE KALMAN 123 4058.62 3345.04
+Robot2 -1 -2.86512e-18
+Robot2 -1 -2.86512e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4058 3345
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.36071 -0.627063
+Robot1 -0.36071 -0.627063
+in transform 2975 4048.112512 3335.479283
+newxy : 4048.112512 3335.479283
+HOMEPOSE KALMAN 123 4048.11 3335.48
+Robot2 -1 -2.79488e-18
+Robot2 -1 -2.79488e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4048 3335
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.357307 -0.622302
+Robot1 -0.357307 -0.622302
+in transform 2975 4037.989261 3325.719733
+newxy : 4037.989261 3325.719733
+HOMEPOSE KALMAN 123 4037.99 3325.72
+Robot2 -1 -2.7197e-18
+Robot2 -1 -2.7197e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4037 3325
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.354036 -0.61745
+Robot1 -0.354036 -0.61745
+in transform 2975 4028.258235 3315.772542
+newxy : 4028.258235 3315.772542
+HOMEPOSE KALMAN 123 4028.26 3315.77
+Robot2 -1 -2.6357e-18
+Robot2 -1 -2.6357e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4028 3315
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000110, -0.000110), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.3509 -0.61251
+Robot1 -0.3509 -0.61251
+in transform 2975 4018.926793 3305.645179
+newxy : 4018.926793 3305.645179
+HOMEPOSE KALMAN 123 4018.93 3305.65
+Robot2 -1 -2.81327e-18
+Robot2 -1 -2.81327e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4018 3305
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000126, -0.000126), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.3479 -0.607485
+Robot1 -0.3479 -0.607485
+in transform 2975 4010.001971 3295.345263
+newxy : 4010.001971 3295.345263
+HOMEPOSE KALMAN 123 4010 3295.35
+Robot2 -1 -2.76981e-18
+Robot2 -1 -2.76981e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4010 3295
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.345039 -0.602381
+Robot1 -0.345039 -0.602381
+in transform 2975 4001.490472 3284.880553
+newxy : 4001.490472 3284.880553
+HOMEPOSE KALMAN 123 4001.49 3284.88
+Robot2 -1 -2.62855e-18
+Robot2 -1 -2.62855e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4001 3284
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.342319 -0.597199
+Robot1 -0.342319 -0.597199
+in transform 2975 3993.398663 3274.258940
+newxy : 3993.398663 3274.258940
+HOMEPOSE KALMAN 123 3993.4 3274.26
+Robot2 -1 -2.84284e-18
+Robot2 -1 -2.84284e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3993 3274
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000126, -0.000126), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.339742 -0.591946
+Robot1 -0.339742 -0.591946
+in transform 2975 3985.732588 3263.488423
+newxy : 3985.732588 3263.488423
+HOMEPOSE KALMAN 123 3985.73 3263.49
+Robot2 -1 -2.7822e-18
+Robot2 -1 -2.7822e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3985 3263
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.33731 -0.586623
+Robot1 -0.33731 -0.586623
+in transform 2975 3978.497991 3252.577106
+newxy : 3978.497991 3252.577106
+HOMEPOSE KALMAN 123 3978.5 3252.58
+Robot2 -1 -2.67416e-18
+Robot2 -1 -2.67416e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3978 3252
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000116, -0.000116), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.335025 -0.581236
+Robot1 -0.335025 -0.581236
+in transform 2975 3971.700325 3241.533182
+newxy : 3971.700325 3241.533182
+HOMEPOSE KALMAN 123 3971.7 3241.53
+Robot2 -1 -2.64028e-18
+Robot2 -1 -2.64028e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3971 3241
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000126, -0.000126), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.332889 -0.575788
+Robot1 -0.332889 -0.575788
+in transform 2975 3965.344746 3230.364942
+newxy : 3965.344746 3230.364942
+HOMEPOSE KALMAN 123 3965.34 3230.36
+Robot2 -1 -2.61197e-18
+Robot2 -1 -2.61197e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3965 3230
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.330903 -0.570283
+Robot1 -0.330903 -0.570283
+in transform 2975 3959.436091 3219.080777
+newxy : 3959.436091 3219.080777
+HOMEPOSE KALMAN 123 3959.44 3219.08
+Robot2 -1 -2.85311e-18
+Robot2 -1 -2.85311e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3959 3219
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000120, -0.000120), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.329069 -0.564726
+Robot1 -0.329069 -0.564726
+in transform 2975 3953.978843 3207.689174
+newxy : 3953.978843 3207.689174
+HOMEPOSE KALMAN 123 3953.98 3207.69
+Robot2 -1 -2.71577e-18
+Robot2 -1 -2.71577e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3953 3207
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.327387 -0.559121
+Robot1 -0.327387 -0.559121
+in transform 2975 3948.977110 3196.198715
+newxy : 3948.977110 3196.198715
+HOMEPOSE KALMAN 123 3948.98 3196.2
+Robot2 -1 -2.85316e-18
+Robot2 -1 -2.85316e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3948 3196
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.32586 -0.553472
+Robot1 -0.32586 -0.553472
+in transform 2975 3944.434616 3184.618059
+newxy : 3944.434616 3184.618059
+HOMEPOSE KALMAN 123 3944.43 3184.62
+Robot2 -1 -2.74813e-18
+Robot2 -1 -2.74813e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.324489 -0.547783
+Robot1 -0.324489 -0.547783
+in transform 2975 3940.354720 3172.955931
+newxy : 3940.354720 3172.955931
+HOMEPOSE KALMAN 123 3940.35 3172.96
+Robot2 -1 -2.64499e-18
+Robot2 -1 -2.64499e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950  -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3940 3172
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3940 3172
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.323274 -0.542059
+Robot1 -0.323274 -0.542059
+in transform 2975 3936.740438 3161.221107
+newxy : 3936.740438 3161.221107
+HOMEPOSE KALMAN 123 3936.74 3161.22
+Robot2 -1 -2.61405e-18
+Robot2 -1 -2.61405e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3936 3161
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000104, -0.000104), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.322217 -0.536304
+Robot1 -0.322217 -0.536304
+in transform 2975 3933.594468 3149.422408
+newxy : 3933.594468 3149.422408
+HOMEPOSE KALMAN 123 3933.59 3149.42
+Robot2 -1 -2.81569e-18
+Robot2 -1 -2.81569e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3933 3149
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.321317 -0.530521
+Robot1 -0.321317 -0.530521
+in transform 2975 3930.919195 3137.568696
+newxy : 3930.919195 3137.568696
+HOMEPOSE KALMAN 123 3930.92 3137.57
+Robot2 -1 -2.71936e-18
+Robot2 -1 -2.71936e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+1HOMEPOSE KALMAN 123 : state update
+4968.25 615
+Robot1 -0.320577 -0.524717
+Robot1 -0.320577 -0.524717
+in transform 2975 3928.716683 3125.668876
+newxy : 3928.716683 3125.668876
+HOMEPOSE KALMAN 123 3928.72 3125.67
+Robot2 -1 -2.62976e-18
+Robot2 -1 -2.62976e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3928 3125
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319996 -0.518894
+Robot1 -0.319996 -0.518894
+in transform 2975 3926.988643 3113.731898
+newxy : 3926.988643 3113.731898
+HOMEPOSE KALMAN 123 3926.99 3113.73
+Robot2 -1 -2.6437e-18
+Robot2 -1 -2.6437e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3926 3113
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319575 -0.513057
+Robot1 -0.319575 -0.513057
+in transform 2975 3925.736403 3101.766747
+newxy : 3925.736403 3101.766747
+HOMEPOSE KALMAN 123 3925.74 3101.77
+Robot2 -1 -2.7991e-18
+Robot2 -1 -2.7991e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3925 3101
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319315 -0.507211
+Robot1 -0.319315 -0.507211
+in transform 2975 3924.960900 3089.782431
+newxy : 3924.960900 3089.782431
+HOMEPOSE KALMAN 123 3924.96 3089.78
+Robot2 -1 -2.70102e-18
+Robot2 -1 -2.70102e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3924 3089
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319214 -0.50136
+Robot1 -0.319214 -0.50136
+in transform 2975 3924.662679 3077.787973
+newxy : 3924.662679 3077.787973
+HOMEPOSE KALMAN 123 3924.66 3077.79
+Robot2 -1 -2.694e-18
+Robot2 -1 -2.694e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3924 3077
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000120, -0.000120), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319275 -0.495508
+Robot1 -0.319275 -0.495508
+in transform 2975 3924.841917 3065.792396
+newxy : 3924.841917 3065.792396
+HOMEPOSE KALMAN 123 3924.84 3065.79
+Robot2 -1 -2.92604e-18
+Robot2 -1 -2.92604e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3924 3065
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319495 -0.489661
+Robot1 -0.319495 -0.489661
+in transform 2975 3925.498451 3053.804719
+newxy : 3925.498451 3053.804719
+HOMEPOSE KALMAN 123 3925.5 3053.8
+Robot2 -1 -2.81134e-18
+Robot2 -1 -2.81134e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3925 3053
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.319876 -0.483821
+Robot1 -0.319876 -0.483821
+in transform 2975 3926.631793 3041.833953
+newxy : 3926.631793 3041.833953
+HOMEPOSE KALMAN 123 3926.63 3041.83
+Robot2 -1 -2.69467e-18
+Robot2 -1 -2.69467e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3926 3041
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000117, -0.000117), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.320417 -0.477995
+Robot1 -0.320417 -0.477995
+in transform 2975 3928.241129 3029.889101
+newxy : 3928.241129 3029.889101
+HOMEPOSE KALMAN 123 3928.24 3029.89
+Robot2 -1 -2.81182e-18
+Robot2 -1 -2.81182e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3928 3029
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.321118 -0.472185
+Robot1 -0.321118 -0.472185
+in transform 2975 3930.325293 3017.979152
+newxy : 3930.325293 3017.979152
+HOMEPOSE KALMAN 123 3930.33 3017.98
+Robot2 -1 -2.67067e-18
+Robot2 -1 -2.67067e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3930 3017
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000137, -0.000137), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.321977 -0.466397
+Robot1 -0.321977 -0.466397
+in transform 2975 3932.882747 3006.113075
+newxy : 3932.882747 3006.113075
+HOMEPOSE KALMAN 123 3932.88 3006.11
+Robot2 -1 -2.87071e-18
+Robot2 -1 -2.87071e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3932 3006
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000110, -0.000110), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.322995 -0.460634
+Robot1 -0.322995 -0.460634
+in transform 2975 3935.911563 2994.299803
+newxy : 3935.911563 2994.299803
+HOMEPOSE KALMAN 123 3935.91 2994.3
+Robot2 -1 -2.79461e-18
+Robot2 -1 -2.79461e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3935 2994
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000110, -0.000110), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.324171 -0.454902
+Robot1 -0.324171 -0.454902
+in transform 2975 3939.409422 2982.548226
+newxy : 3939.409422 2982.548226
+HOMEPOSE KALMAN 123 3939.41 2982.55
+Robot2 -1 -2.69301e-18
+Robot2 -1 -2.69301e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3939 2982
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.325504 -0.449204
+Robot1 -0.325504 -0.449204
+in transform 2975 3943.373636 2970.867175
+newxy : 3943.373636 2970.867175
+HOMEPOSE KALMAN 123 3943.37 2970.87
+Robot2 -1 -2.63589e-18
+Robot2 -1 -2.63589e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3943 2970
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.326992 -0.443544
+Robot1 -0.326992 -0.443544
+in transform 2975 3947.801182 2959.265424
+newxy : 3947.801182 2959.265424
+HOMEPOSE KALMAN 123 3947.8 2959.27
+Robot2 -1 -2.80216e-18
+Robot2 -1 -2.80216e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3947 2959
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.328635 -0.437928
+Robot1 -0.328635 -0.437928
+in transform 2975 3952.688721 2947.751688
+newxy : 3952.688721 2947.751688
+HOMEPOSE KALMAN 123 3952.69 2947.75
+Robot2 -1 -2.7227e-18
+Robot2 -1 -2.7227e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3952 2947
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000120, -0.000120), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.330431 -0.432358
+Robot1 -0.330431 -0.432358
+in transform 2975 3958.032612 2936.334624
+newxy : 3958.032612 2936.334624
+HOMEPOSE KALMAN 123 3958.03 2936.33
+Robot2 -1 -2.59839e-18
+Robot2 -1 -2.59839e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3958 2936
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.332379 -0.42684
+Robot1 -0.332379 -0.42684
+in transform 2975 3963.828891 2925.022830
+newxy : 3963.828891 2925.022830
+HOMEPOSE KALMAN 123 3963.83 2925.02
+Robot2 -1 -2.87787e-18
+Robot2 -1 -2.87787e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3963 2925
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000127, -0.000127), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.334478 -0.421378
+Robot1 -0.334478 -0.421378
+in transform 2975 3970.073252 2913.824832
+newxy : 3970.073252 2913.824832
+HOMEPOSE KALMAN 123 3970.07 2913.82
+Robot2 -1 -2.79175e-18
+Robot2 -1 -2.79175e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3970 2913
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000098, -0.000098), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.336726 -0.415975
+Robot1 -0.336726 -0.415975
+in transform 2975 3976.761024 2902.749071
+newxy : 3976.761024 2902.749071
+HOMEPOSE KALMAN 123 3976.76 2902.75
+Robot2 -1 -2.59224e-18
+Robot2 -1 -2.59224e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3976 2902
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000151, -0.000151), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.339122 -0.410636
+Robot1 -0.339122 -0.410636
+in transform 2975 3983.887158 2891.803886
+newxy : 3983.887158 2891.803886
+HOMEPOSE KALMAN 123 3983.89 2891.8
+Robot2 -1 -2.79453e-18
+Robot2 -1 -2.79453e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3983 2891
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.341663 -0.405365
+Robot1 -0.341663 -0.405365
+in transform 2975 3991.446249 2880.997505
+newxy : 3991.446249 2880.997505
+HOMEPOSE KALMAN 123 3991.45 2881
+Robot2 -1 -2.72643e-18
+Robot2 -1 -2.72643e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3991 2880
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.344347 -0.400165
+Robot1 -0.344347 -0.400165
+in transform 2975 3999.432558 2870.338041
+newxy : 3999.432558 2870.338041
+HOMEPOSE KALMAN 123 3999.43 2870.34
+Robot2 -1 -2.63168e-18
+Robot2 -1 -2.63168e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 3999 2870
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.347173 -0.395041
+Robot1 -0.347173 -0.395041
+in transform 2975 4007.840043 2859.833495
+newxy : 4007.840043 2859.833495
+HOMEPOSE KALMAN 123 4007.84 2859.83
+Robot2 -1 -2.82162e-18
+Robot2 -1 -2.82162e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4007 2859
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000127, -0.000127), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.350139 -0.389996
+Robot1 -0.350139 -0.389996
+in transform 2975 4016.662381 2849.491758
+newxy : 4016.662381 2849.491758
+HOMEPOSE KALMAN 123 4016.66 2849.49
+Robot2 -1 -2.77196e-18
+Robot2 -1 -2.77196e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4016 2849
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.353241 -0.385034
+Robot1 -0.353241 -0.385034
+in transform 2975 4025.892967 2839.320616
+newxy : 4025.892967 2839.320616
+HOMEPOSE KALMAN 123 4025.89 2839.32
+Robot2 -1 -2.67121e-18
+Robot2 -1 -2.67121e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4025 2839
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000120, -0.000120), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.356479 -0.38016
+Robot1 -0.356479 -0.38016
+in transform 2975 4035.524899 2829.327734
+newxy : 4035.524899 2829.327734
+HOMEPOSE KALMAN 123 4035.52 2829.33
+Robot2 -1 -2.60637e-18
+Robot2 -1 -2.60637e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4035 2829
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.359849 -0.375376
+Robot1 -0.359849 -0.375376
+in transform 2975 4045.550960 2819.520648
+newxy : 4045.550960 2819.520648
+HOMEPOSE KALMAN 123 4045.55 2819.52
+Robot2 -1 -2.79036e-18
+Robot2 -1 -2.79036e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4045 2819
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000112, -0.000112), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.363349 -0.370686
+Robot1 -0.363349 -0.370686
+in transform 2975 4055.963610 2809.906744
+newxy : 4055.963610 2809.906744
+HOMEPOSE KALMAN 123 4055.96 2809.91
+Robot2 -1 -2.6527e-18
+Robot2 -1 -2.6527e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4055 2809
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000128, -0.000128), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.366976 -0.366094
+Robot1 -0.366976 -0.366094
+in transform 2975 4066.754989 2800.493248
+newxy : 4066.754989 2800.493248
+HOMEPOSE KALMAN 123 4066.75 2800.49
+Robot2 -1 -2.85382e-18
+Robot2 -1 -2.85382e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4066 2800
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.370728 -0.361604
+Robot1 -0.370728 -0.361604
+in transform 2975 4077.916942 2791.287223
+newxy : 4077.916942 2791.287223
+HOMEPOSE KALMAN 123 4077.92 2791.29
+Robot2 -1 -2.72443e-18
+Robot2 -1 -2.72443e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4077 2791
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.374602 -0.357217
+Robot1 -0.374602 -0.357217
+in transform 2975 4089.441048 2782.295573
+newxy : 4089.441048 2782.295573
+HOMEPOSE KALMAN 123 4089.44 2782.3
+Robot2 -1 -2.73323e-18
+Robot2 -1 -2.73323e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4089 2782
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000129, -0.000129), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.378594 -0.352939
+Robot1 -0.378594 -0.352939
+in transform 2975 4101.318636 2773.525052
+newxy : 4101.318636 2773.525052
+HOMEPOSE KALMAN 123 4101.32 2773.53
+Robot2 -1 -2.66769e-18
+Robot2 -1 -2.66769e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4101 2773
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000111, -0.000111), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.382703 -0.348772
+Robot1 -0.382703 -0.348772
+in transform 2975 4113.540800 2764.982265
+newxy : 4113.540800 2764.982265
+HOMEPOSE KALMAN 123 4113.54 2764.98
+Robot2 -1 -2.63096e-18
+Robot2 -1 -2.63096e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4113 2764
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000119, -0.000119), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.386924 -0.344719
+Robot1 -0.386924 -0.344719
+in transform 2975 4126.098383 2756.673663
+newxy : 4126.098383 2756.673663
+HOMEPOSE KALMAN 123 4126.1 2756.67
+Robot2 -1 -2.66766e-18
+Robot2 -1 -2.66766e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+1: state update
+Home Pose Kalman: 0 4968 615
+Home Pose Kalman: 1 4126 2756
+Home Pose Kalman: 2 5950 2050
+ computing done in kalman now
+sent velocity = (0, 0), vision velocity = (-0.000118, -0.000118), vision pos = (4968, 615)
+Received packet
+Bluenum 3
+in transform 2975 2975.000000 2050.000000
+0 0
+Robot0 -0.67 0.7
+Robot0 -0.67 0.7
+in transform 2975 4968.250050 615.000024
+newxy : 4968.250050 615.000024
+HOMEPOSE KALMAN 123 4968.25 615
+Robot1 -0.391254 -0.340783
+Robot1 -0.391254 -0.340783
+in transform 2975 4138.981972 2748.605524
+newxy : 4138.981972 2748.605524
+HOMEPOSE KALMAN 123 4138.98 2748.61
+Robot2 -1 -2.60282e-18
+Robot2 -1 -2.60282e-18
+in transform 2975 5950.000000 2050.000000
+newxy : 5950.000000 2050.000000
+HOMEPOSE KALMAN 123 5950 2050
+in transform 2975 981.749950 615.000024
+in transform 2975 981.749950 3484.999976
+in transform 2975 -0.000000 2050.000000
+ -394066873,71796993distance from ball: -1040329758
+ballpos: (8 344679424), botpos: (-394066873 71796993)
+BOTID 1 VELL 29.226 VELR 47.6606
+Bot Velocity(firacomm) 1: 29 47
+Exiting process

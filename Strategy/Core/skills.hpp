@@ -49,7 +49,10 @@ typedef Vector2D<int> Vec2D;
     /****************************************************List of Skills******************************************************/
     // Go to a point with obstacle avoidance.
     public:
-    Executor(const BeliefState* state, int botID) : SkillSet(state, botID){};
+    Executor(const BeliefState* state, int botID) : SkillSet(state, botID){
+
+        
+    };
 
     void GoToPoint(int botID,BeliefState *state,Vector2D<int> dpoint, float finalslope, bool increaseSpeed, bool shouldAlign)
     {
@@ -71,8 +74,9 @@ typedef Vector2D<int> Vec2D;
     void GoToPointStraight(int botID,BeliefState *state,Vector2D<int>dpoint,float finalslope, bool increaseSpeed, bool shouldAlign);
     
     // Go to ball: If shouldAlign is true, then bot will align with the line joining the ball and the goal else will go straightaway.
-    void GoToBall(int botID,BeliefState *state,bool shouldAlign)
+    void GoToBall(int botID,bool shouldAlign)
     {
+        printf(" %d,%d",state->homePos[1].x,state->homePos[1].y);
         setbotID(botID);
          Strategy::SParam param;
         param.GoToBallP.align=shouldAlign;

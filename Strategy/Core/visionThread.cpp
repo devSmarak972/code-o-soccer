@@ -33,7 +33,7 @@ namespace Strategy
     while (true)
     {
       // std::cout<<"Client "<<client<<std::endl;
-      if (client.receive(recvPacket))
+      if(client.receive(recvPacket))
       {
 		if (recvPacket.has_geometry()) {
 			SSL_GeometryData gfsize = recvPacket.geometry();

@@ -38,8 +38,8 @@ namespace Strategy
 		
 		if (param.GoToBallP.align==true)
 		{
-			// printf("distance from ball: %d\n",(Vector2D<int>::dist(ballInitialpos,state->homePos[botID])));
-			    // printf("ballpos: (%d %d), botpos: (%d %d)\n",ballInitialpos.x,ballInitialpos.y,state->homePos[botID].x,state->homePos[botID].y);
+			printf("distance from ball: %d\n",(Vector2D<int>::dist(ballInitialpos,state->homePos[botID])));
+			    printf("ballpos: (%d %d), botpos: (%d %d)\n",ballInitialpos.x,ballInitialpos.y,state->homePos[botID].x,state->homePos[botID].y);
 
 			if((Vector2D<int>::dist(ballInitialpos,state->homePos[botID]))>=BOT_BALL_THRESH)
 			{

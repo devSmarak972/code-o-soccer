@@ -12,9 +12,13 @@ using namespace Strategy;
 
 class Simpler : public Util::Thread,public Executor
 {
+  public:
+
+
   void attacker(BeliefState* state,int botID)
   {
     // attacker_skills->setbotID(botID);
+    
     if (Vec2D::dist(state->homePos[botID], state->ballPos) < BOT_RADIUS && state->ballPos.x > state->homePos[botID].x)
     {
 
@@ -25,7 +29,9 @@ class Simpler : public Util::Thread,public Executor
     }
     else
     {
-        GoToPoint(botID, state, state->ballPos, 0, true, true);
+      printf("go to point %d",state->homePos[1].x);
+      GoToBall(botID,true);
+        // GoToPoint(botID, state, state->ballPos, 0, true, true);
     }
 
   };
@@ -52,11 +58,12 @@ class Simpler : public Util::Thread,public Executor
   }
 public:
   bool &running;
-  BeliefState &state;
+  BeliefState &ustate;
 	// SkillSet* attacker_skills,defender_skills,goalkeeper_skills;
   // Executor* sexec;
   Simpler(bool &running_, BeliefState &state_):
-  running(running_),state(state_),Executor(&state,0) {}
+  running(running_),ustate(state_),Executor(&state_,0) {
+  }
   void game(BeliefState* state);
   void run();
 };

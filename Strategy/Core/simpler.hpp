@@ -36,20 +36,26 @@ void Simpler::run()
     {
 
     //      timer.start();
+    //   writer_mutex->enter();
 
-        kFilter.update(state);
-		state.update();
+		cout<<ustate.update()<< ": state update"<<endl;
+		// BeliefState& state1 = *state;
+
+		kFilter.update(ustate);
+
+    //   writer_mutex->leave();
 
 	  
 		int vl=0, vr=0;
 		// SkillSet::comm->getSentData(0, vl, vr);
-		printf( "sent velocity = (%d, %d), vision velocity = (%f, %f), vision pos = (%f, %f)\n", vl, vr, 
-		kFilter.homeVlVr[0].x, kFilter.homeVlVr[0].y, kFilter.homePose[0].x, kFilter.homePose[0].y);
+		printf( "sent velocity = (%d, %d), vision velocity = (%f, %f), vision pos = (%d, %d)\n", vl, vr, 
+		kFilter.homeVlVr[0].x, kFilter.homeVlVr[0].y, state->homePos[0].x, state->homePos[0].y);
         // SkillSet::comm->writeCombinedPacket();
    //**************************************** END OF TESTING ************************************************  
 
          usleep(16000);  // Adding sleep to this thread of execution to prevent CPU hogging
-      game(&state);
+      GoToBall(1,true);
+	//   game(&state);
 		// attacker_skills->goToBall(params);
 
     }
@@ -64,11 +70,11 @@ void Simpler::game(BeliefState* state)
 	{
 		if (state->ourBotNearestToBall == 2 || state->ballPos.x > 0) {
 			attacker(state, 2);
-			defender(state, 1);
+			// defender(state, 1);
 		}
 		else {
 			attacker(state, 1);
-			defender(state, 2);
+			// defender(state, 2);
 		}
-		goalkeeper(state, 0);
+		// goalkeeper(state, 0);
 	}

@@ -127,7 +127,8 @@ namespace Simulator
   static const int SEND_RATE         = 60;
   
   // THESE ARE THE NETWORK PROPERTIES
-  static const int   VISION_PORT  = 10020;
+  // static const int   VISION_PORT  = 10020;
+  static const int   VISION_PORT  = 10006;
   static const int   COMMAND_PORT = 20012;
   const char ADDRESS[]             = "224.5.23.2";
   const char INTER_FACE[]          = "";

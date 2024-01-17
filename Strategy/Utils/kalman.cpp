@@ -31,14 +31,14 @@ inline void linearTransform(double &x, double &y, float &newangle)
 {
 bool invert_field=FIELD_IS_INVERTED;
   double tempx, tempy;
-  // tempx = (y*(-HALF_FIELD_MAXX))/(2050.0);
-  // tempy = ((x + 3025.0/2)*(HALF_FIELD_MAXY))/(3025.0/2.0);
+  tempx = -1*SGN(-invert_field+0.5)*(x)*HALF_FIELD_MAXX;
+  tempy = -1*SGN(-invert_field+0.5)*(y)*HALF_FIELD_MAXY;
   // x = (int)tempx;
   // y = (int)tempy;
   // newangle = normalizeAngle(newangle+PI/2);
   // tempx = SGN(-invert_field+0.5)*(1-x)*HALF_FIELD_MAXX;
-  tempx = SGN(-invert_field+0.5)*(x)*HALF_FIELD_MAXX*2;
-  tempy = SGN(-invert_field+0.5)*(y)*HALF_FIELD_MAXY*2;
+  // tempx = x*HALF_FIELD_MAXX;
+  // tempy = y*HALF_FIELD_MAXY;
   x = tempx;
   y = tempy;
   printf("in transform %d %f %f\n",HALF_FIELD_MAXX,x,y);
@@ -279,13 +279,13 @@ namespace Strategy
     {
       ball = detection.balls(0);
 	  
-      int newx = ball.x() - CENTER_X;
-      int newy = ball.y() - CENTER_Y;
+      double newx = ball.x() - CENTER_X;
+      double newy = ball.y() - CENTER_Y;
       double delTime = timeCapture - ballLastUpdateTime;
 
       float garbage;
       #if GR_SIM_COMM || FIRASSL_COMM
-      linearTransform(newx, newy, garbage);
+      // linearTransform(newx, newy, garbage);
 	 // std::cout << "\n\n\nhere linear\n\n\n" << std::endl;
       #endif
       float  lastPoseX           = ballPose.x;
@@ -349,12 +349,14 @@ namespace Strategy
       for (int i = 0; i < blueNum; ++i)
       {
         SSL_DetectionRobot robot = detection.robots_blue(i);
-		
+		   
 		//Home Blue Bot Info
         int                id    = HAL::BlueMarkerMap[robot.robot_id()];
         
-        int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;
+        double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;
+
+        std::cout<<"NEWX "<<newx<<"NEWY "<<newy<<endl;
         float newangle = robot.orientation();
 //        printf("robot %d: %d %d %f\n", id, newx, newy, newangle);
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
@@ -363,7 +365,7 @@ namespace Strategy
        // printf("newxy : %d %d\n", newx, newy);
         
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -408,11 +410,11 @@ namespace Strategy
       {
         
         SSL_DetectionRobot robot = detection.robots_yellow(i);
-		int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;
+		double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -470,15 +472,15 @@ namespace Strategy
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
-        int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;   
+        double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;   
 		float newangle;
 		if(robot.has_orientation())
 			newangle = robot.orientation();
 		else
 			newangle = 0;
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -524,11 +526,11 @@ namespace Strategy
       for (int i = 0; i < blueNum; ++i)
       {        
         SSL_DetectionRobot robot = detection.robots_blue(i);        
-        int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;
+        double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -879,14 +881,16 @@ namespace Strategy
     {
       ball = frame.ball();
 
-      double newx = ball.x() - CENTER_X;
-      double newy = ball.y() - CENTER_Y;
+      double newx1 = ball.x() - CENTER_X;
+      double newy1 = ball.y() - CENTER_Y;
       // std::cout<<"Ball "<<newx<<" "<<newy<<std::endl;
       double delTime = timeCapture - ballLastUpdateTime;
 
       float garbage;
       #if GR_SIM_COMM || FIRASSL_COMM
-      linearTransform(newx, newy, garbage);
+      linearTransform(newx1, newy1, garbage);
+      int newx = (int)newx1;
+      int newy = (int)newy1;
 	 // std::cout << "\n\n\nhere linear\n\n\n" << std::endl;
       #endif
       float  lastPoseX           = ballPose.x;
@@ -956,9 +960,9 @@ namespace Strategy
         int                id    = HAL::BlueMarkerMap[robot.robot_id()];
         
         std::cout<<"Robot"<<i<<" "<<robot.x()<<" "<<robot.y()<<std::endl;
-        double newx = robot.x() - CENTER_X;
-        double newy = robot.y() - CENTER_Y;
-        std::cout<<"Robot"<<i<<" "<<newx<<" "<<newy<<std::endl;
+        double newx1 = robot.x() - CENTER_X;
+        double newy1 = robot.y() - CENTER_Y;
+        std::cout<<"Robot"<<i<<" "<<newx1<<" "<<newy1<<std::endl;
         float newangle = robot.orientation();
 //        printf("robot %d: %d %d %f\n", id, newx, newy, newangle);
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
@@ -966,10 +970,12 @@ namespace Strategy
         uniqueBotIDs.insert(id);
         
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        linearTransform(newx1, newy1, newangle);
+        int newx = (int)newx1;
+        int newy = (int)newy1;
         #endif
         #if FIRASSL_COMM
-        botcenterTransform(newx, newy, newangle);
+        // botcenterTransform(newx, newy, newangle);
         #endif
         double           delTime = timeCapture - homeLastUpdateTime[id];
         printf("newxy : %f %f\n", newx, newy);
@@ -1014,14 +1020,16 @@ namespace Strategy
       {
         
         fira_message::Robot robot = frame.robots_yellow(i);
-		    double newx = robot.x() - CENTER_X;
-        double newy = robot.y() - CENTER_Y;
+		    double newx1 = robot.x() - CENTER_X;
+        double newy1 = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        linearTransform(newx1, newy1, newangle);
+        int newx = (int)newx1;
+        int newy = (int)newy1;
         #endif
         #if FIRASSL_COMM
-        botcenterTransform(newx, newy, newangle);
+        // botcenterTransform(newx, newy, newangle);
         #endif
         //int                id    = HAL::YellowMarkerMap[robot.robot_id()];				
 				/* Arpit: Modifying code here to assuming that NO botid of opp team is known. Plz be careful!
@@ -1076,9 +1084,9 @@ namespace Strategy
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
-        double  newx = robot.x() - CENTER_X;
-        double newy = robot.y() - CENTER_Y;   
-        std::cout<<"Robot"<<i<<" "<<newx<<" "<<newy<<std::endl;
+        double  newx1 = robot.x() - CENTER_X;
+        double newy1 = robot.y() - CENTER_Y;   
+        std::cout<<"Robot"<<i<<" "<<newx1<<" "<<newy1<<std::endl;
 		float newangle;
 
 		if(robot.orientation())
@@ -1087,10 +1095,12 @@ namespace Strategy
 		// fiel = geometry.field();
 			newangle = 0;
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        linearTransform(newx1, newy1, newangle);
+        int newx = (int)newx1;
+        int newy = (int)newy1;
         #endif
         #if FIRASSL_COMM
-        botcenterTransform(newx, newy, newangle);
+        // botcenterTransform(newx, newy, newangle);
         #endif
         double           delTime = timeCapture - homeLastUpdateTime[id];
 	//	double timeMs = delTime ; //(nowTime - bsQ.front().second)*1000.0;
@@ -1133,14 +1143,17 @@ namespace Strategy
       for (int i = 0; i < blueNum; ++i)
       {        
         fira_message::Robot robot = frame.robots_blue(i);        
-        double newx = robot.x() - CENTER_X;
-        double newy = robot.y() - CENTER_Y;
+        double newx1 = robot.x() - CENTER_X;
+        double newy1 = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        linearTransform(newx1, newy1, newangle);
+
+        int newx = (int)newx1;
+        int newy = (int)newy1;
         #endif
         #if FIRASSL_COMM
-        botcenterTransform(newx, newy, newangle);
+        // botcenterTransform(newx, newy, newangle);
         #endif						
 				/* Arpit: Modifying code here to assuming that NO botid of opp team is known. Plz be careful!
 				 * Randomly assigning IDs to each bot. if less no. of bots know, then 0...i ids will be populated, 

@@ -19,7 +19,13 @@ void Simpler::run()
     VisionThread vThread(&kFilter);
     vThread.start();
     // PExec pExec(&state);
-
+  	unsigned char   refBoxCmdCounter = -1;
+  	HAL::RefBoxCmd  refBoxCmdSh;//  = new RefBoxCmd();
+  	#ifdef RUN_REFBOX
+    Util::CS        refBoxCS;//     = new CS();
+    RefBoxThread    refBoxThread = RefBoxThread::getInstance(&refBoxCmdSh, &refBoxCS);
+    refBoxThread.start();
+	#endif
 
     bool isRunning = true; 
     //    Util::Timer timer;
@@ -45,6 +51,26 @@ void Simpler::run()
 
     //   writer_mutex->leave();
 
+
+#ifdef RUN_REFBOX
+      {
+        // Critical Section protected by refBoxCS
+        refBoxCS.enter();
+        // Updating from Referee Box and the Game State
+      //  printf("refBoxCmdSh.cmdCounter = %d\n",refBoxCmdSh.cmdCounter);
+        if (refBoxCmdCounter != refBoxCmdSh.cmdCounter)
+        {
+          printf("GOT COMMAND FROM REFEREE!!!!\n");
+          ustate.refreeUpdated = true;
+          Util::Logger::toStdOut("Ref Box Updated to %d\n", refBoxCmdSh.cmdCounter);
+          refBoxCmdCounter      = refBoxCmdSh.cmdCounter;
+          ustate.updateStateFromRefree(refBoxCmdSh);
+        }
+		printf("%d\t%d\n",refBoxCmdSh.goalsBlue,refBoxCmdSh.goalsYellow);
+        refBoxCS.leave();
+      } // End of Critical Section protected by refBoxCS
+#endif // RUN_REFBOX
+
 	  
 		int vl=0, vr=0;
 		// SkillSet::comm->getSentData(0, vl, vr);
@@ -54,8 +80,9 @@ void Simpler::run()
    //**************************************** END OF TESTING ************************************************  
 
          usleep(16000);  // Adding sleep to this thread of execution to prevent CPU hogging
-      GoToBall(1,true);
-	//   game(&state);
+		 cout<<"Before sending ustate halted "<<state->pr_gameRunning<<endl;
+    //   GoToBall(1,true);
+	  	game(&ustate);
 		// attacker_skills->goToBall(params);
 
     }
@@ -68,13 +95,27 @@ void Simpler::run()
 
 void Simpler::game(BeliefState* state)
 	{
-		if (state->ourBotNearestToBall == 2 || state->ballPos.x > 0) {
-			attacker(state, 2);
-			// defender(state, 1);
+		cout<<"Inside game"<<endl;
+
+		if(state->pr_gameRunning){
+			cout<<"Inside not haulted"<<endl;
+			GoToBall(1,true);
+		} 
+		else{
+			std::cout<<"Inside haulted"<<std::endl;
+			comm->sendCommand(1,0,0);
+			comm->sendCommand(0,0,0);
+			comm->sendCommand(2,0,0);
 		}
-		else {
-			attacker(state, 1);
-			// defender(state, 2);
-		}
-		// goalkeeper(state, 0);
+
+
+		// if (state->ourBotNearestToBall == 2 || state->ballPos.x > 0) {
+		// 	attacker(state, 2);
+		// 	// defender(state, 1);
+		// }
+		// else {
+		// 	attacker(state, 1);
+		// 	// defender(state, 2);
+		// }
+		// // goalkeeper(state, 0);
 	}

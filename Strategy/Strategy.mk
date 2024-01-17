@@ -7,8 +7,8 @@ ProjectName            :=Strategy
 ConfigurationName      :=Debug
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
-WorkspacePath          := "/home/smarak/krssg/mirosot/modified-korea"
-ProjectPath            := "/home/smarak/krssg/mirosot/modified-korea/Strategy"
+WorkspacePath          := "/home/chinmay/KRSSG_ALL/code-o-soccer"
+ProjectPath            := "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy"
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
@@ -36,7 +36,7 @@ ObjectSwitch           :=-o
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
 MakeDirCommand         :=mkdir -p
-CmpOptions             :=-g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UGR_SIM_COMM -UVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -URUN_REFBOX -DUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   $(Preprocessors)
+CmpOptions             :=-g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UBOT_COMM  -UGR_SIM_COMM -UVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -DRUN_REFBOX -UUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   $(Preprocessors)
 LinkOptions            :=  -pthread -lm  -lgsl -lgslcblas -lX11
 IncludePath            :=  "$(IncludeSwitch)../common/include" "$(IncludeSwitch)../common/gpb/proto/cpp" "$(IncludeSwitch)../common/dlib" "$(IncludeSwitch)Tactics" "$(IncludeSwitch)Skills" "$(IncludeSwitch)Plays/core" "$(IncludeSwitch)Plays/playbook" "$(IncludeSwitch)Utils" "$(IncludeSwitch)Learning" "$(IncludeSwitch)HAL" "$(IncludeSwitch)Core" "$(IncludeSwitch)." "$(IncludeSwitch)/usr/include/qt4" "$(IncludeSwitch)/usr/include/opencv4" "$(IncludeSwitch)." "$(IncludeSwitch)/usr/include"  
 RcIncludePath          :=
@@ -78,714 +78,714 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/dlib_source$(ObjectSuffix): ../common/dlib/dlib/all/source.cpp
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/dlib/dlib/all/source.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/dlib_source$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/dlib/dlib/all/source.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/dlib_source$(ObjectSuffix) $(IncludePath)
 
 $(IntermediateDirectory)/Skills_sVelocity$(ObjectSuffix): Skills/sVelocity.cpp $(IntermediateDirectory)/Skills_sVelocity$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sVelocity.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sVelocity$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sVelocity.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sVelocity$(ObjectSuffix) $(IncludePath)
 
 $(IntermediateDirectory)/Skills_sVelocity$(DependSuffix): Skills/sVelocity.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sVelocity$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sVelocity$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sVelocity.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sVelocity$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sVelocity$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sVelocity.cpp"
 
 $(IntermediateDirectory)/Skills_sVelocity$(PreprocessSuffix): Skills/sVelocity.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sVelocity$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sVelocity.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sVelocity$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sVelocity.cpp"
 
 $(IntermediateDirectory)/Skills_sTurnToAngle$(ObjectSuffix): Skills/sTurnToAngle.cpp $(IntermediateDirectory)/Skills_sTurnToAngle$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sTurnToAngle.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sTurnToAngle$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sTurnToAngle.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sTurnToAngle$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sTurnToAngle$(DependSuffix): Skills/sTurnToAngle.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sTurnToAngle$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sTurnToAngle$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sTurnToAngle.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sTurnToAngle$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sTurnToAngle$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sTurnToAngle.cpp"
 
 $(IntermediateDirectory)/Skills_sTurnToAngle$(PreprocessSuffix): Skills/sTurnToAngle.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sTurnToAngle$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sTurnToAngle.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sTurnToAngle$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sTurnToAngle.cpp"
 
 $(IntermediateDirectory)/Skills_sStop$(ObjectSuffix): Skills/sStop.cpp $(IntermediateDirectory)/Skills_sStop$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sStop.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sStop$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sStop.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sStop$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sStop$(DependSuffix): Skills/sStop.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sStop$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sStop$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sStop.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sStop$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sStop$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sStop.cpp"
 
 $(IntermediateDirectory)/Skills_sStop$(PreprocessSuffix): Skills/sStop.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sStop$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sStop.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sStop$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sStop.cpp"
 
 $(IntermediateDirectory)/Skills_sSpin$(ObjectSuffix): Skills/sSpin.cpp $(IntermediateDirectory)/Skills_sSpin$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sSpin.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sSpin$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sSpin.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sSpin$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sSpin$(DependSuffix): Skills/sSpin.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sSpin$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sSpin$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sSpin.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sSpin$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sSpin$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sSpin.cpp"
 
 $(IntermediateDirectory)/Skills_sSpin$(PreprocessSuffix): Skills/sSpin.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sSpin$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sSpin.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sSpin$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sSpin.cpp"
 
 $(IntermediateDirectory)/Skills_sGoToPoint$(ObjectSuffix): Skills/sGoToPoint.cpp $(IntermediateDirectory)/Skills_sGoToPoint$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoToPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sGoToPoint$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoToPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sGoToPoint$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sGoToPoint$(DependSuffix): Skills/sGoToPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sGoToPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sGoToPoint$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoToPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sGoToPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sGoToPoint$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoToPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sGoToPoint$(PreprocessSuffix): Skills/sGoToPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sGoToPoint$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoToPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sGoToPoint$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoToPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sGoToBall$(ObjectSuffix): Skills/sGoToBall.cpp $(IntermediateDirectory)/Skills_sGoToBall$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoToBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sGoToBall$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoToBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sGoToBall$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sGoToBall$(DependSuffix): Skills/sGoToBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sGoToBall$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sGoToBall$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoToBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sGoToBall$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sGoToBall$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoToBall.cpp"
 
 $(IntermediateDirectory)/Skills_sGoToBall$(PreprocessSuffix): Skills/sGoToBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sGoToBall$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoToBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sGoToBall$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoToBall.cpp"
 
 $(IntermediateDirectory)/Skills_sDefendPoint$(ObjectSuffix): Skills/sDefendPoint.cpp $(IntermediateDirectory)/Skills_sDefendPoint$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sDefendPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sDefendPoint$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sDefendPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sDefendPoint$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sDefendPoint$(DependSuffix): Skills/sDefendPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sDefendPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sDefendPoint$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sDefendPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sDefendPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sDefendPoint$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sDefendPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sDefendPoint$(PreprocessSuffix): Skills/sDefendPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sDefendPoint$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sDefendPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sDefendPoint$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sDefendPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sChargeBall$(ObjectSuffix): Skills/sChargeBall.cpp $(IntermediateDirectory)/Skills_sChargeBall$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sChargeBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sChargeBall$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sChargeBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sChargeBall$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sChargeBall$(DependSuffix): Skills/sChargeBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sChargeBall$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sChargeBall$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sChargeBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sChargeBall$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sChargeBall$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sChargeBall.cpp"
 
 $(IntermediateDirectory)/Skills_sChargeBall$(PreprocessSuffix): Skills/sChargeBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sChargeBall$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sChargeBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sChargeBall$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sChargeBall.cpp"
 
 $(IntermediateDirectory)/Skills_sSplineGoToPoint$(ObjectSuffix): Skills/sSplineGoToPoint.cpp $(IntermediateDirectory)/Skills_sSplineGoToPoint$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sSplineGoToPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sSplineGoToPoint$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sSplineGoToPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sSplineGoToPoint$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sSplineGoToPoint$(DependSuffix): Skills/sSplineGoToPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sSplineGoToPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sSplineGoToPoint$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sSplineGoToPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sSplineGoToPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sSplineGoToPoint$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sSplineGoToPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sSplineGoToPoint$(PreprocessSuffix): Skills/sSplineGoToPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sSplineGoToPoint$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sSplineGoToPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sSplineGoToPoint$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sSplineGoToPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sDWGoToPoint$(ObjectSuffix): Skills/sDWGoToPoint.cpp $(IntermediateDirectory)/Skills_sDWGoToPoint$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sDWGoToPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sDWGoToPoint$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sDWGoToPoint.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sDWGoToPoint$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sDWGoToPoint$(DependSuffix): Skills/sDWGoToPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sDWGoToPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sDWGoToPoint$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sDWGoToPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sDWGoToPoint$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sDWGoToPoint$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sDWGoToPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sDWGoToPoint$(PreprocessSuffix): Skills/sDWGoToPoint.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sDWGoToPoint$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sDWGoToPoint.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sDWGoToPoint$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sDWGoToPoint.cpp"
 
 $(IntermediateDirectory)/Skills_sGoBehindBall$(ObjectSuffix): Skills/sGoBehindBall.cpp $(IntermediateDirectory)/Skills_sGoBehindBall$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoBehindBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sGoBehindBall$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoBehindBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_sGoBehindBall$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_sGoBehindBall$(DependSuffix): Skills/sGoBehindBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sGoBehindBall$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sGoBehindBall$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoBehindBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_sGoBehindBall$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_sGoBehindBall$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoBehindBall.cpp"
 
 $(IntermediateDirectory)/Skills_sGoBehindBall$(PreprocessSuffix): Skills/sGoBehindBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sGoBehindBall$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/sGoBehindBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_sGoBehindBall$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/sGoBehindBall.cpp"
 
 $(IntermediateDirectory)/sSplineInterceptBall$(ObjectSuffix): sSplineInterceptBall.cpp $(IntermediateDirectory)/sSplineInterceptBall$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/sSplineInterceptBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/sSplineInterceptBall$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/sSplineInterceptBall.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/sSplineInterceptBall$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/sSplineInterceptBall$(DependSuffix): sSplineInterceptBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/sSplineInterceptBall$(ObjectSuffix) -MF$(IntermediateDirectory)/sSplineInterceptBall$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/sSplineInterceptBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/sSplineInterceptBall$(ObjectSuffix) -MF$(IntermediateDirectory)/sSplineInterceptBall$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/sSplineInterceptBall.cpp"
 
 $(IntermediateDirectory)/sSplineInterceptBall$(PreprocessSuffix): sSplineInterceptBall.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/sSplineInterceptBall$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/sSplineInterceptBall.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/sSplineInterceptBall$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/sSplineInterceptBall.cpp"
 
 $(IntermediateDirectory)/Skills_skillSet$(ObjectSuffix): Skills/skillSet.cpp $(IntermediateDirectory)/Skills_skillSet$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/skillSet.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_skillSet$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/skillSet.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_skillSet$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_skillSet$(DependSuffix): Skills/skillSet.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_skillSet$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_skillSet$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/skillSet.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_skillSet$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_skillSet$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/skillSet.cpp"
 
 $(IntermediateDirectory)/Skills_skillSet$(PreprocessSuffix): Skills/skillSet.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_skillSet$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/skillSet.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_skillSet$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/skillSet.cpp"
 
 $(IntermediateDirectory)/Skills_tracking$(ObjectSuffix): Skills/tracking.cpp $(IntermediateDirectory)/Skills_tracking$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/tracking.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_tracking$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/tracking.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_tracking$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_tracking$(DependSuffix): Skills/tracking.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_tracking$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_tracking$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/tracking.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_tracking$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_tracking$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/tracking.cpp"
 
 $(IntermediateDirectory)/Skills_tracking$(PreprocessSuffix): Skills/tracking.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_tracking$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/tracking.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_tracking$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/tracking.cpp"
 
 $(IntermediateDirectory)/Skills_trajectory$(ObjectSuffix): Skills/trajectory.cpp $(IntermediateDirectory)/Skills_trajectory$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/trajectory.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_trajectory$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/trajectory.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_trajectory$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_trajectory$(DependSuffix): Skills/trajectory.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_trajectory$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_trajectory$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/trajectory.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_trajectory$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_trajectory$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/trajectory.cpp"
 
 $(IntermediateDirectory)/Skills_trajectory$(PreprocessSuffix): Skills/trajectory.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_trajectory$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/trajectory.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_trajectory$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/trajectory.cpp"
 
 $(IntermediateDirectory)/Skills_velocity-profile$(ObjectSuffix): Skills/velocity-profile.cpp $(IntermediateDirectory)/Skills_velocity-profile$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/velocity-profile.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_velocity-profile$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/velocity-profile.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_velocity-profile$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_velocity-profile$(DependSuffix): Skills/velocity-profile.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_velocity-profile$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_velocity-profile$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/velocity-profile.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_velocity-profile$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_velocity-profile$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/velocity-profile.cpp"
 
 $(IntermediateDirectory)/Skills_velocity-profile$(PreprocessSuffix): Skills/velocity-profile.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_velocity-profile$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/velocity-profile.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_velocity-profile$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/velocity-profile.cpp"
 
 $(IntermediateDirectory)/Skills_splines$(ObjectSuffix): Skills/splines.cpp $(IntermediateDirectory)/Skills_splines$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/splines.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_splines$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/splines.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_splines$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_splines$(DependSuffix): Skills/splines.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_splines$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_splines$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/splines.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_splines$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_splines$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/splines.cpp"
 
 $(IntermediateDirectory)/Skills_splines$(PreprocessSuffix): Skills/splines.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_splines$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/splines.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_splines$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/splines.cpp"
 
 $(IntermediateDirectory)/Skills_arclength-param$(ObjectSuffix): Skills/arclength-param.cpp $(IntermediateDirectory)/Skills_arclength-param$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/arclength-param.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_arclength-param$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/arclength-param.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_arclength-param$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_arclength-param$(DependSuffix): Skills/arclength-param.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_arclength-param$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_arclength-param$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/arclength-param.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_arclength-param$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_arclength-param$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/arclength-param.cpp"
 
 $(IntermediateDirectory)/Skills_arclength-param$(PreprocessSuffix): Skills/arclength-param.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_arclength-param$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/arclength-param.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_arclength-param$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/arclength-param.cpp"
 
 $(IntermediateDirectory)/Skills_pose$(ObjectSuffix): Skills/pose.cpp $(IntermediateDirectory)/Skills_pose$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/pose.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_pose$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/pose.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_pose$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_pose$(DependSuffix): Skills/pose.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_pose$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_pose$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/pose.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_pose$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_pose$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/pose.cpp"
 
 $(IntermediateDirectory)/Skills_pose$(PreprocessSuffix): Skills/pose.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_pose$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/pose.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_pose$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/pose.cpp"
 
 $(IntermediateDirectory)/alglib_alglibinternal$(ObjectSuffix): Skills/alglib/alglibinternal.cpp $(IntermediateDirectory)/alglib_alglibinternal$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/alglibinternal.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_alglibinternal$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/alglibinternal.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_alglibinternal$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_alglibinternal$(DependSuffix): Skills/alglib/alglibinternal.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_alglibinternal$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_alglibinternal$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/alglibinternal.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_alglibinternal$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_alglibinternal$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/alglibinternal.cpp"
 
 $(IntermediateDirectory)/alglib_alglibinternal$(PreprocessSuffix): Skills/alglib/alglibinternal.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_alglibinternal$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/alglibinternal.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_alglibinternal$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/alglibinternal.cpp"
 
 $(IntermediateDirectory)/alglib_alglibmisc$(ObjectSuffix): Skills/alglib/alglibmisc.cpp $(IntermediateDirectory)/alglib_alglibmisc$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/alglibmisc.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_alglibmisc$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/alglibmisc.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_alglibmisc$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_alglibmisc$(DependSuffix): Skills/alglib/alglibmisc.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_alglibmisc$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_alglibmisc$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/alglibmisc.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_alglibmisc$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_alglibmisc$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/alglibmisc.cpp"
 
 $(IntermediateDirectory)/alglib_alglibmisc$(PreprocessSuffix): Skills/alglib/alglibmisc.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_alglibmisc$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/alglibmisc.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_alglibmisc$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/alglibmisc.cpp"
 
 $(IntermediateDirectory)/alglib_ap$(ObjectSuffix): Skills/alglib/ap.cpp $(IntermediateDirectory)/alglib_ap$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/ap.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_ap$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/ap.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_ap$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_ap$(DependSuffix): Skills/alglib/ap.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_ap$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_ap$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/ap.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_ap$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_ap$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/ap.cpp"
 
 $(IntermediateDirectory)/alglib_ap$(PreprocessSuffix): Skills/alglib/ap.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_ap$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/ap.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_ap$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/ap.cpp"
 
 $(IntermediateDirectory)/alglib_dataanalysis$(ObjectSuffix): Skills/alglib/dataanalysis.cpp $(IntermediateDirectory)/alglib_dataanalysis$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/dataanalysis.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_dataanalysis$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/dataanalysis.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_dataanalysis$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_dataanalysis$(DependSuffix): Skills/alglib/dataanalysis.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_dataanalysis$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_dataanalysis$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/dataanalysis.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_dataanalysis$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_dataanalysis$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/dataanalysis.cpp"
 
 $(IntermediateDirectory)/alglib_dataanalysis$(PreprocessSuffix): Skills/alglib/dataanalysis.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_dataanalysis$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/dataanalysis.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_dataanalysis$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/dataanalysis.cpp"
 
 $(IntermediateDirectory)/alglib_diffequations$(ObjectSuffix): Skills/alglib/diffequations.cpp $(IntermediateDirectory)/alglib_diffequations$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/diffequations.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_diffequations$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/diffequations.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_diffequations$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_diffequations$(DependSuffix): Skills/alglib/diffequations.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_diffequations$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_diffequations$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/diffequations.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_diffequations$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_diffequations$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/diffequations.cpp"
 
 $(IntermediateDirectory)/alglib_diffequations$(PreprocessSuffix): Skills/alglib/diffequations.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_diffequations$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/diffequations.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_diffequations$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/diffequations.cpp"
 
 $(IntermediateDirectory)/alglib_fasttransforms$(ObjectSuffix): Skills/alglib/fasttransforms.cpp $(IntermediateDirectory)/alglib_fasttransforms$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/fasttransforms.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_fasttransforms$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/fasttransforms.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_fasttransforms$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_fasttransforms$(DependSuffix): Skills/alglib/fasttransforms.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_fasttransforms$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_fasttransforms$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/fasttransforms.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_fasttransforms$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_fasttransforms$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/fasttransforms.cpp"
 
 $(IntermediateDirectory)/alglib_fasttransforms$(PreprocessSuffix): Skills/alglib/fasttransforms.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_fasttransforms$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/fasttransforms.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_fasttransforms$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/fasttransforms.cpp"
 
 $(IntermediateDirectory)/alglib_integration$(ObjectSuffix): Skills/alglib/integration.cpp $(IntermediateDirectory)/alglib_integration$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/integration.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_integration$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/integration.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_integration$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_integration$(DependSuffix): Skills/alglib/integration.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_integration$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_integration$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/integration.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_integration$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_integration$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/integration.cpp"
 
 $(IntermediateDirectory)/alglib_integration$(PreprocessSuffix): Skills/alglib/integration.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_integration$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/integration.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_integration$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/integration.cpp"
 
 $(IntermediateDirectory)/alglib_interpolation$(ObjectSuffix): Skills/alglib/interpolation.cpp $(IntermediateDirectory)/alglib_interpolation$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/interpolation.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_interpolation$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/interpolation.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_interpolation$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_interpolation$(DependSuffix): Skills/alglib/interpolation.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_interpolation$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_interpolation$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/interpolation.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_interpolation$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_interpolation$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/interpolation.cpp"
 
 $(IntermediateDirectory)/alglib_interpolation$(PreprocessSuffix): Skills/alglib/interpolation.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_interpolation$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/interpolation.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_interpolation$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/interpolation.cpp"
 
 $(IntermediateDirectory)/alglib_linalg$(ObjectSuffix): Skills/alglib/linalg.cpp $(IntermediateDirectory)/alglib_linalg$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/linalg.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_linalg$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/linalg.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_linalg$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_linalg$(DependSuffix): Skills/alglib/linalg.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_linalg$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_linalg$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/linalg.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_linalg$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_linalg$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/linalg.cpp"
 
 $(IntermediateDirectory)/alglib_linalg$(PreprocessSuffix): Skills/alglib/linalg.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_linalg$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/linalg.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_linalg$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/linalg.cpp"
 
 $(IntermediateDirectory)/alglib_optimization$(ObjectSuffix): Skills/alglib/optimization.cpp $(IntermediateDirectory)/alglib_optimization$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/optimization.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_optimization$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/optimization.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_optimization$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_optimization$(DependSuffix): Skills/alglib/optimization.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_optimization$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_optimization$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/optimization.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_optimization$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_optimization$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/optimization.cpp"
 
 $(IntermediateDirectory)/alglib_optimization$(PreprocessSuffix): Skills/alglib/optimization.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_optimization$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/optimization.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_optimization$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/optimization.cpp"
 
 $(IntermediateDirectory)/alglib_solvers$(ObjectSuffix): Skills/alglib/solvers.cpp $(IntermediateDirectory)/alglib_solvers$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/solvers.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_solvers$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/solvers.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_solvers$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_solvers$(DependSuffix): Skills/alglib/solvers.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_solvers$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_solvers$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/solvers.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_solvers$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_solvers$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/solvers.cpp"
 
 $(IntermediateDirectory)/alglib_solvers$(PreprocessSuffix): Skills/alglib/solvers.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_solvers$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/solvers.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_solvers$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/solvers.cpp"
 
 $(IntermediateDirectory)/alglib_specialfunctions$(ObjectSuffix): Skills/alglib/specialfunctions.cpp $(IntermediateDirectory)/alglib_specialfunctions$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/specialfunctions.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_specialfunctions$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/specialfunctions.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_specialfunctions$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_specialfunctions$(DependSuffix): Skills/alglib/specialfunctions.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_specialfunctions$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_specialfunctions$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/specialfunctions.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_specialfunctions$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_specialfunctions$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/specialfunctions.cpp"
 
 $(IntermediateDirectory)/alglib_specialfunctions$(PreprocessSuffix): Skills/alglib/specialfunctions.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_specialfunctions$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/specialfunctions.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_specialfunctions$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/specialfunctions.cpp"
 
 $(IntermediateDirectory)/alglib_statistics$(ObjectSuffix): Skills/alglib/statistics.cpp $(IntermediateDirectory)/alglib_statistics$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/statistics.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_statistics$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/statistics.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/alglib_statistics$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/alglib_statistics$(DependSuffix): Skills/alglib/statistics.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_statistics$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_statistics$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/statistics.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/alglib_statistics$(ObjectSuffix) -MF$(IntermediateDirectory)/alglib_statistics$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/statistics.cpp"
 
 $(IntermediateDirectory)/alglib_statistics$(PreprocessSuffix): Skills/alglib/statistics.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_statistics$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/alglib/statistics.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/alglib_statistics$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/alglib/statistics.cpp"
 
 $(IntermediateDirectory)/Skills_controller-wrapper$(ObjectSuffix): Skills/controller-wrapper.cpp $(IntermediateDirectory)/Skills_controller-wrapper$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/controller-wrapper.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_controller-wrapper$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/controller-wrapper.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_controller-wrapper$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_controller-wrapper$(DependSuffix): Skills/controller-wrapper.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_controller-wrapper$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_controller-wrapper$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/controller-wrapper.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_controller-wrapper$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_controller-wrapper$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/controller-wrapper.cpp"
 
 $(IntermediateDirectory)/Skills_controller-wrapper$(PreprocessSuffix): Skills/controller-wrapper.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_controller-wrapper$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/controller-wrapper.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_controller-wrapper$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/controller-wrapper.cpp"
 
 $(IntermediateDirectory)/Skills_controllers$(ObjectSuffix): Skills/controllers.cpp $(IntermediateDirectory)/Skills_controllers$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/controllers.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_controllers$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/controllers.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_controllers$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_controllers$(DependSuffix): Skills/controllers.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_controllers$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_controllers$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/controllers.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_controllers$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_controllers$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/controllers.cpp"
 
 $(IntermediateDirectory)/Skills_controllers$(PreprocessSuffix): Skills/controllers.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_controllers$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/controllers.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_controllers$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/controllers.cpp"
 
 $(IntermediateDirectory)/Skills_trajectory-generators$(ObjectSuffix): Skills/trajectory-generators.cpp $(IntermediateDirectory)/Skills_trajectory-generators$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/trajectory-generators.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_trajectory-generators$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/trajectory-generators.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_trajectory-generators$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_trajectory-generators$(DependSuffix): Skills/trajectory-generators.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_trajectory-generators$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_trajectory-generators$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/trajectory-generators.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_trajectory-generators$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_trajectory-generators$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/trajectory-generators.cpp"
 
 $(IntermediateDirectory)/Skills_trajectory-generators$(PreprocessSuffix): Skills/trajectory-generators.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_trajectory-generators$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/trajectory-generators.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_trajectory-generators$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/trajectory-generators.cpp"
 
 $(IntermediateDirectory)/Skills_ballinterception$(ObjectSuffix): Skills/ballinterception.cpp $(IntermediateDirectory)/Skills_ballinterception$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/ballinterception.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_ballinterception$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/ballinterception.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_ballinterception$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_ballinterception$(DependSuffix): Skills/ballinterception.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_ballinterception$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_ballinterception$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/ballinterception.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_ballinterception$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_ballinterception$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/ballinterception.cpp"
 
 $(IntermediateDirectory)/Skills_ballinterception$(PreprocessSuffix): Skills/ballinterception.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_ballinterception$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/ballinterception.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_ballinterception$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/ballinterception.cpp"
 
 $(IntermediateDirectory)/Skills_collision-checking$(ObjectSuffix): Skills/collision-checking.cpp $(IntermediateDirectory)/Skills_collision-checking$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/collision-checking.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_collision-checking$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/collision-checking.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Skills_collision-checking$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Skills_collision-checking$(DependSuffix): Skills/collision-checking.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_collision-checking$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_collision-checking$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/collision-checking.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Skills_collision-checking$(ObjectSuffix) -MF$(IntermediateDirectory)/Skills_collision-checking$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/collision-checking.cpp"
 
 $(IntermediateDirectory)/Skills_collision-checking$(PreprocessSuffix): Skills/collision-checking.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_collision-checking$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Skills/collision-checking.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Skills_collision-checking$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Skills/collision-checking.cpp"
 
 $(IntermediateDirectory)/Core_visionThread$(ObjectSuffix): Core/visionThread.cpp $(IntermediateDirectory)/Core_visionThread$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/visionThread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_visionThread$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/visionThread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_visionThread$(ObjectSuffix) $(IncludePath)
 
 $(IntermediateDirectory)/Core_visionThread$(DependSuffix): Core/visionThread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_visionThread$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_visionThread$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/visionThread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_visionThread$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_visionThread$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/visionThread.cpp"
 
 $(IntermediateDirectory)/Core_visionThread$(PreprocessSuffix): Core/visionThread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_visionThread$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/visionThread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_visionThread$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/visionThread.cpp"
 
 # $(IntermediateDirectory)/Core_attacker$(ObjectSuffix): Core/attacker.hpp $(IntermediateDirectory)/Core_attacker$(DependSuffix)
-# 	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/attacker.hpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_attacker$(ObjectSuffix) $(IncludePath)
+# 	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/attacker.hpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_attacker$(ObjectSuffix) $(IncludePath)
 
 # $(IntermediateDirectory)/Core_attacker$(DependSuffix): Core/attacker.hpp
-# 	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_attacker$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_attacker$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/attacker.hpp"
+# 	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_attacker$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_attacker$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/attacker.hpp"
 # $(IntermediateDirectory)/Core_attacker$(PreprocessSuffix): Core/attacker.hpp
-# 	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_attacker$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/attacker.hpp"
+# 	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_attacker$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/attacker.hpp"
 
 
 
 $(IntermediateDirectory)/Core_refBoxThread$(ObjectSuffix): Core/refBoxThread.cpp $(IntermediateDirectory)/Core_refBoxThread$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/refBoxThread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_refBoxThread$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/refBoxThread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_refBoxThread$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Core_refBoxThread$(DependSuffix): Core/refBoxThread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_refBoxThread$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_refBoxThread$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/refBoxThread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_refBoxThread$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_refBoxThread$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/refBoxThread.cpp"
 
 $(IntermediateDirectory)/Core_refBoxThread$(PreprocessSuffix): Core/refBoxThread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_refBoxThread$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/refBoxThread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_refBoxThread$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/refBoxThread.cpp"
 
 $(IntermediateDirectory)/Core_client$(ObjectSuffix): Core/client.cpp $(IntermediateDirectory)/Core_client$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/client.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_client$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/client.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_client$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Core_client$(DependSuffix): Core/client.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_client$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_client$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/client.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_client$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_client$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/client.cpp"
 
 $(IntermediateDirectory)/Core_client$(PreprocessSuffix): Core/client.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_client$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/client.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_client$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/client.cpp"
 
 $(IntermediateDirectory)/Core_beliefState$(ObjectSuffix): Core/beliefState.cpp $(IntermediateDirectory)/Core_beliefState$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/beliefState.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_beliefState$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/beliefState.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_beliefState$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Core_beliefState$(DependSuffix): Core/beliefState.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_beliefState$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_beliefState$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/beliefState.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_beliefState$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_beliefState$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/beliefState.cpp"
 
 $(IntermediateDirectory)/Core_beliefState$(PreprocessSuffix): Core/beliefState.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_beliefState$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/beliefState.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_beliefState$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/beliefState.cpp"
 
 $(IntermediateDirectory)/Core_strategygui_thread$(ObjectSuffix): Core/strategygui_thread.cpp $(IntermediateDirectory)/Core_strategygui_thread$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/strategygui_thread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_strategygui_thread$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/strategygui_thread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_strategygui_thread$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Core_strategygui_thread$(DependSuffix): Core/strategygui_thread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_strategygui_thread$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_strategygui_thread$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/strategygui_thread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_strategygui_thread$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_strategygui_thread$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/strategygui_thread.cpp"
 
 $(IntermediateDirectory)/Core_strategygui_thread$(PreprocessSuffix): Core/strategygui_thread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_strategygui_thread$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/strategygui_thread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_strategygui_thread$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/strategygui_thread.cpp"
 
 $(IntermediateDirectory)/main$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main$(DependSuffix): main.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/main.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/main.cpp"
 
 $(IntermediateDirectory)/main$(PreprocessSuffix): main.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/main.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/main.cpp"
 
 $(IntermediateDirectory)/Core_command-packet.pb$(ObjectSuffix): Core/command-packet.pb.cc $(IntermediateDirectory)/Core_command-packet.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/command-packet.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_command-packet.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/command-packet.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Core_command-packet.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Core_command-packet.pb$(DependSuffix): Core/command-packet.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_command-packet.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_command-packet.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/command-packet.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Core_command-packet.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/Core_command-packet.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/command-packet.pb.cc"
 
 $(IntermediateDirectory)/Core_command-packet.pb$(PreprocessSuffix): Core/command-packet.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_command-packet.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Core/command-packet.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Core_command-packet.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Core/command-packet.pb.cc"
 
 $(IntermediateDirectory)/core_ps$(ObjectSuffix): Plays/core/ps.cpp $(IntermediateDirectory)/core_ps$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/ps.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_ps$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/ps.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_ps$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/core_ps$(DependSuffix): Plays/core/ps.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_ps$(ObjectSuffix) -MF$(IntermediateDirectory)/core_ps$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/ps.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_ps$(ObjectSuffix) -MF$(IntermediateDirectory)/core_ps$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/ps.cpp"
 
 $(IntermediateDirectory)/core_ps$(PreprocessSuffix): Plays/core/ps.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_ps$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/ps.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_ps$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/ps.cpp"
 
 $(IntermediateDirectory)/core_playBook$(ObjectSuffix): Plays/core/playBook.cpp $(IntermediateDirectory)/core_playBook$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/playBook.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_playBook$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/playBook.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_playBook$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/core_playBook$(DependSuffix): Plays/core/playBook.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_playBook$(ObjectSuffix) -MF$(IntermediateDirectory)/core_playBook$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/playBook.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_playBook$(ObjectSuffix) -MF$(IntermediateDirectory)/core_playBook$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/playBook.cpp"
 
 $(IntermediateDirectory)/core_playBook$(PreprocessSuffix): Plays/core/playBook.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_playBook$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/playBook.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_playBook$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/playBook.cpp"
 
 $(IntermediateDirectory)/core_pExec$(ObjectSuffix): Plays/core/pExec.cpp $(IntermediateDirectory)/core_pExec$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/pExec.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_pExec$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/pExec.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_pExec$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/core_pExec$(DependSuffix): Plays/core/pExec.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_pExec$(ObjectSuffix) -MF$(IntermediateDirectory)/core_pExec$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/pExec.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_pExec$(ObjectSuffix) -MF$(IntermediateDirectory)/core_pExec$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/pExec.cpp"
 
 $(IntermediateDirectory)/core_pExec$(PreprocessSuffix): Plays/core/pExec.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_pExec$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/pExec.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_pExec$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/pExec.cpp"
 
 $(IntermediateDirectory)/core_expPS$(ObjectSuffix): Plays/core/expPS.cpp $(IntermediateDirectory)/core_expPS$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/expPS.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_expPS$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/expPS.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_expPS$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/core_expPS$(DependSuffix): Plays/core/expPS.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_expPS$(ObjectSuffix) -MF$(IntermediateDirectory)/core_expPS$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/expPS.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_expPS$(ObjectSuffix) -MF$(IntermediateDirectory)/core_expPS$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/expPS.cpp"
 
 $(IntermediateDirectory)/core_expPS$(PreprocessSuffix): Plays/core/expPS.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_expPS$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/expPS.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_expPS$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/expPS.cpp"
 
 $(IntermediateDirectory)/core_naivePS$(ObjectSuffix): Plays/core/naivePS.cpp $(IntermediateDirectory)/core_naivePS$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/naivePS.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_naivePS$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/naivePS.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/core_naivePS$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/core_naivePS$(DependSuffix): Plays/core/naivePS.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_naivePS$(ObjectSuffix) -MF$(IntermediateDirectory)/core_naivePS$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/naivePS.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/core_naivePS$(ObjectSuffix) -MF$(IntermediateDirectory)/core_naivePS$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/naivePS.cpp"
 
 $(IntermediateDirectory)/core_naivePS$(PreprocessSuffix): Plays/core/naivePS.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_naivePS$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Plays/core/naivePS.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/core_naivePS$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Plays/core/naivePS.cpp"
 
 $(IntermediateDirectory)/HAL_comm$(ObjectSuffix): HAL/comm.cpp $(IntermediateDirectory)/HAL_comm$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/HAL/comm.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/HAL_comm$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/HAL/comm.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/HAL_comm$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/HAL_comm$(DependSuffix): HAL/comm.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/HAL_comm$(ObjectSuffix) -MF$(IntermediateDirectory)/HAL_comm$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/HAL/comm.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/HAL_comm$(ObjectSuffix) -MF$(IntermediateDirectory)/HAL_comm$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/HAL/comm.cpp"
 
 $(IntermediateDirectory)/HAL_comm$(PreprocessSuffix): HAL/comm.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/HAL_comm$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/HAL/comm.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/HAL_comm$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/HAL/comm.cpp"
 
 $(IntermediateDirectory)/HAL_fira_comm$(ObjectSuffix): HAL/fira_comm.cpp $(IntermediateDirectory)/HAL_fira_comm$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/HAL/fira_comm.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/HAL_fira_comm$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/HAL/fira_comm.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/HAL_fira_comm$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/HAL_fira_comm$(DependSuffix): HAL/fira_comm.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/HAL_fira_comm$(ObjectSuffix) -MF$(IntermediateDirectory)/HAL_fira_comm$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/HAL/fira_comm.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/HAL_fira_comm$(ObjectSuffix) -MF$(IntermediateDirectory)/HAL_fira_comm$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/HAL/fira_comm.cpp"
 
 $(IntermediateDirectory)/HAL_fira_comm$(PreprocessSuffix): HAL/fira_comm.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/HAL_fira_comm$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/HAL/fira_comm.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/HAL_fira_comm$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/HAL/fira_comm.cpp"
 
 $(IntermediateDirectory)/cpp_sslDebug_Data.pb$(ObjectSuffix): ../common/gpb/proto/cpp/sslDebug_Data.pb.cc $(IntermediateDirectory)/cpp_sslDebug_Data.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/sslDebug_Data.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_sslDebug_Data.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/sslDebug_Data.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_sslDebug_Data.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_sslDebug_Data.pb$(DependSuffix): ../common/gpb/proto/cpp/sslDebug_Data.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_sslDebug_Data.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_sslDebug_Data.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/sslDebug_Data.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_sslDebug_Data.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_sslDebug_Data.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/sslDebug_Data.pb.cc"
 
 $(IntermediateDirectory)/cpp_sslDebug_Data.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/sslDebug_Data.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_sslDebug_Data.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/sslDebug_Data.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_sslDebug_Data.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/sslDebug_Data.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(ObjectSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc $(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(DependSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc"
 
 
 # $(IntermediateDirectory)/cpp_common.pb$(ObjectSuffix) $(IntermediateDirectory)/cpp_command.pb$(ObjectSuffix) $(IntermediateDirectory)/cpp_packet.pb$(ObjectSuffix) $(IntermediateDirectory)/cpp_replacement.pb$(ObjectSuffix)
 
 $(IntermediateDirectory)/cpp_common.pb$(ObjectSuffix): ../common/gpb/proto/cpp/common.pb.cc $(IntermediateDirectory)/cpp_common.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/common.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_common.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/common.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_common.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_common.pb$(DependSuffix): ../common/gpb/proto/cpp/common.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_common.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_common.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/common.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_common.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_common.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/common.pb.cc"
 
 $(IntermediateDirectory)/cpp_command.pb$(ObjectSuffix): ../common/gpb/proto/cpp/command.pb.cc $(IntermediateDirectory)/cpp_command.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/command.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_command.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/command.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_command.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_command.pb$(DependSuffix): ../common/gpb/proto/cpp/command.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_command.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_command.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/command.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_command.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_command.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/command.pb.cc"
 
 $(IntermediateDirectory)/cpp_packet.pb$(ObjectSuffix): ../common/gpb/proto/cpp/packet.pb.cc $(IntermediateDirectory)/cpp_packet.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/packet.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_packet.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/packet.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_packet.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_packet.pb$(DependSuffix): ../common/gpb/proto/cpp/packet.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_packet.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_packet.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/packet.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_packet.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_packet.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/packet.pb.cc"
 
 $(IntermediateDirectory)/cpp_replacement.pb$(ObjectSuffix): ../common/gpb/proto/cpp/replacement.pb.cc $(IntermediateDirectory)/cpp_replacement.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/replacement.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_replacement.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/replacement.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_replacement.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_replacement.pb$(DependSuffix): ../common/gpb/proto/cpp/replacement.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_replacement.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_replacement.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/replacement.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_replacement.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_replacement.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/replacement.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_wrapper.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_wrapper.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(ObjectSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc $(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(DependSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_refbox_log.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_refbox_log.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(ObjectSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc $(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(DependSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_geometry.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_geometry.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(ObjectSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc $(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(DependSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc"
 
 $(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_messages_robocup_ssl_detection.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/messages_robocup_ssl_detection.pb.cc"
 
 $(IntermediateDirectory)/cpp_grSim_Replacement.pb$(ObjectSuffix): ../common/gpb/proto/cpp/grSim_Replacement.pb.cc $(IntermediateDirectory)/cpp_grSim_Replacement.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Replacement.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_grSim_Replacement.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Replacement.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_grSim_Replacement.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_grSim_Replacement.pb$(DependSuffix): ../common/gpb/proto/cpp/grSim_Replacement.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_grSim_Replacement.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_grSim_Replacement.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Replacement.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_grSim_Replacement.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_grSim_Replacement.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Replacement.pb.cc"
 
 $(IntermediateDirectory)/cpp_grSim_Replacement.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/grSim_Replacement.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_grSim_Replacement.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Replacement.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_grSim_Replacement.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Replacement.pb.cc"
 
 $(IntermediateDirectory)/cpp_grSim_Packet.pb$(ObjectSuffix): ../common/gpb/proto/cpp/grSim_Packet.pb.cc $(IntermediateDirectory)/cpp_grSim_Packet.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Packet.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_grSim_Packet.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Packet.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_grSim_Packet.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_grSim_Packet.pb$(DependSuffix): ../common/gpb/proto/cpp/grSim_Packet.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_grSim_Packet.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_grSim_Packet.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Packet.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_grSim_Packet.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_grSim_Packet.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Packet.pb.cc"
 
 $(IntermediateDirectory)/cpp_grSim_Packet.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/grSim_Packet.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_grSim_Packet.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Packet.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_grSim_Packet.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Packet.pb.cc"
 
 $(IntermediateDirectory)/cpp_grSim_Commands.pb$(ObjectSuffix): ../common/gpb/proto/cpp/grSim_Commands.pb.cc $(IntermediateDirectory)/cpp_grSim_Commands.pb$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Commands.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_grSim_Commands.pb$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Commands.pb.cc" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/cpp_grSim_Commands.pb$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/cpp_grSim_Commands.pb$(DependSuffix): ../common/gpb/proto/cpp/grSim_Commands.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_grSim_Commands.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_grSim_Commands.pb$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Commands.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/cpp_grSim_Commands.pb$(ObjectSuffix) -MF$(IntermediateDirectory)/cpp_grSim_Commands.pb$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Commands.pb.cc"
 
 $(IntermediateDirectory)/cpp_grSim_Commands.pb$(PreprocessSuffix): ../common/gpb/proto/cpp/grSim_Commands.pb.cc
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_grSim_Commands.pb$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/gpb/proto/cpp/grSim_Commands.pb.cc"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/cpp_grSim_Commands.pb$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/grSim_Commands.pb.cc"
 
 $(IntermediateDirectory)/Utils_naivePathPlanner$(ObjectSuffix): Utils/naivePathPlanner.cpp $(IntermediateDirectory)/Utils_naivePathPlanner$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/naivePathPlanner.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_naivePathPlanner$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/naivePathPlanner.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_naivePathPlanner$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_naivePathPlanner$(DependSuffix): Utils/naivePathPlanner.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_naivePathPlanner$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_naivePathPlanner$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/naivePathPlanner.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_naivePathPlanner$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_naivePathPlanner$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/naivePathPlanner.cpp"
 
 $(IntermediateDirectory)/Utils_naivePathPlanner$(PreprocessSuffix): Utils/naivePathPlanner.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_naivePathPlanner$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/naivePathPlanner.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_naivePathPlanner$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/naivePathPlanner.cpp"
 
 $(IntermediateDirectory)/Utils_mergeSCurve$(ObjectSuffix): Utils/mergeSCurve.cpp $(IntermediateDirectory)/Utils_mergeSCurve$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/mergeSCurve.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_mergeSCurve$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/mergeSCurve.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_mergeSCurve$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_mergeSCurve$(DependSuffix): Utils/mergeSCurve.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_mergeSCurve$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_mergeSCurve$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/mergeSCurve.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_mergeSCurve$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_mergeSCurve$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/mergeSCurve.cpp"
 
 $(IntermediateDirectory)/Utils_mergeSCurve$(PreprocessSuffix): Utils/mergeSCurve.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_mergeSCurve$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/mergeSCurve.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_mergeSCurve$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/mergeSCurve.cpp"
 
 $(IntermediateDirectory)/src_netraw$(ObjectSuffix): ../common/src/netraw.cpp $(IntermediateDirectory)/src_netraw$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/netraw.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_netraw$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/netraw.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_netraw$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_netraw$(DependSuffix): ../common/src/netraw.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_netraw$(ObjectSuffix) -MF$(IntermediateDirectory)/src_netraw$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/netraw.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_netraw$(ObjectSuffix) -MF$(IntermediateDirectory)/src_netraw$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/netraw.cpp"
 
 $(IntermediateDirectory)/src_netraw$(PreprocessSuffix): ../common/src/netraw.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_netraw$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/netraw.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_netraw$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/netraw.cpp"
 
 $(IntermediateDirectory)/src_logger$(ObjectSuffix): ../common/src/logger.cpp $(IntermediateDirectory)/src_logger$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/logger.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_logger$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/logger.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_logger$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_logger$(DependSuffix): ../common/src/logger.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_logger$(ObjectSuffix) -MF$(IntermediateDirectory)/src_logger$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/logger.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_logger$(ObjectSuffix) -MF$(IntermediateDirectory)/src_logger$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/logger.cpp"
 
 $(IntermediateDirectory)/src_logger$(PreprocessSuffix): ../common/src/logger.cppd
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_logger$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/logger.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_logger$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/logger.cpp"
 
 $(IntermediateDirectory)/Utils_LocalAvoidance$(ObjectSuffix): Utils/LocalAvoidance.cpp $(IntermediateDirectory)/Utils_LocalAvoidance$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/LocalAvoidance.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_LocalAvoidance$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/LocalAvoidance.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_LocalAvoidance$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_LocalAvoidance$(DependSuffix): Utils/LocalAvoidance.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_LocalAvoidance$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_LocalAvoidance$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/LocalAvoidance.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_LocalAvoidance$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_LocalAvoidance$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/LocalAvoidance.cpp"
 
 $(IntermediateDirectory)/Utils_LocalAvoidance$(PreprocessSuffix): Utils/LocalAvoidance.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_LocalAvoidance$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/LocalAvoidance.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_LocalAvoidance$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/LocalAvoidance.cpp"
 
 $(IntermediateDirectory)/Utils_kalman$(ObjectSuffix): Utils/kalman.cpp $(IntermediateDirectory)/Utils_kalman$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/kalman.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_kalman$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/kalman.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_kalman$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_kalman$(DependSuffix): Utils/kalman.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_kalman$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_kalman$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/kalman.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_kalman$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_kalman$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/kalman.cpp"
 
 $(IntermediateDirectory)/Utils_kalman$(PreprocessSuffix): Utils/kalman.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_kalman$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/kalman.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_kalman$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/kalman.cpp"
 
 $(IntermediateDirectory)/Utils_sCurve$(ObjectSuffix): Utils/sCurve.cpp $(IntermediateDirectory)/Utils_sCurve$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/sCurve.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_sCurve$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/sCurve.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_sCurve$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_sCurve$(DependSuffix): Utils/sCurve.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_sCurve$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_sCurve$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/sCurve.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_sCurve$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_sCurve$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/sCurve.cpp"
 
 $(IntermediateDirectory)/Utils_sCurve$(PreprocessSuffix): Utils/sCurve.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_sCurve$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/sCurve.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_sCurve$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/sCurve.cpp"
 
 $(IntermediateDirectory)/Utils_intersection$(ObjectSuffix): Utils/intersection.cpp $(IntermediateDirectory)/Utils_intersection$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/intersection.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_intersection$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/intersection.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_intersection$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_intersection$(DependSuffix): Utils/intersection.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_intersection$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_intersection$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/intersection.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_intersection$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_intersection$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/intersection.cpp"
 
 $(IntermediateDirectory)/Utils_intersection$(PreprocessSuffix): Utils/intersection.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_intersection$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/intersection.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_intersection$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/intersection.cpp"
 
 $(IntermediateDirectory)/src_sem$(ObjectSuffix): ../common/src/sem.cpp $(IntermediateDirectory)/src_sem$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/sem.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_sem$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/sem.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_sem$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_sem$(DependSuffix): ../common/src/sem.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_sem$(ObjectSuffix) -MF$(IntermediateDirectory)/src_sem$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/sem.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_sem$(ObjectSuffix) -MF$(IntermediateDirectory)/src_sem$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/sem.cpp"
 
 $(IntermediateDirectory)/src_sem$(PreprocessSuffix): ../common/src/sem.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_sem$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/sem.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_sem$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/sem.cpp"
 
 $(IntermediateDirectory)/src_serial$(ObjectSuffix): ../common/src/serial.cpp $(IntermediateDirectory)/src_serial$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/serial.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_serial$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/serial.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_serial$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_serial$(DependSuffix): ../common/src/serial.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_serial$(ObjectSuffix) -MF$(IntermediateDirectory)/src_serial$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/serial.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_serial$(ObjectSuffix) -MF$(IntermediateDirectory)/src_serial$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/serial.cpp"
 
 $(IntermediateDirectory)/src_serial$(PreprocessSuffix): ../common/src/serial.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_serial$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/serial.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_serial$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/serial.cpp"
 
 $(IntermediateDirectory)/src_shmem$(ObjectSuffix): ../common/src/shmem.cpp $(IntermediateDirectory)/src_shmem$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/shmem.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_shmem$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/shmem.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_shmem$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_shmem$(DependSuffix): ../common/src/shmem.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_shmem$(ObjectSuffix) -MF$(IntermediateDirectory)/src_shmem$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/shmem.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_shmem$(ObjectSuffix) -MF$(IntermediateDirectory)/src_shmem$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/shmem.cpp"
 
 $(IntermediateDirectory)/src_shmem$(PreprocessSuffix): ../common/src/shmem.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_shmem$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/shmem.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_shmem$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/shmem.cpp"
 
 $(IntermediateDirectory)/src_socket$(ObjectSuffix): ../common/src/socket.cpp $(IntermediateDirectory)/src_socket$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/socket.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_socket$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/socket.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_socket$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_socket$(DependSuffix): ../common/src/socket.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_socket$(ObjectSuffix) -MF$(IntermediateDirectory)/src_socket$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/socket.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_socket$(ObjectSuffix) -MF$(IntermediateDirectory)/src_socket$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/socket.cpp"
 
 $(IntermediateDirectory)/src_socket$(PreprocessSuffix): ../common/src/socket.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_socket$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/socket.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_socket$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/socket.cpp"
 
 $(IntermediateDirectory)/src_thread$(ObjectSuffix): ../common/src/thread.cpp $(IntermediateDirectory)/src_thread$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/thread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_thread$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/thread.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_thread$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_thread$(DependSuffix): ../common/src/thread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_thread$(ObjectSuffix) -MF$(IntermediateDirectory)/src_thread$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/thread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_thread$(ObjectSuffix) -MF$(IntermediateDirectory)/src_thread$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/thread.cpp"
 
 $(IntermediateDirectory)/src_thread$(PreprocessSuffix): ../common/src/thread.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_thread$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/thread.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_thread$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/thread.cpp"
 
 $(IntermediateDirectory)/src_xmlParser$(ObjectSuffix): ../common/src/xmlParser.cpp $(IntermediateDirectory)/src_xmlParser$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/src/xmlParser.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_xmlParser$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/xmlParser.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/src_xmlParser$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_xmlParser$(DependSuffix): ../common/src/xmlParser.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_xmlParser$(ObjectSuffix) -MF$(IntermediateDirectory)/src_xmlParser$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/src/xmlParser.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/src_xmlParser$(ObjectSuffix) -MF$(IntermediateDirectory)/src_xmlParser$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/xmlParser.cpp"
 
 $(IntermediateDirectory)/src_xmlParser$(PreprocessSuffix): ../common/src/xmlParser.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_xmlParser$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/src/xmlParser.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_xmlParser$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/src/xmlParser.cpp"
 
 $(IntermediateDirectory)/sgfilter$(ObjectSuffix): sgfilter.cpp $(IntermediateDirectory)/sgfilter$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/sgfilter.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/sgfilter$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/sgfilter.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/sgfilter$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/sgfilter$(DependSuffix): sgfilter.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/sgfilter$(ObjectSuffix) -MF$(IntermediateDirectory)/sgfilter$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/sgfilter.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/sgfilter$(ObjectSuffix) -MF$(IntermediateDirectory)/sgfilter$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/sgfilter.cpp"
 
 $(IntermediateDirectory)/sgfilter$(PreprocessSuffix): sgfilter.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/sgfilter$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/sgfilter.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/sgfilter$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/sgfilter.cpp"
 
 $(IntermediateDirectory)/Utils_comdef$(ObjectSuffix): Utils/comdef.cpp $(IntermediateDirectory)/Utils_comdef$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/comdef.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_comdef$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/comdef.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Utils_comdef$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Utils_comdef$(DependSuffix): Utils/comdef.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_comdef$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_comdef$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/comdef.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Utils_comdef$(ObjectSuffix) -MF$(IntermediateDirectory)/Utils_comdef$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/comdef.cpp"
 
 $(IntermediateDirectory)/Utils_comdef$(PreprocessSuffix): Utils/comdef.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_comdef$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Utils/comdef.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Utils_comdef$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Utils/comdef.cpp"
 
 $(IntermediateDirectory)/include_config$(ObjectSuffix): ../common/include/config.cpp $(IntermediateDirectory)/include_config$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/common/include/config.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/include_config$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/include/config.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/include_config$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/include_config$(DependSuffix): ../common/include/config.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/include_config$(ObjectSuffix) -MF$(IntermediateDirectory)/include_config$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/common/include/config.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/include_config$(ObjectSuffix) -MF$(IntermediateDirectory)/include_config$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/common/include/config.cpp"
 
 $(IntermediateDirectory)/include_config$(PreprocessSuffix): ../common/include/config.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/include_config$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/common/include/config.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/include_config$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/common/include/config.cpp"
 
 $(IntermediateDirectory)/Tactics_robot$(ObjectSuffix): Tactics/robot.cpp $(IntermediateDirectory)/Tactics_robot$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/robot.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Tactics_robot$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/robot.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Tactics_robot$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Tactics_robot$(DependSuffix): Tactics/robot.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Tactics_robot$(ObjectSuffix) -MF$(IntermediateDirectory)/Tactics_robot$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/robot.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Tactics_robot$(ObjectSuffix) -MF$(IntermediateDirectory)/Tactics_robot$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/robot.cpp"
 
 $(IntermediateDirectory)/Tactics_robot$(PreprocessSuffix): Tactics/robot.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tactics_robot$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/robot.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tactics_robot$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/robot.cpp"
 
 $(IntermediateDirectory)/Tactics_tactic$(ObjectSuffix): Tactics/tactic.cpp $(IntermediateDirectory)/Tactics_tactic$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tactic.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Tactics_tactic$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/tactic.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Tactics_tactic$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Tactics_tactic$(DependSuffix): Tactics/tactic.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Tactics_tactic$(ObjectSuffix) -MF$(IntermediateDirectory)/Tactics_tactic$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tactic.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Tactics_tactic$(ObjectSuffix) -MF$(IntermediateDirectory)/Tactics_tactic$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/tactic.cpp"
 
 $(IntermediateDirectory)/Tactics_tactic$(PreprocessSuffix): Tactics/tactic.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tactics_tactic$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tactic.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tactics_tactic$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/tactic.cpp"
 
 $(IntermediateDirectory)/Tactics_tExec$(ObjectSuffix): Tactics/tExec.cpp $(IntermediateDirectory)/Tactics_tExec$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tExec.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Tactics_tExec$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/tExec.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Tactics_tExec$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Tactics_tExec$(DependSuffix): Tactics/tExec.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Tactics_tExec$(ObjectSuffix) -MF$(IntermediateDirectory)/Tactics_tExec$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tExec.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Tactics_tExec$(ObjectSuffix) -MF$(IntermediateDirectory)/Tactics_tExec$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/tExec.cpp"
 
 $(IntermediateDirectory)/Tactics_tExec$(PreprocessSuffix): Tactics/tExec.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tactics_tExec$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/Tactics/tExec.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Tactics_tExec$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/Tactics/tExec.cpp"
 
 $(IntermediateDirectory)/qtDebugger_main_widget$(ObjectSuffix): qtDebugger/main_widget.cpp $(IntermediateDirectory)/qtDebugger_main_widget$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/main_widget.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_main_widget$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/main_widget.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_main_widget$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/qtDebugger_main_widget$(DependSuffix): qtDebugger/main_widget.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_main_widget$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_main_widget$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/main_widget.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_main_widget$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_main_widget$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/main_widget.cpp"
 
 $(IntermediateDirectory)/qtDebugger_main_widget$(PreprocessSuffix): qtDebugger/main_widget.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_main_widget$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/main_widget.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_main_widget$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/main_widget.cpp"
 
 $(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(ObjectSuffix): qtDebugger/qtDebuggerMain.cpp $(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/qtDebuggerMain.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/qtDebuggerMain.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(DependSuffix): qtDebugger/qtDebuggerMain.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/qtDebuggerMain.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/qtDebuggerMain.cpp"
 
 $(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(PreprocessSuffix): qtDebugger/qtDebuggerMain.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/qtDebuggerMain.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_qtDebuggerMain$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/qtDebuggerMain.cpp"
 
 $(IntermediateDirectory)/qtDebugger_render_area$(ObjectSuffix): qtDebugger/render_area.cpp $(IntermediateDirectory)/qtDebugger_render_area$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/render_area.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_render_area$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/render_area.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_render_area$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/qtDebugger_render_area$(DependSuffix): qtDebugger/render_area.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_render_area$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_render_area$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/render_area.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_render_area$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_render_area$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/render_area.cpp"
 
 $(IntermediateDirectory)/qtDebugger_render_area$(PreprocessSuffix): qtDebugger/render_area.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_render_area$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/render_area.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_render_area$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/render_area.cpp"
 
 $(IntermediateDirectory)/qtDebugger_main_widget.moc$(ObjectSuffix): qtDebugger/main_widget.moc.cpp $(IntermediateDirectory)/qtDebugger_main_widget.moc$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/main_widget.moc.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_main_widget.moc$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/main_widget.moc.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_main_widget.moc$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/qtDebugger_main_widget.moc$(DependSuffix): qtDebugger/main_widget.moc.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_main_widget.moc$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_main_widget.moc$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/main_widget.moc.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_main_widget.moc$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_main_widget.moc$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/main_widget.moc.cpp"
 
 $(IntermediateDirectory)/qtDebugger_main_widget.moc$(PreprocessSuffix): qtDebugger/main_widget.moc.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_main_widget.moc$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/main_widget.moc.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_main_widget.moc$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/main_widget.moc.cpp"
 
 $(IntermediateDirectory)/qtDebugger_render_area.moc$(ObjectSuffix): qtDebugger/render_area.moc.cpp $(IntermediateDirectory)/qtDebugger_render_area.moc$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/render_area.moc.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_render_area.moc$(ObjectSuffix) $(IncludePath)
+	$(CompilerName) $(SourceSwitch) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/render_area.moc.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/qtDebugger_render_area.moc$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/qtDebugger_render_area.moc$(DependSuffix): qtDebugger/render_area.moc.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_render_area.moc$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_render_area.moc$(DependSuffix) -MM "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/render_area.moc.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/qtDebugger_render_area.moc$(ObjectSuffix) -MF$(IntermediateDirectory)/qtDebugger_render_area.moc$(DependSuffix) -MM "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/render_area.moc.cpp"
 
 $(IntermediateDirectory)/qtDebugger_render_area.moc$(PreprocessSuffix): qtDebugger/render_area.moc.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_render_area.moc$(PreprocessSuffix) "/home/smarak/krssg/mirosot/modified-korea/Strategy/qtDebugger/render_area.moc.cpp"
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/qtDebugger_render_area.moc$(PreprocessSuffix) "/home/chinmay/KRSSG_ALL/code-o-soccer/Strategy/qtDebugger/render_area.moc.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

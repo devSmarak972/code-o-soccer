@@ -66,7 +66,7 @@ public:
   // Returns the Eucledian distance between the 2 vectors
   static inline float dist(const Vector2D<T>& v1, const Vector2D<T>& v2)
   {
-    printf("%f in euclid\n",sqrt((float)(v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y)));
+    // printf("%f in euclid\n",sqrt((float)(v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y)));
     return sqrt((float)(v1.x - v2.x) * (v1.x - v2.x) + (v1.y - v2.y) * (v1.y - v2.y));
   }
   

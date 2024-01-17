@@ -37,11 +37,12 @@ bool invert_field=FIELD_IS_INVERTED;
   // y = (int)tempy;
   // newangle = normalizeAngle(newangle+PI/2);
   // tempx = SGN(-invert_field+0.5)*(1-x)*HALF_FIELD_MAXX;
-  tempx = SGN(-invert_field+0.5)*(x)*HALF_FIELD_MAXX*2;
-  tempy = SGN(-invert_field+0.5)*(y)*HALF_FIELD_MAXY*2;
+  tempx = -1*SGN(-invert_field+0.5)*(x)*HALF_FIELD_MAXX;
+  tempy = -1*SGN(-invert_field+0.5)*(y)*HALF_FIELD_MAXY;
+  printf("in transform %d %f %f\n",HALF_FIELD_MAXX,x,y);
+
   x = tempx;
   y = tempy;
-  printf("in transform %d %f %f\n",HALF_FIELD_MAXX,x,y);
 
   newangle = !invert_field?normalizeAngle(newangle+PI):newangle;
   
@@ -256,6 +257,8 @@ namespace Strategy
     static double minDelTime = 999999;
     static double lastTime = 0;
     mutex->enter();
+
+    cout<<"Add info "<<detection.balls_size()<<endl;
     //double timeCapture           = detection.t_capture();
     int ballsNum                 = detection.balls_size();
     blueNum                      = MIN(detection.robots_blue_size(), Simulator::BlueTeam::SIZE);
@@ -278,14 +281,15 @@ namespace Strategy
     if (ballsNum > 0)
     {
       ball = detection.balls(0);
-	  
-      int newx = ball.x() - CENTER_X;
-      int newy = ball.y() - CENTER_Y;
+	    printf("ball found: %f %f\n",ball.x(),ball.y());
+      double newx = ball.x() - CENTER_X;
+      double newy = ball.y() - CENTER_Y;
       double delTime = timeCapture - ballLastUpdateTime;
 
       float garbage;
       #if GR_SIM_COMM || FIRASSL_COMM
-      linearTransform(newx, newy, garbage);
+      // linearTransform(newx, newy, garbage);
+      printf("new ball : %f %f\n",newx,newy);
 	 // std::cout << "\n\n\nhere linear\n\n\n" << std::endl;
       #endif
       float  lastPoseX           = ballPose.x;
@@ -345,25 +349,27 @@ namespace Strategy
     if (HomeTeam::COLOR == Simulator::BLUE_TEAM)
     {
       // Blue robot info
-      
+      printf("number of blue bots: %d ------------\n",blueNum);
+      printf("number of yellow bots: %d ------------\n",yellowNum);
       for (int i = 0; i < blueNum; ++i)
       {
         SSL_DetectionRobot robot = detection.robots_blue(i);
-		
+        printf("detected bot with id :%d\n",(int)robot.robot_id());
 		//Home Blue Bot Info
         int                id    = HAL::BlueMarkerMap[robot.robot_id()];
         
-        int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;
+        double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
-//        printf("robot %d: %d %d %f\n", id, newx, newy, newangle);
+       printf("robot %d: %f %f %f\n", id, newx, newy, newangle);
+       if(id==-1)continue;
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
-       // printf("newxy : %d %d\n", newx, newy);
+      //  printf("new bot pos : %d %d\n", newx, newy);
         
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -408,11 +414,11 @@ namespace Strategy
       {
         
         SSL_DetectionRobot robot = detection.robots_yellow(i);
-		int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;
+		double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -470,8 +476,8 @@ namespace Strategy
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
-        int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;   
+        double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;   
 		float newangle;
 		if(robot.has_orientation())
 			newangle = robot.orientation();
@@ -524,8 +530,8 @@ namespace Strategy
       for (int i = 0; i < blueNum; ++i)
       {        
         SSL_DetectionRobot robot = detection.robots_blue(i);        
-        int newx = robot.x() - CENTER_X;
-        int newy = robot.y() - CENTER_Y;
+        double newx = robot.x() - CENTER_X;
+        double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
         linearTransform(newx, newy, newangle);
@@ -610,6 +616,7 @@ namespace Strategy
       state.homePos[botID]   = Vector2D<int>(homePose[botID].x, homePose[botID].y);/*Vector2D<int>(homePose[botID].x+homeVelocity[botID].x*delTime, 
       homePose[botID].y+homeVelocity[botID].y*delTime);*/
       printf("Home Pose: %d %d %d\n",botID,state.homePos[botID].x,state.homePos[botID].y);
+      // printf("Away Pose: %d %d %d\n",botID,state.awayPos[botID].x,state.awayPos[botID].y);
 	  state.homeAngle[botID] = homeAngle[botID];// + homeOmega[botID]*delTime;
       state.homeVel[botID]   = homeVelocity[botID];
 	  state.homeVlVr[botID] = homeVlVr[botID];

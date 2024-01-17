@@ -36,7 +36,7 @@ ObjectSwitch           :=-o
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
 MakeDirCommand         :=mkdir -p
-CmpOptions             :=-g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UGR_SIM_COMM -UVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -URUN_REFBOX -DUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   $(Preprocessors)
+CmpOptions             :=-g -std=c++14 -UWIN32 -UBOTLOG -USSL_COMM -UGR_SIM_COMM -DVISION_COMM -DFIRASSL_COMM -DPS_CLASS=NaivePS -URUN_REFBOX -DUSE_FAKE_REFREE -DSHOW_REFBOX_LOG -DSHOW_SSLVISION_LOG -UMIN -UMAX -DLOCAL_AVOID -DSTR_GUI   $(Preprocessors)
 LinkOptions            :=  -pthread -lm  -lgsl -lgslcblas -lX11
 IncludePath            :=  "$(IncludeSwitch)../common/include" "$(IncludeSwitch)../common/gpb/proto/cpp" "$(IncludeSwitch)../common/dlib" "$(IncludeSwitch)Tactics" "$(IncludeSwitch)Skills" "$(IncludeSwitch)Plays/core" "$(IncludeSwitch)Plays/playbook" "$(IncludeSwitch)Utils" "$(IncludeSwitch)Learning" "$(IncludeSwitch)HAL" "$(IncludeSwitch)Core" "$(IncludeSwitch)." "$(IncludeSwitch)/usr/include/qt4" "$(IncludeSwitch)/usr/include/opencv4" "$(IncludeSwitch)." "$(IncludeSwitch)/usr/include"  
 RcIncludePath          :=

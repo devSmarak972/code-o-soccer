@@ -43,27 +43,27 @@ namespace Strategy
         {
           SSL_DetectionFrame detection = recvPacket.detection();
 		  
-		
+            printf("receved packet with detection! \n");
 		
           kFilter->addInfo(detection);
 
 
 #ifdef SHOW_SSLVISION_LOG
-            /*Logger::toStdOut("Vision Frame = %d ID = %d Angle = %f v_x = %f v_y = %f v_t = %f delay = %f\n",
-                             viSh->frameNum,
-                             0,
-                             viSh->blueAngle[0],
-                             viSh->blueVel[0].x,
-                             viSh->blueVel[0].y,
-                             viSh->blueAngVel[0]
-               );*/
+            // Logger::toStdOut("Vision Frame = %d ID = %d Angle = %f v_x = %f v_y = %f v_t = %f delay = %f\n",
+            //                  viSh->frameNum,
+            //                  0,
+            //                  viSh->blueAngle[0],
+            //                  viSh->blueVel[0].x,
+            //                  viSh->blueVel[0].y,
+            //                  viSh->blueAngVel[0]
+            //    );
 #endif // SHOW_SSLVISION_LOG
         }
 
         /* Once a frame is received, the next frame will be received atleast after 1000/60ms ~ 16ms
          * due to the camera frame rate is capped at 60fps
          Why is it 10? Shouldn't it br 16!*/
-        sleep(10);
+        sleep(50);
       }
       // Sleep for 1ms to prevent CPU hogging
       sleep(1);

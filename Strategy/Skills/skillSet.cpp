@@ -68,6 +68,7 @@ SkillSet::SkillSet(const BeliefState* state, const int botID) :
   pathPlannerSec = new MergeSCurve();
 #else
   pathPlanner = new MergeSCurve();
+  // pathPlanner = new LocalAvoidance();
 #endif
 	counter = 0;
 	interceptCounter = 0;

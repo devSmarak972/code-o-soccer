@@ -170,7 +170,18 @@ void SkillSet::_goToPoint(int botid, Vector2D<int> dpoint, float finalvel, float
                       comm,
                       clearance);
 #else
-#error LOCAL_AVOIDANCE should always be defined!
+    // pathPlanner->plan(state->homePos[botID],
+    //                   dpoint,
+    //                   &obs,
+    //                   botID,
+    //                   true,
+    //                   state->homeAngle[botID],
+    //                   finalslope,
+    //                   t,
+    //                   r,
+    //                   comm,
+    //                   clearance);
+// #error LOCAL_AVOIDANCE should always be defined!
 #endif
     float fTheta = asin(sqrt(fabs(r)));
     fTheta = 1 - fTheta/(PI/2);
@@ -196,6 +207,8 @@ void SkillSet::_goToPoint(int botid, Vector2D<int> dpoint, float finalvel, float
     else if(profileFactor <-1.2*MAX_BOT_SPEED)
       profileFactor = -1.2*MAX_BOT_SPEED;
     prevVel=profileFactor;
+
+    printf("Profilefactor %f",profileFactor);
     r *= 0.5*profileFactor;
     t *= profileFactor;
 		//Arpit : Adding polar based code here

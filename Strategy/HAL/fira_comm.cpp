@@ -131,17 +131,59 @@ namespace HAL
 
   FIRAComm::FIRAComm()
   {
-    std::cout<<"Inside firacomm 1"<<std::endl;
+    // std::cout<<"Inside firacomm 1"<<std::endl;
     debug_cs = new CS();
 
-    this->dgram_socket = socket(PF_INET, SOCK_DGRAM, 0);
-    this->dest.sin_family = AF_INET;
-    inet_aton("127.0.0.1", &this->dest.sin_addr); // 192.168.137.52
-    // inet_aton("192.168.137.167", &this->dest.sin_addr);
+    // this->dgram_socket = socket(PF_INET, SOCK_DGRAM, 0);
+    // this->dgram_socket_fira = socket(PF_INET, SOCK_DGRAM, 0);
+    // this->dest.sin_family = AF_INET;
+    // this->dest_fira.sin_family = AF_INET;
+    // inet_aton("192.168.137.120", &this->dest.sin_addr); // 192.168.137.52
+    // inet_aton("127.0.0.1",&this->dest_fira.sin_addr);
+    // // inet_aton("192.168.137.167", &this->dest.sin_addr);
 
-    this->dest.sin_port = htons(20011); // 4220
+    // this->dest.sin_port = htons(4220); // 4220
+    // this->dest_fira.sin_port = htons(20011); // 4210
 
     // this->dest.sin_port = htons(4210); 
+
+    // BOT ID - 1
+
+    int blue_team = 1;
+
+      this->dgram_socket[0] = socket(PF_INET, SOCK_DGRAM, 0);
+      this->dgram_socket[1] = socket(PF_INET, SOCK_DGRAM, 0);
+      this->dgram_socket[2] = socket(PF_INET, SOCK_DGRAM, 0);
+
+    
+    for (int i = 0; i < 3; i++)
+    {
+      this->dest[i].sin_family = AF_INET;
+    }
+
+    if(blue_team)
+    {
+      inet_aton("10.42.0.40", &this->dest[0].sin_addr);
+      this->dest[0].sin_port = htons(4210);
+      inet_aton("10.42.0.238", &this->dest[1].sin_addr);
+      this->dest[1].sin_port = htons(4220);
+      inet_aton("10.42.0.189", &this->dest[2].sin_addr);
+      this->dest[2].sin_port = htons(4230);
+    }
+    else
+    {
+      inet_aton("192.168.137.120", &this->dest[0].sin_addr);
+      this->dest[0].sin_port = htons(4220);
+      inet_aton("192.168.137.120", &this->dest[1].sin_addr);
+      this->dest[1].sin_port = htons(4220);
+      inet_aton("192.168.137.120", &this->dest[2].sin_addr);
+      this->dest[2].sin_port = htons(4220);
+    }
+
+
+
+    
+    
 
     for(int i = 0; i < 3; i++)
     {
@@ -187,16 +229,19 @@ namespace HAL
                              float v_l,
                              float v_r)
   {
-    v_l = v_l/2;
-    v_r = v_r/2;
-    // v_l = 0;
-    // v_r = 0;
-    #ifdef BOT_COMM
+    // v_l = v_l/2;
+    // v_r = v_r/2;
+    // int v_l1 = 50;
+    // int v_r1 = -25;
+    int v_l1 = v_l;
+    int v_r1 = v_r;
+    v_l = v_r1;
+    v_r = v_l1;
+    // #ifdef BOT_COMM
+        cout<<"Bot Velocity(firacomm) "<<botID<<": "<<(int)v_l<<" "<<(int)v_r<<endl;
         const int max_vel = (1<<10) - 1;
-
         int leftvel = std::min(abs((int)v_l),max_vel);
         int rightvel = std::min(abs((int)v_r),max_vel);
-
 
         std::bitset<10> leftBits(leftvel);
         std::bitset<10> rightBits(rightvel);
@@ -210,10 +255,10 @@ namespace HAL
        }
 
         std::cout << "Ascii String: " << bitString <<endl;
-        sendto(this->dgram_socket, asciiString.data(), asciiString.size(), 0, (struct sockaddr*)&this->dest, sizeof(this->dest));
+        sendto(this->dgram_socket[botID], asciiString.data(), asciiString.size(), 0, (struct sockaddr*)&this->dest[botID], sizeof(this->dest[botID]));
 
 
-    #else
+    // #else
     fira_message::sim_to_ref::Packet packet;
     char Sentence [1000];
 
@@ -226,10 +271,10 @@ namespace HAL
     packet.SerializeToString(&env);
     
 
-    sendto(this->dgram_socket, env.data(), env.size(), 0, 
-           (struct sockaddr*)&this->dest, sizeof(this->dest));
+    sendto(this->dgram_socket_fira, env.data(), env.size(), 0, 
+           (struct sockaddr*)&this->dest_fira, sizeof(this->dest_fira));
     // cs_internal[botID].leave();
-    #endif
+    // #endif
   }
 
   void FIRAComm::addCircle(int x, int y, unsigned int radius, unsigned int color = 0xFFFFFFFF)

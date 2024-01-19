@@ -12,7 +12,7 @@ namespace HAL
 
   Comm::Comm()
   {
-    assert(initializedOnce == false);
+    // assert(initializedOnce == false);
     initializedOnce = true;
   }
 

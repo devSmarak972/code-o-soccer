@@ -6,9 +6,11 @@
 #include "skills.hpp"
 #include <fstream>
 // #include "attacker.hpp"
-
+#include "fira_comm.h"
+using namespace HAL;
+#include "beliefState.h"
 using namespace std;
-using namespace Strategy;
+
 
 class Simpler : public Util::Thread,public Executor
 {
@@ -35,7 +37,7 @@ class Simpler : public Util::Thread,public Executor
     }
 
   };
-  void defender(BeliefState* state,int botId)
+  void defender(BeliefState* state,int botID)
   {
    //print("Defender\n");
 		//It follows the ball
@@ -47,7 +49,7 @@ class Simpler : public Util::Thread,public Executor
 		dpoint.y = state->ballPos.y;
 		GoToPoint(botID, state, dpoint, PI / 2, false, false); 
   }
-  void goalkeeper(BeliefState* state,int botId){
+  void goalkeeper(BeliefState* state,int botID){
     Vec2D dpoint(OUR_GOAL_X+DBOX_HEIGHT,state->ballPos.y);
 
     if(dpoint.y > OUR_GOAL_MAXY)
@@ -62,7 +64,7 @@ public:
 	// SkillSet* attacker_skills,defender_skills,goalkeeper_skills;
   // Executor* sexec;
   Simpler(bool &running_, BeliefState &state_):
-  running(running_),ustate(state_),Executor(&state_,0) {
+  running(running_),ustate(state_),Executor(&state_) {
   }
   void game(BeliefState* state);
   void run();

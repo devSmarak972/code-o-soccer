@@ -586,6 +586,13 @@ class SSL_DetectionFrame : public ::google::protobuf::Message /* @@protoc_insert
   double t_sent() const;
   void set_t_sent(double value);
 
+  // optional double t_capture_camera = 8;
+  bool has_t_capture_camera() const;
+  void clear_t_capture_camera();
+  static const int kTCaptureCameraFieldNumber = 8;
+  double t_capture_camera() const;
+  void set_t_capture_camera(double value);
+
   // @@protoc_insertion_point(class_scope:SSL_DetectionFrame)
  private:
   void set_has_frame_number();
@@ -594,6 +601,8 @@ class SSL_DetectionFrame : public ::google::protobuf::Message /* @@protoc_insert
   void clear_has_t_capture();
   void set_has_t_sent();
   void clear_has_t_sent();
+  void set_has_t_capture_camera();
+  void clear_has_t_capture_camera();
   void set_has_camera_id();
   void clear_has_camera_id();
 
@@ -610,6 +619,7 @@ class SSL_DetectionFrame : public ::google::protobuf::Message /* @@protoc_insert
   ::google::protobuf::uint32 frame_number_;
   ::google::protobuf::uint32 camera_id_;
   double t_sent_;
+  double t_capture_camera_;
   friend struct ::protobuf_messages_5frobocup_5fssl_5fdetection_2eproto::TableStruct;
 };
 // ===================================================================
@@ -1061,6 +1071,30 @@ inline void SSL_DetectionFrame::set_t_sent(double value) {
   set_has_t_sent();
   t_sent_ = value;
   // @@protoc_insertion_point(field_set:SSL_DetectionFrame.t_sent)
+}
+
+// optional double t_capture_camera = 8;
+inline bool SSL_DetectionFrame::has_t_capture_camera() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void SSL_DetectionFrame::set_has_t_capture_camera() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void SSL_DetectionFrame::clear_has_t_capture_camera() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void SSL_DetectionFrame::clear_t_capture_camera() {
+  t_capture_camera_ = 0;
+  clear_has_t_capture_camera();
+}
+inline double SSL_DetectionFrame::t_capture_camera() const {
+  // @@protoc_insertion_point(field_get:SSL_DetectionFrame.t_capture_camera)
+  return t_capture_camera_;
+}
+inline void SSL_DetectionFrame::set_t_capture_camera(double value) {
+  set_has_t_capture_camera();
+  t_capture_camera_ = value;
+  // @@protoc_insertion_point(field_set:SSL_DetectionFrame.t_capture_camera)
 }
 
 // required uint32 camera_id = 4;

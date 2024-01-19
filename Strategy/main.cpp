@@ -18,7 +18,7 @@ using namespace Strategy;
 static bool run = true;
 const bool test = false;
 
-const bool qtdebug = false;
+const bool qtdebug = true;
 
 // Define the function to be called when Ctrl+C (SIGINT) signal is sent to process
 void signal_callback_handler(int signum)
@@ -114,7 +114,7 @@ int startgame(bool usePositiveXSide, Simulator::TeamColor color)
   }
   else 
   {
-     Simpler s(run, state);
+    Simpler s(run, state);
     if(qtdebug) 
     {
       s.start();

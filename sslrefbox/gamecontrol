@@ -1,0 +1,10 @@
+1705534105.317270 Game log for Thu Jan 18 04:58:25 2024
+
+1705534118.910755 	Pre-game	Halted	0.000000 Sending S: Stopping robots
+1705534125.158156 	Pre-game	Stopped	6.247401 Sending s: Starting robots
+1705534128.776820 	First Half	Halted	3.618664 Sending H: Halting robots
+1705534130.304583 	First Half	Halted	3.618664 Sending S: Stopping robots
+1705534144.486918 	First Half	Stopped	17.800999 Sending s: Starting robots
+1705534148.366008 	First Half	Running	21.680089 Sending S: Stopping robots
+1705534205.045923 	First Half	Stopped	78.360004 Sending s: Starting robots
+1705534311.196772 	First Half	Halted	184.510853 Sending H: Halting robots

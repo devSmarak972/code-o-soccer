@@ -140,6 +140,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, frame_number_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, t_capture_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, t_sent_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, t_capture_camera_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, camera_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, balls_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_DetectionFrame, robots_yellow_),
@@ -147,6 +148,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
   0,
   3,
+  4,
   2,
   ~0u,
   ~0u,
@@ -155,7 +157,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 12, sizeof(::SSL_DetectionBall)},
   { 19, 32, sizeof(::SSL_DetectionRobot)},
-  { 40, 52, sizeof(::SSL_DetectionFrame)},
+  { 40, 53, sizeof(::SSL_DetectionFrame)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -192,16 +194,16 @@ void AddDescriptorsImpl() {
       "\"\227\001\n\022SSL_DetectionRobot\022\022\n\nconfidence\030\001 "
       "\002(\002\022\020\n\010robot_id\030\002 \001(\r\022\t\n\001x\030\003 \002(\002\022\t\n\001y\030\004 "
       "\002(\002\022\023\n\013orientation\030\005 \001(\002\022\017\n\007pixel_x\030\006 \002("
-      "\002\022\017\n\007pixel_y\030\007 \002(\002\022\016\n\006height\030\010 \001(\002\"\331\001\n\022S"
+      "\002\022\017\n\007pixel_y\030\007 \002(\002\022\016\n\006height\030\010 \001(\002\"\363\001\n\022S"
       "SL_DetectionFrame\022\024\n\014frame_number\030\001 \002(\r\022"
-      "\021\n\tt_capture\030\002 \002(\001\022\016\n\006t_sent\030\003 \002(\001\022\021\n\tca"
-      "mera_id\030\004 \002(\r\022!\n\005balls\030\005 \003(\0132\022.SSL_Detec"
-      "tionBall\022*\n\rrobots_yellow\030\006 \003(\0132\023.SSL_De"
-      "tectionRobot\022(\n\013robots_blue\030\007 \003(\0132\023.SSL_"
-      "DetectionRobot"
+      "\021\n\tt_capture\030\002 \002(\001\022\016\n\006t_sent\030\003 \002(\001\022\030\n\020t_"
+      "capture_camera\030\010 \001(\001\022\021\n\tcamera_id\030\004 \002(\r\022"
+      "!\n\005balls\030\005 \003(\0132\022.SSL_DetectionBall\022*\n\rro"
+      "bots_yellow\030\006 \003(\0132\023.SSL_DetectionRobot\022("
+      "\n\013robots_blue\030\007 \003(\0132\023.SSL_DetectionRobot"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 534);
+      descriptor, 560);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages_robocup_ssl_detection.proto", &protobuf_RegisterTypes);
 }
@@ -1202,6 +1204,7 @@ void SSL_DetectionFrame::InitAsDefaultInstance() {
 const int SSL_DetectionFrame::kFrameNumberFieldNumber;
 const int SSL_DetectionFrame::kTCaptureFieldNumber;
 const int SSL_DetectionFrame::kTSentFieldNumber;
+const int SSL_DetectionFrame::kTCaptureCameraFieldNumber;
 const int SSL_DetectionFrame::kCameraIdFieldNumber;
 const int SSL_DetectionFrame::kBallsFieldNumber;
 const int SSL_DetectionFrame::kRobotsYellowFieldNumber;
@@ -1224,15 +1227,15 @@ SSL_DetectionFrame::SSL_DetectionFrame(const SSL_DetectionFrame& from)
       robots_blue_(from.robots_blue_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&t_capture_, &from.t_capture_,
-    static_cast<size_t>(reinterpret_cast<char*>(&t_sent_) -
-    reinterpret_cast<char*>(&t_capture_)) + sizeof(t_sent_));
+    static_cast<size_t>(reinterpret_cast<char*>(&t_capture_camera_) -
+    reinterpret_cast<char*>(&t_capture_)) + sizeof(t_capture_camera_));
   // @@protoc_insertion_point(copy_constructor:SSL_DetectionFrame)
 }
 
 void SSL_DetectionFrame::SharedCtor() {
   ::memset(&t_capture_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&t_sent_) -
-      reinterpret_cast<char*>(&t_capture_)) + sizeof(t_sent_));
+      reinterpret_cast<char*>(&t_capture_camera_) -
+      reinterpret_cast<char*>(&t_capture_)) + sizeof(t_capture_camera_));
 }
 
 SSL_DetectionFrame::~SSL_DetectionFrame() {
@@ -1267,10 +1270,10 @@ void SSL_DetectionFrame::Clear() {
   robots_yellow_.Clear();
   robots_blue_.Clear();
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 15u) {
+  if (cached_has_bits & 31u) {
     ::memset(&t_capture_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&t_sent_) -
-        reinterpret_cast<char*>(&t_capture_)) + sizeof(t_sent_));
+        reinterpret_cast<char*>(&t_capture_camera_) -
+        reinterpret_cast<char*>(&t_capture_)) + sizeof(t_capture_camera_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -1378,6 +1381,20 @@ bool SSL_DetectionFrame::MergePartialFromCodedStream(
         break;
       }
 
+      // optional double t_capture_camera = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
+          set_has_t_capture_camera();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &t_capture_camera_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -1452,6 +1469,11 @@ void SSL_DetectionFrame::SerializeWithCachedSizes(
       output);
   }
 
+  // optional double t_capture_camera = 8;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->t_capture_camera(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -1509,6 +1531,11 @@ void SSL_DetectionFrame::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         7, this->robots_blue(static_cast<int>(i)), deterministic, target);
+  }
+
+  // optional double t_capture_camera = 8;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->t_capture_camera(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1611,6 +1638,11 @@ size_t SSL_DetectionFrame::ByteSizeLong() const {
     }
   }
 
+  // optional double t_capture_camera = 8;
+  if (has_t_capture_camera()) {
+    total_size += 1 + 8;
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1642,7 +1674,7 @@ void SSL_DetectionFrame::MergeFrom(const SSL_DetectionFrame& from) {
   robots_yellow_.MergeFrom(from.robots_yellow_);
   robots_blue_.MergeFrom(from.robots_blue_);
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 15u) {
+  if (cached_has_bits & 31u) {
     if (cached_has_bits & 0x00000001u) {
       t_capture_ = from.t_capture_;
     }
@@ -1654,6 +1686,9 @@ void SSL_DetectionFrame::MergeFrom(const SSL_DetectionFrame& from) {
     }
     if (cached_has_bits & 0x00000008u) {
       t_sent_ = from.t_sent_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      t_capture_camera_ = from.t_capture_camera_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -1694,6 +1729,7 @@ void SSL_DetectionFrame::InternalSwap(SSL_DetectionFrame* other) {
   swap(frame_number_, other->frame_number_);
   swap(camera_id_, other->camera_id_);
   swap(t_sent_, other->t_sent_);
+  swap(t_capture_camera_, other->t_capture_camera_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }

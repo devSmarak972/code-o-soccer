@@ -39,24 +39,32 @@
 #include <fstream>
 using namespace std;
 using namespace Strategy;
+using namespace HAL;
 
 template <class T> class Vector2D;
 typedef Vector2D<int> Vec2D;
 // Use Vec2D to define a point with x and y as coordinate
 
-   class Executor: public SkillSet
+   class Executor
   {
     /****************************************************List of Skills******************************************************/
     // Go to a point with obstacle avoidance.
     public:
-    Executor(const BeliefState* state, int botID) : SkillSet(state, botID){
+    SkillSet* s[3];
+    Comm*  refComm = new FIRAComm();
+
+    Executor(const BeliefState* state) {
+           s[0]=new SkillSet(state,0); 
+            s[1]=new SkillSet(state,1); 
+
+           s[2]=new SkillSet(state,2); 
 
         
     };
 
     void GoToPoint(int botID,BeliefState *state,Vector2D<int> dpoint, float finalslope, bool increaseSpeed, bool shouldAlign)
     {
-          setbotID(botID);
+       
          Strategy::SParam param;
         param.GoToPointP.x=dpoint.x;
         param.GoToPointP.y=dpoint.y;
@@ -67,7 +75,7 @@ typedef Vector2D<int> Vec2D;
 
         // bool align;
         // float finalVelocity;
-        goToPoint(param); 
+        s[botID]->goToPoint(param); 
     };
     
     // Go to point without obstacle avoidance.
@@ -76,30 +84,44 @@ typedef Vector2D<int> Vec2D;
     // Go to ball: If shouldAlign is true, then bot will align with the line joining the ball and the goal else will go straightaway.
     void GoToBall(int botID,bool shouldAlign)
     {
-        printf(" %d,%d",state->homePos[1].x,state->homePos[1].y);
-        setbotID(botID);
+        // printf(" %d,%d",state->homePos[1].x,state->homePos[1].y);
+        // setbotID(botID);
          Strategy::SParam param;
         param.GoToBallP.align=shouldAlign;
-        goToBall(param);
+        s[botID]->goToBall(param);
 
     }
     // Angle in radian
-    void TurnToAngle(int botID,BeliefState *state,float angle);
+    void TurnToAngle(int botID,BeliefState *state,float angle)
+    {
+
+    };
     
     // Control the bot directly.
-    void Velocity(int botID,int vl,int vr);
+    void Velocity(int botID,int vl,int vr)
+    {
+        Strategy::SParam param;
+        param.VelocityP.vl=vl;
+        param.VelocityP.vr=vr;
+        s[botID]->velocity(param);
+
+    };
 
     // Spin the bot. Positive angular speed for clockwise rotation
     void Spin(int botID,float angularSpeed)
     {
-     setbotID(botID);
+        // setbotID(botID);
          Strategy::SParam param;
         param.SpinP.radPerSec=angularSpeed;
-        spin(param); 
+        s[botID]->spin(param); 
     };// spped in radians
     
     // Stop the bot.
-    void Stop(int botID);
+    void Stop(int botID)
+    {
+        Velocity(botID,0,0);
+
+    };
 	
 	void vibrate(BeliefState *state,int botID,int c);
     /*

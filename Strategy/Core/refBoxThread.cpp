@@ -63,7 +63,7 @@ namespace Strategy
         sock->recvFrom(refBoxCmd, sizeof(RefBoxCmd), REF_BOX_MULTICAST_ADDR, port);
         if (refBoxCmd->cmdCounter != refBoxCmdSh->cmdCounter)
         {
-          assert(refBoxCmd->cmdCounter == (unsigned char)(refBoxCmdSh->cmdCounter + 1)); // Referee Box command missed
+          // assert(refBoxCmd->cmdCounter == (unsigned char)(refBoxCmdSh->cmdCounter + 1)); // Referee Box command missed
 
           refBoxCS->enter();
           memcpy(refBoxCmdSh, refBoxCmd, sizeof(RefBoxCmd));

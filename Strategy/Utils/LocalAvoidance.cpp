@@ -204,9 +204,11 @@ namespace Strategy
 //      comm->addLine(p1.x, p1.y, p2.x, p2.y);
     }
     float delta = normalizeAngle(thetaD - phi);
+    std::cout<<"delta: "<<delta<<std::endl;
     int sgn1 = sin(delta);
     int sgn2 = cos(delta);
-//    assert(sgn1 > -1 || sgn1 == 0 || sgn1 == 1);
+  //  assert(sgn1 > -1 || sgn1 == 0 || sgn1 == 1);
+
     r = (sin(delta) * sin(delta)) * SGN(tan(delta));
     t = (cos(delta) * cos(delta)) * SGN(cos(delta));
     if(!(t >= -1.0 && t <= 1.0 && r >= -1.0 && r <= 1.0)) {

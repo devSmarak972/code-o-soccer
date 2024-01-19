@@ -41,9 +41,9 @@ const int FREEBALL_RADIUS							 = SELECT(30,700);
 const int KICKOFF_RADIUS	             = SELECT(18,200);
 
 
-const int BOT_BALL_THRESH              = SELECT(105, 150);                  // mm
-const int BOT_BALL_THRESH_FOR_PR       = SELECT(105, 200);                  // mm
-const int BOT_POINT_THRESH             = SELECT(105, 147);                     // mm
+const int BOT_BALL_THRESH              = SELECT(105, 20);                  // mm
+const int BOT_BALL_THRESH_FOR_PR       = SELECT(105, 20);                  // mm
+const int BOT_POINT_THRESH             = SELECT(105, 20);                     // mm
 
 const int STRIP_WIDTH_X                = ForwardX(BOT_RADIUS*1.5);
 const int STRIP_WIDTH_Y                = BOT_RADIUS*1.5;

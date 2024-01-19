@@ -7,8 +7,8 @@
 #include <fstream>
 #include "game.h"
 
-using namespace std;
 using namespace Strategy;
+
 
 void Simpler::run()
   {
@@ -75,12 +75,12 @@ void Simpler::run()
 		int vl=0, vr=0;
 		// SkillSet::comm->getSentData(0, vl, vr);
 		printf( "sent velocity = (%d, %d), vision velocity = (%f, %f), vision pos = (%d, %d)\n", vl, vr, 
-		kFilter.homeVlVr[0].x, kFilter.homeVlVr[0].y, state->homePos[0].x, state->homePos[0].y);
+		kFilter.homeVlVr[0].x, kFilter.homeVlVr[0].y, ustate.homePos[0].x, ustate.homePos[0].y);
         // SkillSet::comm->writeCombinedPacket();
    //**************************************** END OF TESTING ************************************************  
 
          usleep(16000);  // Adding sleep to this thread of execution to prevent CPU hogging
-		 cout<<"Before sending ustate halted "<<state->pr_gameRunning<<endl;
+		 cout<<"Before sending ustate halted "<<ustate.pr_gameRunning<<endl;
     //   GoToBall(1,true);
 	  	game(&ustate);
 		// attacker_skills->goToBall(params);
@@ -99,13 +99,16 @@ void Simpler::game(BeliefState* state)
 
 		if(state->pr_gameRunning){
 			cout<<"Inside not haulted"<<endl;
-			GoToBall(1,true);
+          // attacker(state,0);
+          // defender(state,1);
+          goalkeeper(state,0);
+
 		} 
 		else{
 			std::cout<<"Inside haulted"<<std::endl;
-			comm->sendCommand(1,0,0);
-			comm->sendCommand(0,0,0);
-			comm->sendCommand(2,0,0);
+			// refComm->sendCommand(1,0,0);
+			refComm->sendCommand(0,0,0);
+			refComm->sendCommand(2,0,0);
 		}
 
 

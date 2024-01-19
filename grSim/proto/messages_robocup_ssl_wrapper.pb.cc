@@ -23,7 +23,7 @@ namespace protobuf_messages_5frobocup_5fssl_5fdetection_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_5frobocup_5fssl_5fdetection_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SSL_DetectionFrame;
 }  // namespace protobuf_messages_5frobocup_5fssl_5fdetection_2eproto
 namespace protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SSL_GeometryData;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_SSL_GeometryData;
 }  // namespace protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto
 class SSL_WrapperPacketDefaultTypeInternal {
  public:

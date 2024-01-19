@@ -115,8 +115,8 @@ namespace HAL
   /* Index of this array represents the ID of the bot markers and the value corresponding
    * to the index represents the ID assigned to that bot in the Strategy module
    */
-  static int BlueMarkerMap[]   = {0, 1, 2, -1, -1, -1, -1, -1, -1, -1, -1, -1};
-  static int YellowMarkerMap[] = {-1, -1, -1, 0, 1, 2, -1, -1, -1, -1, -1, -1};
+  static int BlueMarkerMap[]   = {-1, -1, 0, -1, 1, 2, -1, -1, -1, -1, -1, -1};
+  static int YellowMarkerMap[] = {0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
 
 #endif
 

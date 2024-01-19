@@ -62,8 +62,10 @@ namespace HAL
   class FIRAComm : public Comm
   {
     private:
-      int dgram_socket;
-      struct sockaddr_in dest;
+      int dgram_socket[6];
+      int dgram_socket_fira;
+      struct sockaddr_in dest[6];
+      struct sockaddr_in dest_fira;
 
     static Util::CS cs_internal[3]; /* Since each thread writes at a diff location, diff cs for each. However, all cs are entered while
                                      * data is written to serial port. Maybe think of a better soln?

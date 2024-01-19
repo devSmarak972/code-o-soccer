@@ -36,15 +36,15 @@ bool invert_field=FIELD_IS_INVERTED;
   // x = (int)tempx;
   // y = (int)tempy;
   // newangle = normalizeAngle(newangle+PI/2);
-  // tempx = SGN(-invert_field+0.5)*(1-x)*HALF_FIELD_MAXX;
-  tempx = -1*SGN(-invert_field+0.5)*(x)*HALF_FIELD_MAXX;
-  tempy = -1*SGN(-invert_field+0.5)*(y)*HALF_FIELD_MAXY;
-  printf("in transform %d %f %f\n",HALF_FIELD_MAXX,x,y);
+  // // tempx = SGN(-invert_field+0.5)*(1-x)*HALF_FIELD_MAXX;
+  // tempx = -1*SGN(-invert_field+0.5)*(x);
+  // tempy = -1*SGN(-invert_field+0.5)*(y);
+  // printf("in transform %d %f %f\n",HALF_FIELD_MAXX,x,y);
 
-  x = tempx;
-  y = tempy;
+  x = x*1.1;
+  // y = tempy;
 
-  newangle = !invert_field?normalizeAngle(newangle+PI):newangle;
+  // newangle = !invert_field?normalizeAngle(newangle+PI):newangle;
   
 }
 
@@ -288,7 +288,7 @@ namespace Strategy
 
       float garbage;
       #if GR_SIM_COMM || FIRASSL_COMM
-      // linearTransform(newx, newy, garbage);
+      linearTransform(newx, newy, garbage);
       printf("new ball : %f %f\n",newx,newy);
 	 // std::cout << "\n\n\nhere linear\n\n\n" << std::endl;
       #endif
@@ -351,6 +351,8 @@ namespace Strategy
       // Blue robot info
       printf("number of blue bots: %d ------------\n",blueNum);
       printf("number of yellow bots: %d ------------\n",yellowNum);
+            vector<SSL_DetectionRobot> yellowbots;
+
       for (int i = 0; i < blueNum; ++i)
       {
         SSL_DetectionRobot robot = detection.robots_blue(i);
@@ -362,14 +364,20 @@ namespace Strategy
         double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
        printf("robot %d: %f %f %f\n", id, newx, newy, newangle);
-       if(id==-1)continue;
+       if(id==-1)
+       {
+        yellowbots.push_back(robot);
+        yellowNum++;
+        continue;
+
+       }
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
       //  printf("new bot pos : %d %d\n", newx, newy);
         
         #if GR_SIM_COMM || FIRASSL_COMM
-        // linearTransform(newx, newy, newangle);
+        linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -413,12 +421,14 @@ namespace Strategy
       for (int i = 0; i < yellowNum; ++i)
       {
         
-        SSL_DetectionRobot robot = detection.robots_yellow(i);
+        // SSL_DetectionRobot robot = detection.robots_yellow(i);
+        SSL_DetectionRobot robot = yellowbots[i];
+
 		double newx = robot.x() - CENTER_X;
         double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        // linearTransform(newx, newy, newangle);
+        linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -428,10 +438,14 @@ namespace Strategy
 				 * Randomly assigning IDs to each bot. if less no. of bots know, then 0...i ids will be populated, 
 				 * i+1...4 ids will not be used. 
 				 */
-				int id_ = getClosestBotID(newx, newy, newangle, uniqueBotIDs);
-				if(id_ == -1) //means all bots already populated
-					continue;
-				int id = HAL::YellowMarkerMap[id_];
+				// int id_ = getClosestBotID(newx, newy, newangle, uniqueBotIDs);
+				// if(id_ == -1) //means all bots already populated
+					// continue;
+				int id = HAL::YellowMarkerMap[robot.robot_id()];
+        if(id==-1)
+        {
+          continue;
+        }
 				uniqueBotIDs.insert(id);
         //printf("ID = %d, loc = %d, %d\n", id, newx, newy);
         double           delTime = timeCapture - awayLastUpdateTime[id];
@@ -462,7 +476,7 @@ namespace Strategy
         checkValidX(awayPose[id].x, awayVelocity[id].x, newx);
         checkValidY(awayPose[id].y, awayVelocity[id].y, newy);
         checkValidA(awayAngle[id], awayOmega[id], newangle);
-        //printf("Awaybots %d: %f %f %f %f %lf\n", id, awayPose[id].x, awayPose[id].y, predictedPoseX, awayPosK[id].y, delTime);
+        printf("Awaybots %d: %f %f  %lf\n", id, awayPose[id].x, awayPose[id].y,   delTime);
       }
     }
     else
@@ -484,7 +498,7 @@ namespace Strategy
 		else
 			newangle = 0;
         #if GR_SIM_COMM || FIRASSL_COMM
-        // linearTransform(newx, newy, newangle);
+        linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -534,7 +548,7 @@ namespace Strategy
         double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        // linearTransform(newx, newy, newangle);
+        linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);

@@ -1,4 +1,4 @@
 Debug/cpp_replacement.pb.o: \
- /home/smarak/krssg/mirosot/kgpkubs-southkorea-updated/common/gpb/proto/cpp/replacement.pb.cc \
- /home/smarak/krssg/mirosot/kgpkubs-southkorea-updated/common/gpb/proto/cpp/replacement.pb.h \
- /home/smarak/krssg/mirosot/kgpkubs-southkorea-updated/common/gpb/proto/cpp/common.pb.h
+ /home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/replacement.pb.cc \
+ /home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/replacement.pb.h \
+ /home/chinmay/KRSSG_ALL/code-o-soccer/common/gpb/proto/cpp/common.pb.h

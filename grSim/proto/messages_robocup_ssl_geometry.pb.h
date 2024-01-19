@@ -29,6 +29,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #define PROTOBUF_INTERNAL_EXPORT_protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto 
@@ -38,13 +39,25 @@ namespace protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[3];
+  static const ::google::protobuf::internal::ParseTable schema[9];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors();
 }  // namespace protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto
+class SSL_BallModelChipFixedLoss;
+class SSL_BallModelChipFixedLossDefaultTypeInternal;
+extern SSL_BallModelChipFixedLossDefaultTypeInternal _SSL_BallModelChipFixedLoss_default_instance_;
+class SSL_BallModelStraightTwoPhase;
+class SSL_BallModelStraightTwoPhaseDefaultTypeInternal;
+extern SSL_BallModelStraightTwoPhaseDefaultTypeInternal _SSL_BallModelStraightTwoPhase_default_instance_;
+class SSL_FieldCircularArc;
+class SSL_FieldCircularArcDefaultTypeInternal;
+extern SSL_FieldCircularArcDefaultTypeInternal _SSL_FieldCircularArc_default_instance_;
+class SSL_FieldLineSegment;
+class SSL_FieldLineSegmentDefaultTypeInternal;
+extern SSL_FieldLineSegmentDefaultTypeInternal _SSL_FieldLineSegment_default_instance_;
 class SSL_GeometryCameraCalibration;
 class SSL_GeometryCameraCalibrationDefaultTypeInternal;
 extern SSL_GeometryCameraCalibrationDefaultTypeInternal _SSL_GeometryCameraCalibration_default_instance_;
@@ -54,15 +67,550 @@ extern SSL_GeometryDataDefaultTypeInternal _SSL_GeometryData_default_instance_;
 class SSL_GeometryFieldSize;
 class SSL_GeometryFieldSizeDefaultTypeInternal;
 extern SSL_GeometryFieldSizeDefaultTypeInternal _SSL_GeometryFieldSize_default_instance_;
+class SSL_GeometryModels;
+class SSL_GeometryModelsDefaultTypeInternal;
+extern SSL_GeometryModelsDefaultTypeInternal _SSL_GeometryModels_default_instance_;
+class Vector2f;
+class Vector2fDefaultTypeInternal;
+extern Vector2fDefaultTypeInternal _Vector2f_default_instance_;
 namespace google {
 namespace protobuf {
+template<> ::SSL_BallModelChipFixedLoss* Arena::CreateMaybeMessage<::SSL_BallModelChipFixedLoss>(Arena*);
+template<> ::SSL_BallModelStraightTwoPhase* Arena::CreateMaybeMessage<::SSL_BallModelStraightTwoPhase>(Arena*);
+template<> ::SSL_FieldCircularArc* Arena::CreateMaybeMessage<::SSL_FieldCircularArc>(Arena*);
+template<> ::SSL_FieldLineSegment* Arena::CreateMaybeMessage<::SSL_FieldLineSegment>(Arena*);
 template<> ::SSL_GeometryCameraCalibration* Arena::CreateMaybeMessage<::SSL_GeometryCameraCalibration>(Arena*);
 template<> ::SSL_GeometryData* Arena::CreateMaybeMessage<::SSL_GeometryData>(Arena*);
 template<> ::SSL_GeometryFieldSize* Arena::CreateMaybeMessage<::SSL_GeometryFieldSize>(Arena*);
+template<> ::SSL_GeometryModels* Arena::CreateMaybeMessage<::SSL_GeometryModels>(Arena*);
+template<> ::Vector2f* Arena::CreateMaybeMessage<::Vector2f>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 
+enum SSL_FieldShapeType {
+  Undefined = 0,
+  CenterCircle = 1,
+  TopTouchLine = 2,
+  BottomTouchLine = 3,
+  LeftGoalLine = 4,
+  RightGoalLine = 5,
+  HalfwayLine = 6,
+  CenterLine = 7,
+  LeftPenaltyStretch = 8,
+  RightPenaltyStretch = 9,
+  LeftFieldLeftPenaltyStretch = 10,
+  LeftFieldRightPenaltyStretch = 11,
+  RightFieldLeftPenaltyStretch = 12,
+  RightFieldRightPenaltyStretch = 13
+};
+bool SSL_FieldShapeType_IsValid(int value);
+const SSL_FieldShapeType SSL_FieldShapeType_MIN = Undefined;
+const SSL_FieldShapeType SSL_FieldShapeType_MAX = RightFieldRightPenaltyStretch;
+const int SSL_FieldShapeType_ARRAYSIZE = SSL_FieldShapeType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* SSL_FieldShapeType_descriptor();
+inline const ::std::string& SSL_FieldShapeType_Name(SSL_FieldShapeType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    SSL_FieldShapeType_descriptor(), value);
+}
+inline bool SSL_FieldShapeType_Parse(
+    const ::std::string& name, SSL_FieldShapeType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<SSL_FieldShapeType>(
+    SSL_FieldShapeType_descriptor(), name, value);
+}
 // ===================================================================
+
+class Vector2f : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Vector2f) */ {
+ public:
+  Vector2f();
+  virtual ~Vector2f();
+
+  Vector2f(const Vector2f& from);
+
+  inline Vector2f& operator=(const Vector2f& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Vector2f(Vector2f&& from) noexcept
+    : Vector2f() {
+    *this = ::std::move(from);
+  }
+
+  inline Vector2f& operator=(Vector2f&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Vector2f& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Vector2f* internal_default_instance() {
+    return reinterpret_cast<const Vector2f*>(
+               &_Vector2f_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  void Swap(Vector2f* other);
+  friend void swap(Vector2f& a, Vector2f& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Vector2f* New() const final {
+    return CreateMaybeMessage<Vector2f>(NULL);
+  }
+
+  Vector2f* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Vector2f>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Vector2f& from);
+  void MergeFrom(const Vector2f& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Vector2f* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required float x = 1;
+  bool has_x() const;
+  void clear_x();
+  static const int kXFieldNumber = 1;
+  float x() const;
+  void set_x(float value);
+
+  // required float y = 2;
+  bool has_y() const;
+  void clear_y();
+  static const int kYFieldNumber = 2;
+  float y() const;
+  void set_y(float value);
+
+  // @@protoc_insertion_point(class_scope:Vector2f)
+ private:
+  void set_has_x();
+  void clear_has_x();
+  void set_has_y();
+  void clear_has_y();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  float x_;
+  float y_;
+  friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class SSL_FieldLineSegment : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSL_FieldLineSegment) */ {
+ public:
+  SSL_FieldLineSegment();
+  virtual ~SSL_FieldLineSegment();
+
+  SSL_FieldLineSegment(const SSL_FieldLineSegment& from);
+
+  inline SSL_FieldLineSegment& operator=(const SSL_FieldLineSegment& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SSL_FieldLineSegment(SSL_FieldLineSegment&& from) noexcept
+    : SSL_FieldLineSegment() {
+    *this = ::std::move(from);
+  }
+
+  inline SSL_FieldLineSegment& operator=(SSL_FieldLineSegment&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SSL_FieldLineSegment& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SSL_FieldLineSegment* internal_default_instance() {
+    return reinterpret_cast<const SSL_FieldLineSegment*>(
+               &_SSL_FieldLineSegment_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(SSL_FieldLineSegment* other);
+  friend void swap(SSL_FieldLineSegment& a, SSL_FieldLineSegment& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SSL_FieldLineSegment* New() const final {
+    return CreateMaybeMessage<SSL_FieldLineSegment>(NULL);
+  }
+
+  SSL_FieldLineSegment* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<SSL_FieldLineSegment>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const SSL_FieldLineSegment& from);
+  void MergeFrom(const SSL_FieldLineSegment& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SSL_FieldLineSegment* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required string name = 1;
+  bool has_name() const;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // required .Vector2f p1 = 2;
+  bool has_p1() const;
+  void clear_p1();
+  static const int kP1FieldNumber = 2;
+  private:
+  const ::Vector2f& _internal_p1() const;
+  public:
+  const ::Vector2f& p1() const;
+  ::Vector2f* release_p1();
+  ::Vector2f* mutable_p1();
+  void set_allocated_p1(::Vector2f* p1);
+
+  // required .Vector2f p2 = 3;
+  bool has_p2() const;
+  void clear_p2();
+  static const int kP2FieldNumber = 3;
+  private:
+  const ::Vector2f& _internal_p2() const;
+  public:
+  const ::Vector2f& p2() const;
+  ::Vector2f* release_p2();
+  ::Vector2f* mutable_p2();
+  void set_allocated_p2(::Vector2f* p2);
+
+  // required float thickness = 4;
+  bool has_thickness() const;
+  void clear_thickness();
+  static const int kThicknessFieldNumber = 4;
+  float thickness() const;
+  void set_thickness(float value);
+
+  // optional .SSL_FieldShapeType type = 5;
+  bool has_type() const;
+  void clear_type();
+  static const int kTypeFieldNumber = 5;
+  ::SSL_FieldShapeType type() const;
+  void set_type(::SSL_FieldShapeType value);
+
+  // @@protoc_insertion_point(class_scope:SSL_FieldLineSegment)
+ private:
+  void set_has_name();
+  void clear_has_name();
+  void set_has_p1();
+  void clear_has_p1();
+  void set_has_p2();
+  void clear_has_p2();
+  void set_has_thickness();
+  void clear_has_thickness();
+  void set_has_type();
+  void clear_has_type();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::Vector2f* p1_;
+  ::Vector2f* p2_;
+  float thickness_;
+  int type_;
+  friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class SSL_FieldCircularArc : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSL_FieldCircularArc) */ {
+ public:
+  SSL_FieldCircularArc();
+  virtual ~SSL_FieldCircularArc();
+
+  SSL_FieldCircularArc(const SSL_FieldCircularArc& from);
+
+  inline SSL_FieldCircularArc& operator=(const SSL_FieldCircularArc& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SSL_FieldCircularArc(SSL_FieldCircularArc&& from) noexcept
+    : SSL_FieldCircularArc() {
+    *this = ::std::move(from);
+  }
+
+  inline SSL_FieldCircularArc& operator=(SSL_FieldCircularArc&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SSL_FieldCircularArc& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SSL_FieldCircularArc* internal_default_instance() {
+    return reinterpret_cast<const SSL_FieldCircularArc*>(
+               &_SSL_FieldCircularArc_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(SSL_FieldCircularArc* other);
+  friend void swap(SSL_FieldCircularArc& a, SSL_FieldCircularArc& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SSL_FieldCircularArc* New() const final {
+    return CreateMaybeMessage<SSL_FieldCircularArc>(NULL);
+  }
+
+  SSL_FieldCircularArc* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<SSL_FieldCircularArc>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const SSL_FieldCircularArc& from);
+  void MergeFrom(const SSL_FieldCircularArc& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SSL_FieldCircularArc* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required string name = 1;
+  bool has_name() const;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // required .Vector2f center = 2;
+  bool has_center() const;
+  void clear_center();
+  static const int kCenterFieldNumber = 2;
+  private:
+  const ::Vector2f& _internal_center() const;
+  public:
+  const ::Vector2f& center() const;
+  ::Vector2f* release_center();
+  ::Vector2f* mutable_center();
+  void set_allocated_center(::Vector2f* center);
+
+  // required float radius = 3;
+  bool has_radius() const;
+  void clear_radius();
+  static const int kRadiusFieldNumber = 3;
+  float radius() const;
+  void set_radius(float value);
+
+  // required float a1 = 4;
+  bool has_a1() const;
+  void clear_a1();
+  static const int kA1FieldNumber = 4;
+  float a1() const;
+  void set_a1(float value);
+
+  // required float a2 = 5;
+  bool has_a2() const;
+  void clear_a2();
+  static const int kA2FieldNumber = 5;
+  float a2() const;
+  void set_a2(float value);
+
+  // required float thickness = 6;
+  bool has_thickness() const;
+  void clear_thickness();
+  static const int kThicknessFieldNumber = 6;
+  float thickness() const;
+  void set_thickness(float value);
+
+  // optional .SSL_FieldShapeType type = 7;
+  bool has_type() const;
+  void clear_type();
+  static const int kTypeFieldNumber = 7;
+  ::SSL_FieldShapeType type() const;
+  void set_type(::SSL_FieldShapeType value);
+
+  // @@protoc_insertion_point(class_scope:SSL_FieldCircularArc)
+ private:
+  void set_has_name();
+  void clear_has_name();
+  void set_has_center();
+  void clear_has_center();
+  void set_has_radius();
+  void clear_has_radius();
+  void set_has_a1();
+  void clear_has_a1();
+  void set_has_a2();
+  void clear_has_a2();
+  void set_has_thickness();
+  void clear_has_thickness();
+  void set_has_type();
+  void clear_has_type();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::Vector2f* center_;
+  float radius_;
+  float a1_;
+  float a2_;
+  float thickness_;
+  int type_;
+  friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
 
 class SSL_GeometryFieldSize : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSL_GeometryFieldSize) */ {
  public:
@@ -106,7 +654,7 @@ class SSL_GeometryFieldSize : public ::google::protobuf::Message /* @@protoc_ins
                &_SSL_GeometryFieldSize_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    3;
 
   void Swap(SSL_GeometryFieldSize* other);
   friend void swap(SSL_GeometryFieldSize& a, SSL_GeometryFieldSize& b) {
@@ -158,134 +706,149 @@ class SSL_GeometryFieldSize : public ::google::protobuf::Message /* @@protoc_ins
 
   // accessors -------------------------------------------------------
 
-  // required int32 line_width = 1;
-  bool has_line_width() const;
-  void clear_line_width();
-  static const int kLineWidthFieldNumber = 1;
-  ::google::protobuf::int32 line_width() const;
-  void set_line_width(::google::protobuf::int32 value);
+  // repeated .SSL_FieldLineSegment field_lines = 6;
+  int field_lines_size() const;
+  void clear_field_lines();
+  static const int kFieldLinesFieldNumber = 6;
+  ::SSL_FieldLineSegment* mutable_field_lines(int index);
+  ::google::protobuf::RepeatedPtrField< ::SSL_FieldLineSegment >*
+      mutable_field_lines();
+  const ::SSL_FieldLineSegment& field_lines(int index) const;
+  ::SSL_FieldLineSegment* add_field_lines();
+  const ::google::protobuf::RepeatedPtrField< ::SSL_FieldLineSegment >&
+      field_lines() const;
 
-  // required int32 field_length = 2;
+  // repeated .SSL_FieldCircularArc field_arcs = 7;
+  int field_arcs_size() const;
+  void clear_field_arcs();
+  static const int kFieldArcsFieldNumber = 7;
+  ::SSL_FieldCircularArc* mutable_field_arcs(int index);
+  ::google::protobuf::RepeatedPtrField< ::SSL_FieldCircularArc >*
+      mutable_field_arcs();
+  const ::SSL_FieldCircularArc& field_arcs(int index) const;
+  ::SSL_FieldCircularArc* add_field_arcs();
+  const ::google::protobuf::RepeatedPtrField< ::SSL_FieldCircularArc >&
+      field_arcs() const;
+
+  // required int32 field_length = 1;
   bool has_field_length() const;
   void clear_field_length();
-  static const int kFieldLengthFieldNumber = 2;
+  static const int kFieldLengthFieldNumber = 1;
   ::google::protobuf::int32 field_length() const;
   void set_field_length(::google::protobuf::int32 value);
 
-  // required int32 field_width = 3;
+  // required int32 field_width = 2;
   bool has_field_width() const;
   void clear_field_width();
-  static const int kFieldWidthFieldNumber = 3;
+  static const int kFieldWidthFieldNumber = 2;
   ::google::protobuf::int32 field_width() const;
   void set_field_width(::google::protobuf::int32 value);
 
-  // required int32 boundary_width = 4;
-  bool has_boundary_width() const;
-  void clear_boundary_width();
-  static const int kBoundaryWidthFieldNumber = 4;
-  ::google::protobuf::int32 boundary_width() const;
-  void set_boundary_width(::google::protobuf::int32 value);
-
-  // required int32 referee_width = 5;
-  bool has_referee_width() const;
-  void clear_referee_width();
-  static const int kRefereeWidthFieldNumber = 5;
-  ::google::protobuf::int32 referee_width() const;
-  void set_referee_width(::google::protobuf::int32 value);
-
-  // required int32 goal_width = 6;
+  // required int32 goal_width = 3;
   bool has_goal_width() const;
   void clear_goal_width();
-  static const int kGoalWidthFieldNumber = 6;
+  static const int kGoalWidthFieldNumber = 3;
   ::google::protobuf::int32 goal_width() const;
   void set_goal_width(::google::protobuf::int32 value);
 
-  // required int32 goal_depth = 7;
+  // required int32 goal_depth = 4;
   bool has_goal_depth() const;
   void clear_goal_depth();
-  static const int kGoalDepthFieldNumber = 7;
+  static const int kGoalDepthFieldNumber = 4;
   ::google::protobuf::int32 goal_depth() const;
   void set_goal_depth(::google::protobuf::int32 value);
 
-  // required int32 goal_wall_width = 8;
-  bool has_goal_wall_width() const;
-  void clear_goal_wall_width();
-  static const int kGoalWallWidthFieldNumber = 8;
-  ::google::protobuf::int32 goal_wall_width() const;
-  void set_goal_wall_width(::google::protobuf::int32 value);
+  // required int32 boundary_width = 5;
+  bool has_boundary_width() const;
+  void clear_boundary_width();
+  static const int kBoundaryWidthFieldNumber = 5;
+  ::google::protobuf::int32 boundary_width() const;
+  void set_boundary_width(::google::protobuf::int32 value);
 
-  // required int32 center_circle_radius = 9;
+  // optional int32 penalty_area_depth = 8;
+  bool has_penalty_area_depth() const;
+  void clear_penalty_area_depth();
+  static const int kPenaltyAreaDepthFieldNumber = 8;
+  ::google::protobuf::int32 penalty_area_depth() const;
+  void set_penalty_area_depth(::google::protobuf::int32 value);
+
+  // optional int32 penalty_area_width = 9;
+  bool has_penalty_area_width() const;
+  void clear_penalty_area_width();
+  static const int kPenaltyAreaWidthFieldNumber = 9;
+  ::google::protobuf::int32 penalty_area_width() const;
+  void set_penalty_area_width(::google::protobuf::int32 value);
+
+  // optional int32 center_circle_radius = 10;
   bool has_center_circle_radius() const;
   void clear_center_circle_radius();
-  static const int kCenterCircleRadiusFieldNumber = 9;
+  static const int kCenterCircleRadiusFieldNumber = 10;
   ::google::protobuf::int32 center_circle_radius() const;
   void set_center_circle_radius(::google::protobuf::int32 value);
 
-  // required int32 defense_radius = 10;
-  bool has_defense_radius() const;
-  void clear_defense_radius();
-  static const int kDefenseRadiusFieldNumber = 10;
-  ::google::protobuf::int32 defense_radius() const;
-  void set_defense_radius(::google::protobuf::int32 value);
+  // optional int32 line_thickness = 11;
+  bool has_line_thickness() const;
+  void clear_line_thickness();
+  static const int kLineThicknessFieldNumber = 11;
+  ::google::protobuf::int32 line_thickness() const;
+  void set_line_thickness(::google::protobuf::int32 value);
 
-  // required int32 defense_stretch = 11;
-  bool has_defense_stretch() const;
-  void clear_defense_stretch();
-  static const int kDefenseStretchFieldNumber = 11;
-  ::google::protobuf::int32 defense_stretch() const;
-  void set_defense_stretch(::google::protobuf::int32 value);
+  // optional int32 goal_center_to_penalty_mark = 12;
+  bool has_goal_center_to_penalty_mark() const;
+  void clear_goal_center_to_penalty_mark();
+  static const int kGoalCenterToPenaltyMarkFieldNumber = 12;
+  ::google::protobuf::int32 goal_center_to_penalty_mark() const;
+  void set_goal_center_to_penalty_mark(::google::protobuf::int32 value);
 
-  // required int32 free_kick_from_defense_dist = 12;
-  bool has_free_kick_from_defense_dist() const;
-  void clear_free_kick_from_defense_dist();
-  static const int kFreeKickFromDefenseDistFieldNumber = 12;
-  ::google::protobuf::int32 free_kick_from_defense_dist() const;
-  void set_free_kick_from_defense_dist(::google::protobuf::int32 value);
+  // optional int32 goal_height = 13;
+  bool has_goal_height() const;
+  void clear_goal_height();
+  static const int kGoalHeightFieldNumber = 13;
+  ::google::protobuf::int32 goal_height() const;
+  void set_goal_height(::google::protobuf::int32 value);
 
-  // required int32 penalty_spot_from_field_line_dist = 13;
-  bool has_penalty_spot_from_field_line_dist() const;
-  void clear_penalty_spot_from_field_line_dist();
-  static const int kPenaltySpotFromFieldLineDistFieldNumber = 13;
-  ::google::protobuf::int32 penalty_spot_from_field_line_dist() const;
-  void set_penalty_spot_from_field_line_dist(::google::protobuf::int32 value);
+  // optional float ball_radius = 14;
+  bool has_ball_radius() const;
+  void clear_ball_radius();
+  static const int kBallRadiusFieldNumber = 14;
+  float ball_radius() const;
+  void set_ball_radius(float value);
 
-  // required int32 penalty_line_from_spot_dist = 14;
-  bool has_penalty_line_from_spot_dist() const;
-  void clear_penalty_line_from_spot_dist();
-  static const int kPenaltyLineFromSpotDistFieldNumber = 14;
-  ::google::protobuf::int32 penalty_line_from_spot_dist() const;
-  void set_penalty_line_from_spot_dist(::google::protobuf::int32 value);
+  // optional float max_robot_radius = 15;
+  bool has_max_robot_radius() const;
+  void clear_max_robot_radius();
+  static const int kMaxRobotRadiusFieldNumber = 15;
+  float max_robot_radius() const;
+  void set_max_robot_radius(float value);
 
   // @@protoc_insertion_point(class_scope:SSL_GeometryFieldSize)
  private:
-  void set_has_line_width();
-  void clear_has_line_width();
   void set_has_field_length();
   void clear_has_field_length();
   void set_has_field_width();
   void clear_has_field_width();
-  void set_has_boundary_width();
-  void clear_has_boundary_width();
-  void set_has_referee_width();
-  void clear_has_referee_width();
   void set_has_goal_width();
   void clear_has_goal_width();
   void set_has_goal_depth();
   void clear_has_goal_depth();
-  void set_has_goal_wall_width();
-  void clear_has_goal_wall_width();
+  void set_has_boundary_width();
+  void clear_has_boundary_width();
+  void set_has_penalty_area_depth();
+  void clear_has_penalty_area_depth();
+  void set_has_penalty_area_width();
+  void clear_has_penalty_area_width();
   void set_has_center_circle_radius();
   void clear_has_center_circle_radius();
-  void set_has_defense_radius();
-  void clear_has_defense_radius();
-  void set_has_defense_stretch();
-  void clear_has_defense_stretch();
-  void set_has_free_kick_from_defense_dist();
-  void clear_has_free_kick_from_defense_dist();
-  void set_has_penalty_spot_from_field_line_dist();
-  void clear_has_penalty_spot_from_field_line_dist();
-  void set_has_penalty_line_from_spot_dist();
-  void clear_has_penalty_line_from_spot_dist();
+  void set_has_line_thickness();
+  void clear_has_line_thickness();
+  void set_has_goal_center_to_penalty_mark();
+  void clear_has_goal_center_to_penalty_mark();
+  void set_has_goal_height();
+  void clear_has_goal_height();
+  void set_has_ball_radius();
+  void clear_has_ball_radius();
+  void set_has_max_robot_radius();
+  void clear_has_max_robot_radius();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -293,20 +856,21 @@ class SSL_GeometryFieldSize : public ::google::protobuf::Message /* @@protoc_ins
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  ::google::protobuf::int32 line_width_;
+  ::google::protobuf::RepeatedPtrField< ::SSL_FieldLineSegment > field_lines_;
+  ::google::protobuf::RepeatedPtrField< ::SSL_FieldCircularArc > field_arcs_;
   ::google::protobuf::int32 field_length_;
   ::google::protobuf::int32 field_width_;
-  ::google::protobuf::int32 boundary_width_;
-  ::google::protobuf::int32 referee_width_;
   ::google::protobuf::int32 goal_width_;
   ::google::protobuf::int32 goal_depth_;
-  ::google::protobuf::int32 goal_wall_width_;
+  ::google::protobuf::int32 boundary_width_;
+  ::google::protobuf::int32 penalty_area_depth_;
+  ::google::protobuf::int32 penalty_area_width_;
   ::google::protobuf::int32 center_circle_radius_;
-  ::google::protobuf::int32 defense_radius_;
-  ::google::protobuf::int32 defense_stretch_;
-  ::google::protobuf::int32 free_kick_from_defense_dist_;
-  ::google::protobuf::int32 penalty_spot_from_field_line_dist_;
-  ::google::protobuf::int32 penalty_line_from_spot_dist_;
+  ::google::protobuf::int32 line_thickness_;
+  ::google::protobuf::int32 goal_center_to_penalty_mark_;
+  ::google::protobuf::int32 goal_height_;
+  float ball_radius_;
+  float max_robot_radius_;
   friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -353,7 +917,7 @@ class SSL_GeometryCameraCalibration : public ::google::protobuf::Message /* @@pr
                &_SSL_GeometryCameraCalibration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    4;
 
   void Swap(SSL_GeometryCameraCalibration* other);
   friend void swap(SSL_GeometryCameraCalibration& a, SSL_GeometryCameraCalibration& b) {
@@ -510,6 +1074,20 @@ class SSL_GeometryCameraCalibration : public ::google::protobuf::Message /* @@pr
   float derived_camera_world_tz() const;
   void set_derived_camera_world_tz(float value);
 
+  // optional uint32 pixel_image_width = 16;
+  bool has_pixel_image_width() const;
+  void clear_pixel_image_width();
+  static const int kPixelImageWidthFieldNumber = 16;
+  ::google::protobuf::uint32 pixel_image_width() const;
+  void set_pixel_image_width(::google::protobuf::uint32 value);
+
+  // optional uint32 pixel_image_height = 17;
+  bool has_pixel_image_height() const;
+  void clear_pixel_image_height();
+  static const int kPixelImageHeightFieldNumber = 17;
+  ::google::protobuf::uint32 pixel_image_height() const;
+  void set_pixel_image_height(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:SSL_GeometryCameraCalibration)
  private:
   void set_has_camera_id();
@@ -542,6 +1120,10 @@ class SSL_GeometryCameraCalibration : public ::google::protobuf::Message /* @@pr
   void clear_has_derived_camera_world_ty();
   void set_has_derived_camera_world_tz();
   void clear_has_derived_camera_world_tz();
+  void set_has_pixel_image_width();
+  void clear_has_pixel_image_width();
+  void set_has_pixel_image_height();
+  void clear_has_pixel_image_height();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -564,6 +1146,416 @@ class SSL_GeometryCameraCalibration : public ::google::protobuf::Message /* @@pr
   float derived_camera_world_tx_;
   float derived_camera_world_ty_;
   float derived_camera_world_tz_;
+  ::google::protobuf::uint32 pixel_image_width_;
+  ::google::protobuf::uint32 pixel_image_height_;
+  friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class SSL_BallModelStraightTwoPhase : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSL_BallModelStraightTwoPhase) */ {
+ public:
+  SSL_BallModelStraightTwoPhase();
+  virtual ~SSL_BallModelStraightTwoPhase();
+
+  SSL_BallModelStraightTwoPhase(const SSL_BallModelStraightTwoPhase& from);
+
+  inline SSL_BallModelStraightTwoPhase& operator=(const SSL_BallModelStraightTwoPhase& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SSL_BallModelStraightTwoPhase(SSL_BallModelStraightTwoPhase&& from) noexcept
+    : SSL_BallModelStraightTwoPhase() {
+    *this = ::std::move(from);
+  }
+
+  inline SSL_BallModelStraightTwoPhase& operator=(SSL_BallModelStraightTwoPhase&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SSL_BallModelStraightTwoPhase& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SSL_BallModelStraightTwoPhase* internal_default_instance() {
+    return reinterpret_cast<const SSL_BallModelStraightTwoPhase*>(
+               &_SSL_BallModelStraightTwoPhase_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  void Swap(SSL_BallModelStraightTwoPhase* other);
+  friend void swap(SSL_BallModelStraightTwoPhase& a, SSL_BallModelStraightTwoPhase& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SSL_BallModelStraightTwoPhase* New() const final {
+    return CreateMaybeMessage<SSL_BallModelStraightTwoPhase>(NULL);
+  }
+
+  SSL_BallModelStraightTwoPhase* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<SSL_BallModelStraightTwoPhase>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const SSL_BallModelStraightTwoPhase& from);
+  void MergeFrom(const SSL_BallModelStraightTwoPhase& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SSL_BallModelStraightTwoPhase* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required double acc_slide = 1;
+  bool has_acc_slide() const;
+  void clear_acc_slide();
+  static const int kAccSlideFieldNumber = 1;
+  double acc_slide() const;
+  void set_acc_slide(double value);
+
+  // required double acc_roll = 2;
+  bool has_acc_roll() const;
+  void clear_acc_roll();
+  static const int kAccRollFieldNumber = 2;
+  double acc_roll() const;
+  void set_acc_roll(double value);
+
+  // required double k_switch = 3;
+  bool has_k_switch() const;
+  void clear_k_switch();
+  static const int kKSwitchFieldNumber = 3;
+  double k_switch() const;
+  void set_k_switch(double value);
+
+  // @@protoc_insertion_point(class_scope:SSL_BallModelStraightTwoPhase)
+ private:
+  void set_has_acc_slide();
+  void clear_has_acc_slide();
+  void set_has_acc_roll();
+  void clear_has_acc_roll();
+  void set_has_k_switch();
+  void clear_has_k_switch();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  double acc_slide_;
+  double acc_roll_;
+  double k_switch_;
+  friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class SSL_BallModelChipFixedLoss : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSL_BallModelChipFixedLoss) */ {
+ public:
+  SSL_BallModelChipFixedLoss();
+  virtual ~SSL_BallModelChipFixedLoss();
+
+  SSL_BallModelChipFixedLoss(const SSL_BallModelChipFixedLoss& from);
+
+  inline SSL_BallModelChipFixedLoss& operator=(const SSL_BallModelChipFixedLoss& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SSL_BallModelChipFixedLoss(SSL_BallModelChipFixedLoss&& from) noexcept
+    : SSL_BallModelChipFixedLoss() {
+    *this = ::std::move(from);
+  }
+
+  inline SSL_BallModelChipFixedLoss& operator=(SSL_BallModelChipFixedLoss&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SSL_BallModelChipFixedLoss& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SSL_BallModelChipFixedLoss* internal_default_instance() {
+    return reinterpret_cast<const SSL_BallModelChipFixedLoss*>(
+               &_SSL_BallModelChipFixedLoss_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(SSL_BallModelChipFixedLoss* other);
+  friend void swap(SSL_BallModelChipFixedLoss& a, SSL_BallModelChipFixedLoss& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SSL_BallModelChipFixedLoss* New() const final {
+    return CreateMaybeMessage<SSL_BallModelChipFixedLoss>(NULL);
+  }
+
+  SSL_BallModelChipFixedLoss* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<SSL_BallModelChipFixedLoss>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const SSL_BallModelChipFixedLoss& from);
+  void MergeFrom(const SSL_BallModelChipFixedLoss& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SSL_BallModelChipFixedLoss* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required double damping_xy_first_hop = 1;
+  bool has_damping_xy_first_hop() const;
+  void clear_damping_xy_first_hop();
+  static const int kDampingXyFirstHopFieldNumber = 1;
+  double damping_xy_first_hop() const;
+  void set_damping_xy_first_hop(double value);
+
+  // required double damping_xy_other_hops = 2;
+  bool has_damping_xy_other_hops() const;
+  void clear_damping_xy_other_hops();
+  static const int kDampingXyOtherHopsFieldNumber = 2;
+  double damping_xy_other_hops() const;
+  void set_damping_xy_other_hops(double value);
+
+  // required double damping_z = 3;
+  bool has_damping_z() const;
+  void clear_damping_z();
+  static const int kDampingZFieldNumber = 3;
+  double damping_z() const;
+  void set_damping_z(double value);
+
+  // @@protoc_insertion_point(class_scope:SSL_BallModelChipFixedLoss)
+ private:
+  void set_has_damping_xy_first_hop();
+  void clear_has_damping_xy_first_hop();
+  void set_has_damping_xy_other_hops();
+  void clear_has_damping_xy_other_hops();
+  void set_has_damping_z();
+  void clear_has_damping_z();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  double damping_xy_first_hop_;
+  double damping_xy_other_hops_;
+  double damping_z_;
+  friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class SSL_GeometryModels : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSL_GeometryModels) */ {
+ public:
+  SSL_GeometryModels();
+  virtual ~SSL_GeometryModels();
+
+  SSL_GeometryModels(const SSL_GeometryModels& from);
+
+  inline SSL_GeometryModels& operator=(const SSL_GeometryModels& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SSL_GeometryModels(SSL_GeometryModels&& from) noexcept
+    : SSL_GeometryModels() {
+    *this = ::std::move(from);
+  }
+
+  inline SSL_GeometryModels& operator=(SSL_GeometryModels&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SSL_GeometryModels& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SSL_GeometryModels* internal_default_instance() {
+    return reinterpret_cast<const SSL_GeometryModels*>(
+               &_SSL_GeometryModels_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(SSL_GeometryModels* other);
+  friend void swap(SSL_GeometryModels& a, SSL_GeometryModels& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SSL_GeometryModels* New() const final {
+    return CreateMaybeMessage<SSL_GeometryModels>(NULL);
+  }
+
+  SSL_GeometryModels* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<SSL_GeometryModels>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const SSL_GeometryModels& from);
+  void MergeFrom(const SSL_GeometryModels& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SSL_GeometryModels* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .SSL_BallModelStraightTwoPhase straight_two_phase = 1;
+  bool has_straight_two_phase() const;
+  void clear_straight_two_phase();
+  static const int kStraightTwoPhaseFieldNumber = 1;
+  private:
+  const ::SSL_BallModelStraightTwoPhase& _internal_straight_two_phase() const;
+  public:
+  const ::SSL_BallModelStraightTwoPhase& straight_two_phase() const;
+  ::SSL_BallModelStraightTwoPhase* release_straight_two_phase();
+  ::SSL_BallModelStraightTwoPhase* mutable_straight_two_phase();
+  void set_allocated_straight_two_phase(::SSL_BallModelStraightTwoPhase* straight_two_phase);
+
+  // optional .SSL_BallModelChipFixedLoss chip_fixed_loss = 2;
+  bool has_chip_fixed_loss() const;
+  void clear_chip_fixed_loss();
+  static const int kChipFixedLossFieldNumber = 2;
+  private:
+  const ::SSL_BallModelChipFixedLoss& _internal_chip_fixed_loss() const;
+  public:
+  const ::SSL_BallModelChipFixedLoss& chip_fixed_loss() const;
+  ::SSL_BallModelChipFixedLoss* release_chip_fixed_loss();
+  ::SSL_BallModelChipFixedLoss* mutable_chip_fixed_loss();
+  void set_allocated_chip_fixed_loss(::SSL_BallModelChipFixedLoss* chip_fixed_loss);
+
+  // @@protoc_insertion_point(class_scope:SSL_GeometryModels)
+ private:
+  void set_has_straight_two_phase();
+  void clear_has_straight_two_phase();
+  void set_has_chip_fixed_loss();
+  void clear_has_chip_fixed_loss();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::SSL_BallModelStraightTwoPhase* straight_two_phase_;
+  ::SSL_BallModelChipFixedLoss* chip_fixed_loss_;
   friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -610,7 +1602,7 @@ class SSL_GeometryData : public ::google::protobuf::Message /* @@protoc_insertio
                &_SSL_GeometryData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    8;
 
   void Swap(SSL_GeometryData* other);
   friend void swap(SSL_GeometryData& a, SSL_GeometryData& b) {
@@ -686,16 +1678,31 @@ class SSL_GeometryData : public ::google::protobuf::Message /* @@protoc_insertio
   ::SSL_GeometryFieldSize* mutable_field();
   void set_allocated_field(::SSL_GeometryFieldSize* field);
 
+  // optional .SSL_GeometryModels models = 3;
+  bool has_models() const;
+  void clear_models();
+  static const int kModelsFieldNumber = 3;
+  private:
+  const ::SSL_GeometryModels& _internal_models() const;
+  public:
+  const ::SSL_GeometryModels& models() const;
+  ::SSL_GeometryModels* release_models();
+  ::SSL_GeometryModels* mutable_models();
+  void set_allocated_models(::SSL_GeometryModels* models);
+
   // @@protoc_insertion_point(class_scope:SSL_GeometryData)
  private:
   void set_has_field();
   void clear_has_field();
+  void set_has_models();
+  void clear_has_models();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::RepeatedPtrField< ::SSL_GeometryCameraCalibration > calib_;
   ::SSL_GeometryFieldSize* field_;
+  ::SSL_GeometryModels* models_;
   friend struct ::protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::TableStruct;
 };
 // ===================================================================
@@ -707,41 +1714,553 @@ class SSL_GeometryData : public ::google::protobuf::Message /* @@protoc_insertio
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// SSL_GeometryFieldSize
+// Vector2f
 
-// required int32 line_width = 1;
-inline bool SSL_GeometryFieldSize::has_line_width() const {
+// required float x = 1;
+inline bool Vector2f::has_x() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_line_width() {
+inline void Vector2f::set_has_x() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void SSL_GeometryFieldSize::clear_has_line_width() {
+inline void Vector2f::clear_has_x() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void SSL_GeometryFieldSize::clear_line_width() {
-  line_width_ = 0;
-  clear_has_line_width();
+inline void Vector2f::clear_x() {
+  x_ = 0;
+  clear_has_x();
 }
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::line_width() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.line_width)
-  return line_width_;
+inline float Vector2f::x() const {
+  // @@protoc_insertion_point(field_get:Vector2f.x)
+  return x_;
 }
-inline void SSL_GeometryFieldSize::set_line_width(::google::protobuf::int32 value) {
-  set_has_line_width();
-  line_width_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.line_width)
+inline void Vector2f::set_x(float value) {
+  set_has_x();
+  x_ = value;
+  // @@protoc_insertion_point(field_set:Vector2f.x)
 }
 
-// required int32 field_length = 2;
-inline bool SSL_GeometryFieldSize::has_field_length() const {
+// required float y = 2;
+inline bool Vector2f::has_y() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_field_length() {
+inline void Vector2f::set_has_y() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void SSL_GeometryFieldSize::clear_has_field_length() {
+inline void Vector2f::clear_has_y() {
   _has_bits_[0] &= ~0x00000002u;
+}
+inline void Vector2f::clear_y() {
+  y_ = 0;
+  clear_has_y();
+}
+inline float Vector2f::y() const {
+  // @@protoc_insertion_point(field_get:Vector2f.y)
+  return y_;
+}
+inline void Vector2f::set_y(float value) {
+  set_has_y();
+  y_ = value;
+  // @@protoc_insertion_point(field_set:Vector2f.y)
+}
+
+// -------------------------------------------------------------------
+
+// SSL_FieldLineSegment
+
+// required string name = 1;
+inline bool SSL_FieldLineSegment::has_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SSL_FieldLineSegment::set_has_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SSL_FieldLineSegment::clear_has_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SSL_FieldLineSegment::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
+}
+inline const ::std::string& SSL_FieldLineSegment::name() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldLineSegment.name)
+  return name_.GetNoArena();
+}
+inline void SSL_FieldLineSegment::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:SSL_FieldLineSegment.name)
+}
+#if LANG_CXX11
+inline void SSL_FieldLineSegment::set_name(::std::string&& value) {
+  set_has_name();
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:SSL_FieldLineSegment.name)
+}
+#endif
+inline void SSL_FieldLineSegment::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:SSL_FieldLineSegment.name)
+}
+inline void SSL_FieldLineSegment::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:SSL_FieldLineSegment.name)
+}
+inline ::std::string* SSL_FieldLineSegment::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:SSL_FieldLineSegment.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* SSL_FieldLineSegment::release_name() {
+  // @@protoc_insertion_point(field_release:SSL_FieldLineSegment.name)
+  if (!has_name()) {
+    return NULL;
+  }
+  clear_has_name();
+  return name_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SSL_FieldLineSegment::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
+  } else {
+    clear_has_name();
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:SSL_FieldLineSegment.name)
+}
+
+// required .Vector2f p1 = 2;
+inline bool SSL_FieldLineSegment::has_p1() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SSL_FieldLineSegment::set_has_p1() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SSL_FieldLineSegment::clear_has_p1() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void SSL_FieldLineSegment::clear_p1() {
+  if (p1_ != NULL) p1_->Clear();
+  clear_has_p1();
+}
+inline const ::Vector2f& SSL_FieldLineSegment::_internal_p1() const {
+  return *p1_;
+}
+inline const ::Vector2f& SSL_FieldLineSegment::p1() const {
+  const ::Vector2f* p = p1_;
+  // @@protoc_insertion_point(field_get:SSL_FieldLineSegment.p1)
+  return p != NULL ? *p : *reinterpret_cast<const ::Vector2f*>(
+      &::_Vector2f_default_instance_);
+}
+inline ::Vector2f* SSL_FieldLineSegment::release_p1() {
+  // @@protoc_insertion_point(field_release:SSL_FieldLineSegment.p1)
+  clear_has_p1();
+  ::Vector2f* temp = p1_;
+  p1_ = NULL;
+  return temp;
+}
+inline ::Vector2f* SSL_FieldLineSegment::mutable_p1() {
+  set_has_p1();
+  if (p1_ == NULL) {
+    auto* p = CreateMaybeMessage<::Vector2f>(GetArenaNoVirtual());
+    p1_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:SSL_FieldLineSegment.p1)
+  return p1_;
+}
+inline void SSL_FieldLineSegment::set_allocated_p1(::Vector2f* p1) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete p1_;
+  }
+  if (p1) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      p1 = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, p1, submessage_arena);
+    }
+    set_has_p1();
+  } else {
+    clear_has_p1();
+  }
+  p1_ = p1;
+  // @@protoc_insertion_point(field_set_allocated:SSL_FieldLineSegment.p1)
+}
+
+// required .Vector2f p2 = 3;
+inline bool SSL_FieldLineSegment::has_p2() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void SSL_FieldLineSegment::set_has_p2() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void SSL_FieldLineSegment::clear_has_p2() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void SSL_FieldLineSegment::clear_p2() {
+  if (p2_ != NULL) p2_->Clear();
+  clear_has_p2();
+}
+inline const ::Vector2f& SSL_FieldLineSegment::_internal_p2() const {
+  return *p2_;
+}
+inline const ::Vector2f& SSL_FieldLineSegment::p2() const {
+  const ::Vector2f* p = p2_;
+  // @@protoc_insertion_point(field_get:SSL_FieldLineSegment.p2)
+  return p != NULL ? *p : *reinterpret_cast<const ::Vector2f*>(
+      &::_Vector2f_default_instance_);
+}
+inline ::Vector2f* SSL_FieldLineSegment::release_p2() {
+  // @@protoc_insertion_point(field_release:SSL_FieldLineSegment.p2)
+  clear_has_p2();
+  ::Vector2f* temp = p2_;
+  p2_ = NULL;
+  return temp;
+}
+inline ::Vector2f* SSL_FieldLineSegment::mutable_p2() {
+  set_has_p2();
+  if (p2_ == NULL) {
+    auto* p = CreateMaybeMessage<::Vector2f>(GetArenaNoVirtual());
+    p2_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:SSL_FieldLineSegment.p2)
+  return p2_;
+}
+inline void SSL_FieldLineSegment::set_allocated_p2(::Vector2f* p2) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete p2_;
+  }
+  if (p2) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      p2 = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, p2, submessage_arena);
+    }
+    set_has_p2();
+  } else {
+    clear_has_p2();
+  }
+  p2_ = p2;
+  // @@protoc_insertion_point(field_set_allocated:SSL_FieldLineSegment.p2)
+}
+
+// required float thickness = 4;
+inline bool SSL_FieldLineSegment::has_thickness() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void SSL_FieldLineSegment::set_has_thickness() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void SSL_FieldLineSegment::clear_has_thickness() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void SSL_FieldLineSegment::clear_thickness() {
+  thickness_ = 0;
+  clear_has_thickness();
+}
+inline float SSL_FieldLineSegment::thickness() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldLineSegment.thickness)
+  return thickness_;
+}
+inline void SSL_FieldLineSegment::set_thickness(float value) {
+  set_has_thickness();
+  thickness_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldLineSegment.thickness)
+}
+
+// optional .SSL_FieldShapeType type = 5;
+inline bool SSL_FieldLineSegment::has_type() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void SSL_FieldLineSegment::set_has_type() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void SSL_FieldLineSegment::clear_has_type() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void SSL_FieldLineSegment::clear_type() {
+  type_ = 0;
+  clear_has_type();
+}
+inline ::SSL_FieldShapeType SSL_FieldLineSegment::type() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldLineSegment.type)
+  return static_cast< ::SSL_FieldShapeType >(type_);
+}
+inline void SSL_FieldLineSegment::set_type(::SSL_FieldShapeType value) {
+  assert(::SSL_FieldShapeType_IsValid(value));
+  set_has_type();
+  type_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldLineSegment.type)
+}
+
+// -------------------------------------------------------------------
+
+// SSL_FieldCircularArc
+
+// required string name = 1;
+inline bool SSL_FieldCircularArc::has_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SSL_FieldCircularArc::clear_has_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SSL_FieldCircularArc::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
+}
+inline const ::std::string& SSL_FieldCircularArc::name() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.name)
+  return name_.GetNoArena();
+}
+inline void SSL_FieldCircularArc::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:SSL_FieldCircularArc.name)
+}
+#if LANG_CXX11
+inline void SSL_FieldCircularArc::set_name(::std::string&& value) {
+  set_has_name();
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:SSL_FieldCircularArc.name)
+}
+#endif
+inline void SSL_FieldCircularArc::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:SSL_FieldCircularArc.name)
+}
+inline void SSL_FieldCircularArc::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:SSL_FieldCircularArc.name)
+}
+inline ::std::string* SSL_FieldCircularArc::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:SSL_FieldCircularArc.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* SSL_FieldCircularArc::release_name() {
+  // @@protoc_insertion_point(field_release:SSL_FieldCircularArc.name)
+  if (!has_name()) {
+    return NULL;
+  }
+  clear_has_name();
+  return name_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SSL_FieldCircularArc::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
+  } else {
+    clear_has_name();
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:SSL_FieldCircularArc.name)
+}
+
+// required .Vector2f center = 2;
+inline bool SSL_FieldCircularArc::has_center() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_center() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SSL_FieldCircularArc::clear_has_center() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void SSL_FieldCircularArc::clear_center() {
+  if (center_ != NULL) center_->Clear();
+  clear_has_center();
+}
+inline const ::Vector2f& SSL_FieldCircularArc::_internal_center() const {
+  return *center_;
+}
+inline const ::Vector2f& SSL_FieldCircularArc::center() const {
+  const ::Vector2f* p = center_;
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.center)
+  return p != NULL ? *p : *reinterpret_cast<const ::Vector2f*>(
+      &::_Vector2f_default_instance_);
+}
+inline ::Vector2f* SSL_FieldCircularArc::release_center() {
+  // @@protoc_insertion_point(field_release:SSL_FieldCircularArc.center)
+  clear_has_center();
+  ::Vector2f* temp = center_;
+  center_ = NULL;
+  return temp;
+}
+inline ::Vector2f* SSL_FieldCircularArc::mutable_center() {
+  set_has_center();
+  if (center_ == NULL) {
+    auto* p = CreateMaybeMessage<::Vector2f>(GetArenaNoVirtual());
+    center_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:SSL_FieldCircularArc.center)
+  return center_;
+}
+inline void SSL_FieldCircularArc::set_allocated_center(::Vector2f* center) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete center_;
+  }
+  if (center) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      center = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, center, submessage_arena);
+    }
+    set_has_center();
+  } else {
+    clear_has_center();
+  }
+  center_ = center;
+  // @@protoc_insertion_point(field_set_allocated:SSL_FieldCircularArc.center)
+}
+
+// required float radius = 3;
+inline bool SSL_FieldCircularArc::has_radius() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_radius() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void SSL_FieldCircularArc::clear_has_radius() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void SSL_FieldCircularArc::clear_radius() {
+  radius_ = 0;
+  clear_has_radius();
+}
+inline float SSL_FieldCircularArc::radius() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.radius)
+  return radius_;
+}
+inline void SSL_FieldCircularArc::set_radius(float value) {
+  set_has_radius();
+  radius_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldCircularArc.radius)
+}
+
+// required float a1 = 4;
+inline bool SSL_FieldCircularArc::has_a1() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_a1() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void SSL_FieldCircularArc::clear_has_a1() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void SSL_FieldCircularArc::clear_a1() {
+  a1_ = 0;
+  clear_has_a1();
+}
+inline float SSL_FieldCircularArc::a1() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.a1)
+  return a1_;
+}
+inline void SSL_FieldCircularArc::set_a1(float value) {
+  set_has_a1();
+  a1_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldCircularArc.a1)
+}
+
+// required float a2 = 5;
+inline bool SSL_FieldCircularArc::has_a2() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_a2() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void SSL_FieldCircularArc::clear_has_a2() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void SSL_FieldCircularArc::clear_a2() {
+  a2_ = 0;
+  clear_has_a2();
+}
+inline float SSL_FieldCircularArc::a2() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.a2)
+  return a2_;
+}
+inline void SSL_FieldCircularArc::set_a2(float value) {
+  set_has_a2();
+  a2_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldCircularArc.a2)
+}
+
+// required float thickness = 6;
+inline bool SSL_FieldCircularArc::has_thickness() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_thickness() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void SSL_FieldCircularArc::clear_has_thickness() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void SSL_FieldCircularArc::clear_thickness() {
+  thickness_ = 0;
+  clear_has_thickness();
+}
+inline float SSL_FieldCircularArc::thickness() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.thickness)
+  return thickness_;
+}
+inline void SSL_FieldCircularArc::set_thickness(float value) {
+  set_has_thickness();
+  thickness_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldCircularArc.thickness)
+}
+
+// optional .SSL_FieldShapeType type = 7;
+inline bool SSL_FieldCircularArc::has_type() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void SSL_FieldCircularArc::set_has_type() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void SSL_FieldCircularArc::clear_has_type() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void SSL_FieldCircularArc::clear_type() {
+  type_ = 0;
+  clear_has_type();
+}
+inline ::SSL_FieldShapeType SSL_FieldCircularArc::type() const {
+  // @@protoc_insertion_point(field_get:SSL_FieldCircularArc.type)
+  return static_cast< ::SSL_FieldShapeType >(type_);
+}
+inline void SSL_FieldCircularArc::set_type(::SSL_FieldShapeType value) {
+  assert(::SSL_FieldShapeType_IsValid(value));
+  set_has_type();
+  type_ = value;
+  // @@protoc_insertion_point(field_set:SSL_FieldCircularArc.type)
+}
+
+// -------------------------------------------------------------------
+
+// SSL_GeometryFieldSize
+
+// required int32 field_length = 1;
+inline bool SSL_GeometryFieldSize::has_field_length() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SSL_GeometryFieldSize::set_has_field_length() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SSL_GeometryFieldSize::clear_has_field_length() {
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline void SSL_GeometryFieldSize::clear_field_length() {
   field_length_ = 0;
@@ -757,15 +2276,15 @@ inline void SSL_GeometryFieldSize::set_field_length(::google::protobuf::int32 va
   // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.field_length)
 }
 
-// required int32 field_width = 3;
+// required int32 field_width = 2;
 inline bool SSL_GeometryFieldSize::has_field_width() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void SSL_GeometryFieldSize::set_has_field_width() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void SSL_GeometryFieldSize::clear_has_field_width() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void SSL_GeometryFieldSize::clear_field_width() {
   field_width_ = 0;
@@ -781,63 +2300,15 @@ inline void SSL_GeometryFieldSize::set_field_width(::google::protobuf::int32 val
   // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.field_width)
 }
 
-// required int32 boundary_width = 4;
-inline bool SSL_GeometryFieldSize::has_boundary_width() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void SSL_GeometryFieldSize::set_has_boundary_width() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void SSL_GeometryFieldSize::clear_has_boundary_width() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void SSL_GeometryFieldSize::clear_boundary_width() {
-  boundary_width_ = 0;
-  clear_has_boundary_width();
-}
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::boundary_width() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.boundary_width)
-  return boundary_width_;
-}
-inline void SSL_GeometryFieldSize::set_boundary_width(::google::protobuf::int32 value) {
-  set_has_boundary_width();
-  boundary_width_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.boundary_width)
-}
-
-// required int32 referee_width = 5;
-inline bool SSL_GeometryFieldSize::has_referee_width() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void SSL_GeometryFieldSize::set_has_referee_width() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void SSL_GeometryFieldSize::clear_has_referee_width() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void SSL_GeometryFieldSize::clear_referee_width() {
-  referee_width_ = 0;
-  clear_has_referee_width();
-}
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::referee_width() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.referee_width)
-  return referee_width_;
-}
-inline void SSL_GeometryFieldSize::set_referee_width(::google::protobuf::int32 value) {
-  set_has_referee_width();
-  referee_width_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.referee_width)
-}
-
-// required int32 goal_width = 6;
+// required int32 goal_width = 3;
 inline bool SSL_GeometryFieldSize::has_goal_width() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void SSL_GeometryFieldSize::set_has_goal_width() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void SSL_GeometryFieldSize::clear_has_goal_width() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void SSL_GeometryFieldSize::clear_goal_width() {
   goal_width_ = 0;
@@ -853,15 +2324,15 @@ inline void SSL_GeometryFieldSize::set_goal_width(::google::protobuf::int32 valu
   // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.goal_width)
 }
 
-// required int32 goal_depth = 7;
+// required int32 goal_depth = 4;
 inline bool SSL_GeometryFieldSize::has_goal_depth() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void SSL_GeometryFieldSize::set_has_goal_depth() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void SSL_GeometryFieldSize::clear_has_goal_depth() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void SSL_GeometryFieldSize::clear_goal_depth() {
   goal_depth_ = 0;
@@ -877,39 +2348,147 @@ inline void SSL_GeometryFieldSize::set_goal_depth(::google::protobuf::int32 valu
   // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.goal_depth)
 }
 
-// required int32 goal_wall_width = 8;
-inline bool SSL_GeometryFieldSize::has_goal_wall_width() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+// required int32 boundary_width = 5;
+inline bool SSL_GeometryFieldSize::has_boundary_width() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_goal_wall_width() {
-  _has_bits_[0] |= 0x00000080u;
+inline void SSL_GeometryFieldSize::set_has_boundary_width() {
+  _has_bits_[0] |= 0x00000010u;
 }
-inline void SSL_GeometryFieldSize::clear_has_goal_wall_width() {
-  _has_bits_[0] &= ~0x00000080u;
+inline void SSL_GeometryFieldSize::clear_has_boundary_width() {
+  _has_bits_[0] &= ~0x00000010u;
 }
-inline void SSL_GeometryFieldSize::clear_goal_wall_width() {
-  goal_wall_width_ = 0;
-  clear_has_goal_wall_width();
+inline void SSL_GeometryFieldSize::clear_boundary_width() {
+  boundary_width_ = 0;
+  clear_has_boundary_width();
 }
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::goal_wall_width() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.goal_wall_width)
-  return goal_wall_width_;
+inline ::google::protobuf::int32 SSL_GeometryFieldSize::boundary_width() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.boundary_width)
+  return boundary_width_;
 }
-inline void SSL_GeometryFieldSize::set_goal_wall_width(::google::protobuf::int32 value) {
-  set_has_goal_wall_width();
-  goal_wall_width_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.goal_wall_width)
+inline void SSL_GeometryFieldSize::set_boundary_width(::google::protobuf::int32 value) {
+  set_has_boundary_width();
+  boundary_width_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.boundary_width)
 }
 
-// required int32 center_circle_radius = 9;
+// repeated .SSL_FieldLineSegment field_lines = 6;
+inline int SSL_GeometryFieldSize::field_lines_size() const {
+  return field_lines_.size();
+}
+inline void SSL_GeometryFieldSize::clear_field_lines() {
+  field_lines_.Clear();
+}
+inline ::SSL_FieldLineSegment* SSL_GeometryFieldSize::mutable_field_lines(int index) {
+  // @@protoc_insertion_point(field_mutable:SSL_GeometryFieldSize.field_lines)
+  return field_lines_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::SSL_FieldLineSegment >*
+SSL_GeometryFieldSize::mutable_field_lines() {
+  // @@protoc_insertion_point(field_mutable_list:SSL_GeometryFieldSize.field_lines)
+  return &field_lines_;
+}
+inline const ::SSL_FieldLineSegment& SSL_GeometryFieldSize::field_lines(int index) const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.field_lines)
+  return field_lines_.Get(index);
+}
+inline ::SSL_FieldLineSegment* SSL_GeometryFieldSize::add_field_lines() {
+  // @@protoc_insertion_point(field_add:SSL_GeometryFieldSize.field_lines)
+  return field_lines_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::SSL_FieldLineSegment >&
+SSL_GeometryFieldSize::field_lines() const {
+  // @@protoc_insertion_point(field_list:SSL_GeometryFieldSize.field_lines)
+  return field_lines_;
+}
+
+// repeated .SSL_FieldCircularArc field_arcs = 7;
+inline int SSL_GeometryFieldSize::field_arcs_size() const {
+  return field_arcs_.size();
+}
+inline void SSL_GeometryFieldSize::clear_field_arcs() {
+  field_arcs_.Clear();
+}
+inline ::SSL_FieldCircularArc* SSL_GeometryFieldSize::mutable_field_arcs(int index) {
+  // @@protoc_insertion_point(field_mutable:SSL_GeometryFieldSize.field_arcs)
+  return field_arcs_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::SSL_FieldCircularArc >*
+SSL_GeometryFieldSize::mutable_field_arcs() {
+  // @@protoc_insertion_point(field_mutable_list:SSL_GeometryFieldSize.field_arcs)
+  return &field_arcs_;
+}
+inline const ::SSL_FieldCircularArc& SSL_GeometryFieldSize::field_arcs(int index) const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.field_arcs)
+  return field_arcs_.Get(index);
+}
+inline ::SSL_FieldCircularArc* SSL_GeometryFieldSize::add_field_arcs() {
+  // @@protoc_insertion_point(field_add:SSL_GeometryFieldSize.field_arcs)
+  return field_arcs_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::SSL_FieldCircularArc >&
+SSL_GeometryFieldSize::field_arcs() const {
+  // @@protoc_insertion_point(field_list:SSL_GeometryFieldSize.field_arcs)
+  return field_arcs_;
+}
+
+// optional int32 penalty_area_depth = 8;
+inline bool SSL_GeometryFieldSize::has_penalty_area_depth() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void SSL_GeometryFieldSize::set_has_penalty_area_depth() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void SSL_GeometryFieldSize::clear_has_penalty_area_depth() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void SSL_GeometryFieldSize::clear_penalty_area_depth() {
+  penalty_area_depth_ = 0;
+  clear_has_penalty_area_depth();
+}
+inline ::google::protobuf::int32 SSL_GeometryFieldSize::penalty_area_depth() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.penalty_area_depth)
+  return penalty_area_depth_;
+}
+inline void SSL_GeometryFieldSize::set_penalty_area_depth(::google::protobuf::int32 value) {
+  set_has_penalty_area_depth();
+  penalty_area_depth_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.penalty_area_depth)
+}
+
+// optional int32 penalty_area_width = 9;
+inline bool SSL_GeometryFieldSize::has_penalty_area_width() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void SSL_GeometryFieldSize::set_has_penalty_area_width() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void SSL_GeometryFieldSize::clear_has_penalty_area_width() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void SSL_GeometryFieldSize::clear_penalty_area_width() {
+  penalty_area_width_ = 0;
+  clear_has_penalty_area_width();
+}
+inline ::google::protobuf::int32 SSL_GeometryFieldSize::penalty_area_width() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.penalty_area_width)
+  return penalty_area_width_;
+}
+inline void SSL_GeometryFieldSize::set_penalty_area_width(::google::protobuf::int32 value) {
+  set_has_penalty_area_width();
+  penalty_area_width_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.penalty_area_width)
+}
+
+// optional int32 center_circle_radius = 10;
 inline bool SSL_GeometryFieldSize::has_center_circle_radius() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void SSL_GeometryFieldSize::set_has_center_circle_radius() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void SSL_GeometryFieldSize::clear_has_center_circle_radius() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void SSL_GeometryFieldSize::clear_center_circle_radius() {
   center_circle_radius_ = 0;
@@ -925,124 +2504,124 @@ inline void SSL_GeometryFieldSize::set_center_circle_radius(::google::protobuf::
   // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.center_circle_radius)
 }
 
-// required int32 defense_radius = 10;
-inline bool SSL_GeometryFieldSize::has_defense_radius() const {
+// optional int32 line_thickness = 11;
+inline bool SSL_GeometryFieldSize::has_line_thickness() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void SSL_GeometryFieldSize::set_has_line_thickness() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void SSL_GeometryFieldSize::clear_has_line_thickness() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void SSL_GeometryFieldSize::clear_line_thickness() {
+  line_thickness_ = 0;
+  clear_has_line_thickness();
+}
+inline ::google::protobuf::int32 SSL_GeometryFieldSize::line_thickness() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.line_thickness)
+  return line_thickness_;
+}
+inline void SSL_GeometryFieldSize::set_line_thickness(::google::protobuf::int32 value) {
+  set_has_line_thickness();
+  line_thickness_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.line_thickness)
+}
+
+// optional int32 goal_center_to_penalty_mark = 12;
+inline bool SSL_GeometryFieldSize::has_goal_center_to_penalty_mark() const {
   return (_has_bits_[0] & 0x00000200u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_defense_radius() {
+inline void SSL_GeometryFieldSize::set_has_goal_center_to_penalty_mark() {
   _has_bits_[0] |= 0x00000200u;
 }
-inline void SSL_GeometryFieldSize::clear_has_defense_radius() {
+inline void SSL_GeometryFieldSize::clear_has_goal_center_to_penalty_mark() {
   _has_bits_[0] &= ~0x00000200u;
 }
-inline void SSL_GeometryFieldSize::clear_defense_radius() {
-  defense_radius_ = 0;
-  clear_has_defense_radius();
+inline void SSL_GeometryFieldSize::clear_goal_center_to_penalty_mark() {
+  goal_center_to_penalty_mark_ = 0;
+  clear_has_goal_center_to_penalty_mark();
 }
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::defense_radius() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.defense_radius)
-  return defense_radius_;
+inline ::google::protobuf::int32 SSL_GeometryFieldSize::goal_center_to_penalty_mark() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.goal_center_to_penalty_mark)
+  return goal_center_to_penalty_mark_;
 }
-inline void SSL_GeometryFieldSize::set_defense_radius(::google::protobuf::int32 value) {
-  set_has_defense_radius();
-  defense_radius_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.defense_radius)
+inline void SSL_GeometryFieldSize::set_goal_center_to_penalty_mark(::google::protobuf::int32 value) {
+  set_has_goal_center_to_penalty_mark();
+  goal_center_to_penalty_mark_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.goal_center_to_penalty_mark)
 }
 
-// required int32 defense_stretch = 11;
-inline bool SSL_GeometryFieldSize::has_defense_stretch() const {
+// optional int32 goal_height = 13;
+inline bool SSL_GeometryFieldSize::has_goal_height() const {
   return (_has_bits_[0] & 0x00000400u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_defense_stretch() {
+inline void SSL_GeometryFieldSize::set_has_goal_height() {
   _has_bits_[0] |= 0x00000400u;
 }
-inline void SSL_GeometryFieldSize::clear_has_defense_stretch() {
+inline void SSL_GeometryFieldSize::clear_has_goal_height() {
   _has_bits_[0] &= ~0x00000400u;
 }
-inline void SSL_GeometryFieldSize::clear_defense_stretch() {
-  defense_stretch_ = 0;
-  clear_has_defense_stretch();
+inline void SSL_GeometryFieldSize::clear_goal_height() {
+  goal_height_ = 0;
+  clear_has_goal_height();
 }
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::defense_stretch() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.defense_stretch)
-  return defense_stretch_;
+inline ::google::protobuf::int32 SSL_GeometryFieldSize::goal_height() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.goal_height)
+  return goal_height_;
 }
-inline void SSL_GeometryFieldSize::set_defense_stretch(::google::protobuf::int32 value) {
-  set_has_defense_stretch();
-  defense_stretch_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.defense_stretch)
+inline void SSL_GeometryFieldSize::set_goal_height(::google::protobuf::int32 value) {
+  set_has_goal_height();
+  goal_height_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.goal_height)
 }
 
-// required int32 free_kick_from_defense_dist = 12;
-inline bool SSL_GeometryFieldSize::has_free_kick_from_defense_dist() const {
+// optional float ball_radius = 14;
+inline bool SSL_GeometryFieldSize::has_ball_radius() const {
   return (_has_bits_[0] & 0x00000800u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_free_kick_from_defense_dist() {
+inline void SSL_GeometryFieldSize::set_has_ball_radius() {
   _has_bits_[0] |= 0x00000800u;
 }
-inline void SSL_GeometryFieldSize::clear_has_free_kick_from_defense_dist() {
+inline void SSL_GeometryFieldSize::clear_has_ball_radius() {
   _has_bits_[0] &= ~0x00000800u;
 }
-inline void SSL_GeometryFieldSize::clear_free_kick_from_defense_dist() {
-  free_kick_from_defense_dist_ = 0;
-  clear_has_free_kick_from_defense_dist();
+inline void SSL_GeometryFieldSize::clear_ball_radius() {
+  ball_radius_ = 0;
+  clear_has_ball_radius();
 }
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::free_kick_from_defense_dist() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.free_kick_from_defense_dist)
-  return free_kick_from_defense_dist_;
+inline float SSL_GeometryFieldSize::ball_radius() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.ball_radius)
+  return ball_radius_;
 }
-inline void SSL_GeometryFieldSize::set_free_kick_from_defense_dist(::google::protobuf::int32 value) {
-  set_has_free_kick_from_defense_dist();
-  free_kick_from_defense_dist_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.free_kick_from_defense_dist)
+inline void SSL_GeometryFieldSize::set_ball_radius(float value) {
+  set_has_ball_radius();
+  ball_radius_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.ball_radius)
 }
 
-// required int32 penalty_spot_from_field_line_dist = 13;
-inline bool SSL_GeometryFieldSize::has_penalty_spot_from_field_line_dist() const {
+// optional float max_robot_radius = 15;
+inline bool SSL_GeometryFieldSize::has_max_robot_radius() const {
   return (_has_bits_[0] & 0x00001000u) != 0;
 }
-inline void SSL_GeometryFieldSize::set_has_penalty_spot_from_field_line_dist() {
+inline void SSL_GeometryFieldSize::set_has_max_robot_radius() {
   _has_bits_[0] |= 0x00001000u;
 }
-inline void SSL_GeometryFieldSize::clear_has_penalty_spot_from_field_line_dist() {
+inline void SSL_GeometryFieldSize::clear_has_max_robot_radius() {
   _has_bits_[0] &= ~0x00001000u;
 }
-inline void SSL_GeometryFieldSize::clear_penalty_spot_from_field_line_dist() {
-  penalty_spot_from_field_line_dist_ = 0;
-  clear_has_penalty_spot_from_field_line_dist();
+inline void SSL_GeometryFieldSize::clear_max_robot_radius() {
+  max_robot_radius_ = 0;
+  clear_has_max_robot_radius();
 }
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::penalty_spot_from_field_line_dist() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.penalty_spot_from_field_line_dist)
-  return penalty_spot_from_field_line_dist_;
+inline float SSL_GeometryFieldSize::max_robot_radius() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.max_robot_radius)
+  return max_robot_radius_;
 }
-inline void SSL_GeometryFieldSize::set_penalty_spot_from_field_line_dist(::google::protobuf::int32 value) {
-  set_has_penalty_spot_from_field_line_dist();
-  penalty_spot_from_field_line_dist_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.penalty_spot_from_field_line_dist)
-}
-
-// required int32 penalty_line_from_spot_dist = 14;
-inline bool SSL_GeometryFieldSize::has_penalty_line_from_spot_dist() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-inline void SSL_GeometryFieldSize::set_has_penalty_line_from_spot_dist() {
-  _has_bits_[0] |= 0x00002000u;
-}
-inline void SSL_GeometryFieldSize::clear_has_penalty_line_from_spot_dist() {
-  _has_bits_[0] &= ~0x00002000u;
-}
-inline void SSL_GeometryFieldSize::clear_penalty_line_from_spot_dist() {
-  penalty_line_from_spot_dist_ = 0;
-  clear_has_penalty_line_from_spot_dist();
-}
-inline ::google::protobuf::int32 SSL_GeometryFieldSize::penalty_line_from_spot_dist() const {
-  // @@protoc_insertion_point(field_get:SSL_GeometryFieldSize.penalty_line_from_spot_dist)
-  return penalty_line_from_spot_dist_;
-}
-inline void SSL_GeometryFieldSize::set_penalty_line_from_spot_dist(::google::protobuf::int32 value) {
-  set_has_penalty_line_from_spot_dist();
-  penalty_line_from_spot_dist_ = value;
-  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.penalty_line_from_spot_dist)
+inline void SSL_GeometryFieldSize::set_max_robot_radius(float value) {
+  set_has_max_robot_radius();
+  max_robot_radius_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryFieldSize.max_robot_radius)
 }
 
 // -------------------------------------------------------------------
@@ -1409,6 +2988,326 @@ inline void SSL_GeometryCameraCalibration::set_derived_camera_world_tz(float val
   // @@protoc_insertion_point(field_set:SSL_GeometryCameraCalibration.derived_camera_world_tz)
 }
 
+// optional uint32 pixel_image_width = 16;
+inline bool SSL_GeometryCameraCalibration::has_pixel_image_width() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void SSL_GeometryCameraCalibration::set_has_pixel_image_width() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void SSL_GeometryCameraCalibration::clear_has_pixel_image_width() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void SSL_GeometryCameraCalibration::clear_pixel_image_width() {
+  pixel_image_width_ = 0u;
+  clear_has_pixel_image_width();
+}
+inline ::google::protobuf::uint32 SSL_GeometryCameraCalibration::pixel_image_width() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryCameraCalibration.pixel_image_width)
+  return pixel_image_width_;
+}
+inline void SSL_GeometryCameraCalibration::set_pixel_image_width(::google::protobuf::uint32 value) {
+  set_has_pixel_image_width();
+  pixel_image_width_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryCameraCalibration.pixel_image_width)
+}
+
+// optional uint32 pixel_image_height = 17;
+inline bool SSL_GeometryCameraCalibration::has_pixel_image_height() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void SSL_GeometryCameraCalibration::set_has_pixel_image_height() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void SSL_GeometryCameraCalibration::clear_has_pixel_image_height() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void SSL_GeometryCameraCalibration::clear_pixel_image_height() {
+  pixel_image_height_ = 0u;
+  clear_has_pixel_image_height();
+}
+inline ::google::protobuf::uint32 SSL_GeometryCameraCalibration::pixel_image_height() const {
+  // @@protoc_insertion_point(field_get:SSL_GeometryCameraCalibration.pixel_image_height)
+  return pixel_image_height_;
+}
+inline void SSL_GeometryCameraCalibration::set_pixel_image_height(::google::protobuf::uint32 value) {
+  set_has_pixel_image_height();
+  pixel_image_height_ = value;
+  // @@protoc_insertion_point(field_set:SSL_GeometryCameraCalibration.pixel_image_height)
+}
+
+// -------------------------------------------------------------------
+
+// SSL_BallModelStraightTwoPhase
+
+// required double acc_slide = 1;
+inline bool SSL_BallModelStraightTwoPhase::has_acc_slide() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SSL_BallModelStraightTwoPhase::set_has_acc_slide() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SSL_BallModelStraightTwoPhase::clear_has_acc_slide() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SSL_BallModelStraightTwoPhase::clear_acc_slide() {
+  acc_slide_ = 0;
+  clear_has_acc_slide();
+}
+inline double SSL_BallModelStraightTwoPhase::acc_slide() const {
+  // @@protoc_insertion_point(field_get:SSL_BallModelStraightTwoPhase.acc_slide)
+  return acc_slide_;
+}
+inline void SSL_BallModelStraightTwoPhase::set_acc_slide(double value) {
+  set_has_acc_slide();
+  acc_slide_ = value;
+  // @@protoc_insertion_point(field_set:SSL_BallModelStraightTwoPhase.acc_slide)
+}
+
+// required double acc_roll = 2;
+inline bool SSL_BallModelStraightTwoPhase::has_acc_roll() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SSL_BallModelStraightTwoPhase::set_has_acc_roll() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SSL_BallModelStraightTwoPhase::clear_has_acc_roll() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void SSL_BallModelStraightTwoPhase::clear_acc_roll() {
+  acc_roll_ = 0;
+  clear_has_acc_roll();
+}
+inline double SSL_BallModelStraightTwoPhase::acc_roll() const {
+  // @@protoc_insertion_point(field_get:SSL_BallModelStraightTwoPhase.acc_roll)
+  return acc_roll_;
+}
+inline void SSL_BallModelStraightTwoPhase::set_acc_roll(double value) {
+  set_has_acc_roll();
+  acc_roll_ = value;
+  // @@protoc_insertion_point(field_set:SSL_BallModelStraightTwoPhase.acc_roll)
+}
+
+// required double k_switch = 3;
+inline bool SSL_BallModelStraightTwoPhase::has_k_switch() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void SSL_BallModelStraightTwoPhase::set_has_k_switch() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void SSL_BallModelStraightTwoPhase::clear_has_k_switch() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void SSL_BallModelStraightTwoPhase::clear_k_switch() {
+  k_switch_ = 0;
+  clear_has_k_switch();
+}
+inline double SSL_BallModelStraightTwoPhase::k_switch() const {
+  // @@protoc_insertion_point(field_get:SSL_BallModelStraightTwoPhase.k_switch)
+  return k_switch_;
+}
+inline void SSL_BallModelStraightTwoPhase::set_k_switch(double value) {
+  set_has_k_switch();
+  k_switch_ = value;
+  // @@protoc_insertion_point(field_set:SSL_BallModelStraightTwoPhase.k_switch)
+}
+
+// -------------------------------------------------------------------
+
+// SSL_BallModelChipFixedLoss
+
+// required double damping_xy_first_hop = 1;
+inline bool SSL_BallModelChipFixedLoss::has_damping_xy_first_hop() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SSL_BallModelChipFixedLoss::set_has_damping_xy_first_hop() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SSL_BallModelChipFixedLoss::clear_has_damping_xy_first_hop() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SSL_BallModelChipFixedLoss::clear_damping_xy_first_hop() {
+  damping_xy_first_hop_ = 0;
+  clear_has_damping_xy_first_hop();
+}
+inline double SSL_BallModelChipFixedLoss::damping_xy_first_hop() const {
+  // @@protoc_insertion_point(field_get:SSL_BallModelChipFixedLoss.damping_xy_first_hop)
+  return damping_xy_first_hop_;
+}
+inline void SSL_BallModelChipFixedLoss::set_damping_xy_first_hop(double value) {
+  set_has_damping_xy_first_hop();
+  damping_xy_first_hop_ = value;
+  // @@protoc_insertion_point(field_set:SSL_BallModelChipFixedLoss.damping_xy_first_hop)
+}
+
+// required double damping_xy_other_hops = 2;
+inline bool SSL_BallModelChipFixedLoss::has_damping_xy_other_hops() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SSL_BallModelChipFixedLoss::set_has_damping_xy_other_hops() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SSL_BallModelChipFixedLoss::clear_has_damping_xy_other_hops() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void SSL_BallModelChipFixedLoss::clear_damping_xy_other_hops() {
+  damping_xy_other_hops_ = 0;
+  clear_has_damping_xy_other_hops();
+}
+inline double SSL_BallModelChipFixedLoss::damping_xy_other_hops() const {
+  // @@protoc_insertion_point(field_get:SSL_BallModelChipFixedLoss.damping_xy_other_hops)
+  return damping_xy_other_hops_;
+}
+inline void SSL_BallModelChipFixedLoss::set_damping_xy_other_hops(double value) {
+  set_has_damping_xy_other_hops();
+  damping_xy_other_hops_ = value;
+  // @@protoc_insertion_point(field_set:SSL_BallModelChipFixedLoss.damping_xy_other_hops)
+}
+
+// required double damping_z = 3;
+inline bool SSL_BallModelChipFixedLoss::has_damping_z() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void SSL_BallModelChipFixedLoss::set_has_damping_z() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void SSL_BallModelChipFixedLoss::clear_has_damping_z() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void SSL_BallModelChipFixedLoss::clear_damping_z() {
+  damping_z_ = 0;
+  clear_has_damping_z();
+}
+inline double SSL_BallModelChipFixedLoss::damping_z() const {
+  // @@protoc_insertion_point(field_get:SSL_BallModelChipFixedLoss.damping_z)
+  return damping_z_;
+}
+inline void SSL_BallModelChipFixedLoss::set_damping_z(double value) {
+  set_has_damping_z();
+  damping_z_ = value;
+  // @@protoc_insertion_point(field_set:SSL_BallModelChipFixedLoss.damping_z)
+}
+
+// -------------------------------------------------------------------
+
+// SSL_GeometryModels
+
+// optional .SSL_BallModelStraightTwoPhase straight_two_phase = 1;
+inline bool SSL_GeometryModels::has_straight_two_phase() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SSL_GeometryModels::set_has_straight_two_phase() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SSL_GeometryModels::clear_has_straight_two_phase() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SSL_GeometryModels::clear_straight_two_phase() {
+  if (straight_two_phase_ != NULL) straight_two_phase_->Clear();
+  clear_has_straight_two_phase();
+}
+inline const ::SSL_BallModelStraightTwoPhase& SSL_GeometryModels::_internal_straight_two_phase() const {
+  return *straight_two_phase_;
+}
+inline const ::SSL_BallModelStraightTwoPhase& SSL_GeometryModels::straight_two_phase() const {
+  const ::SSL_BallModelStraightTwoPhase* p = straight_two_phase_;
+  // @@protoc_insertion_point(field_get:SSL_GeometryModels.straight_two_phase)
+  return p != NULL ? *p : *reinterpret_cast<const ::SSL_BallModelStraightTwoPhase*>(
+      &::_SSL_BallModelStraightTwoPhase_default_instance_);
+}
+inline ::SSL_BallModelStraightTwoPhase* SSL_GeometryModels::release_straight_two_phase() {
+  // @@protoc_insertion_point(field_release:SSL_GeometryModels.straight_two_phase)
+  clear_has_straight_two_phase();
+  ::SSL_BallModelStraightTwoPhase* temp = straight_two_phase_;
+  straight_two_phase_ = NULL;
+  return temp;
+}
+inline ::SSL_BallModelStraightTwoPhase* SSL_GeometryModels::mutable_straight_two_phase() {
+  set_has_straight_two_phase();
+  if (straight_two_phase_ == NULL) {
+    auto* p = CreateMaybeMessage<::SSL_BallModelStraightTwoPhase>(GetArenaNoVirtual());
+    straight_two_phase_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:SSL_GeometryModels.straight_two_phase)
+  return straight_two_phase_;
+}
+inline void SSL_GeometryModels::set_allocated_straight_two_phase(::SSL_BallModelStraightTwoPhase* straight_two_phase) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete straight_two_phase_;
+  }
+  if (straight_two_phase) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      straight_two_phase = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, straight_two_phase, submessage_arena);
+    }
+    set_has_straight_two_phase();
+  } else {
+    clear_has_straight_two_phase();
+  }
+  straight_two_phase_ = straight_two_phase;
+  // @@protoc_insertion_point(field_set_allocated:SSL_GeometryModels.straight_two_phase)
+}
+
+// optional .SSL_BallModelChipFixedLoss chip_fixed_loss = 2;
+inline bool SSL_GeometryModels::has_chip_fixed_loss() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SSL_GeometryModels::set_has_chip_fixed_loss() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SSL_GeometryModels::clear_has_chip_fixed_loss() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void SSL_GeometryModels::clear_chip_fixed_loss() {
+  if (chip_fixed_loss_ != NULL) chip_fixed_loss_->Clear();
+  clear_has_chip_fixed_loss();
+}
+inline const ::SSL_BallModelChipFixedLoss& SSL_GeometryModels::_internal_chip_fixed_loss() const {
+  return *chip_fixed_loss_;
+}
+inline const ::SSL_BallModelChipFixedLoss& SSL_GeometryModels::chip_fixed_loss() const {
+  const ::SSL_BallModelChipFixedLoss* p = chip_fixed_loss_;
+  // @@protoc_insertion_point(field_get:SSL_GeometryModels.chip_fixed_loss)
+  return p != NULL ? *p : *reinterpret_cast<const ::SSL_BallModelChipFixedLoss*>(
+      &::_SSL_BallModelChipFixedLoss_default_instance_);
+}
+inline ::SSL_BallModelChipFixedLoss* SSL_GeometryModels::release_chip_fixed_loss() {
+  // @@protoc_insertion_point(field_release:SSL_GeometryModels.chip_fixed_loss)
+  clear_has_chip_fixed_loss();
+  ::SSL_BallModelChipFixedLoss* temp = chip_fixed_loss_;
+  chip_fixed_loss_ = NULL;
+  return temp;
+}
+inline ::SSL_BallModelChipFixedLoss* SSL_GeometryModels::mutable_chip_fixed_loss() {
+  set_has_chip_fixed_loss();
+  if (chip_fixed_loss_ == NULL) {
+    auto* p = CreateMaybeMessage<::SSL_BallModelChipFixedLoss>(GetArenaNoVirtual());
+    chip_fixed_loss_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:SSL_GeometryModels.chip_fixed_loss)
+  return chip_fixed_loss_;
+}
+inline void SSL_GeometryModels::set_allocated_chip_fixed_loss(::SSL_BallModelChipFixedLoss* chip_fixed_loss) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete chip_fixed_loss_;
+  }
+  if (chip_fixed_loss) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      chip_fixed_loss = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, chip_fixed_loss, submessage_arena);
+    }
+    set_has_chip_fixed_loss();
+  } else {
+    clear_has_chip_fixed_loss();
+  }
+  chip_fixed_loss_ = chip_fixed_loss;
+  // @@protoc_insertion_point(field_set_allocated:SSL_GeometryModels.chip_fixed_loss)
+}
+
 // -------------------------------------------------------------------
 
 // SSL_GeometryData
@@ -1501,6 +3400,64 @@ SSL_GeometryData::calib() const {
   return calib_;
 }
 
+// optional .SSL_GeometryModels models = 3;
+inline bool SSL_GeometryData::has_models() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SSL_GeometryData::set_has_models() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SSL_GeometryData::clear_has_models() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void SSL_GeometryData::clear_models() {
+  if (models_ != NULL) models_->Clear();
+  clear_has_models();
+}
+inline const ::SSL_GeometryModels& SSL_GeometryData::_internal_models() const {
+  return *models_;
+}
+inline const ::SSL_GeometryModels& SSL_GeometryData::models() const {
+  const ::SSL_GeometryModels* p = models_;
+  // @@protoc_insertion_point(field_get:SSL_GeometryData.models)
+  return p != NULL ? *p : *reinterpret_cast<const ::SSL_GeometryModels*>(
+      &::_SSL_GeometryModels_default_instance_);
+}
+inline ::SSL_GeometryModels* SSL_GeometryData::release_models() {
+  // @@protoc_insertion_point(field_release:SSL_GeometryData.models)
+  clear_has_models();
+  ::SSL_GeometryModels* temp = models_;
+  models_ = NULL;
+  return temp;
+}
+inline ::SSL_GeometryModels* SSL_GeometryData::mutable_models() {
+  set_has_models();
+  if (models_ == NULL) {
+    auto* p = CreateMaybeMessage<::SSL_GeometryModels>(GetArenaNoVirtual());
+    models_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:SSL_GeometryData.models)
+  return models_;
+}
+inline void SSL_GeometryData::set_allocated_models(::SSL_GeometryModels* models) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete models_;
+  }
+  if (models) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      models = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, models, submessage_arena);
+    }
+    set_has_models();
+  } else {
+    clear_has_models();
+  }
+  models_ = models;
+  // @@protoc_insertion_point(field_set_allocated:SSL_GeometryData.models)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -1508,9 +3465,33 @@ SSL_GeometryData::calib() const {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
+
+namespace google {
+namespace protobuf {
+
+template <> struct is_proto_enum< ::SSL_FieldShapeType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::SSL_FieldShapeType>() {
+  return ::SSL_FieldShapeType_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 

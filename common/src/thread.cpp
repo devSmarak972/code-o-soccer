@@ -43,6 +43,7 @@ namespace Util
 
   void* Thread::threadFunc(void* arg)
   {
+    std::cout<<"INSIDE THREAD FUNC"<<std::endl;
     reinterpret_cast<Thread *>(arg)->run();
     return 0;
   }

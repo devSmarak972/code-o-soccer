@@ -21,13 +21,13 @@ class Simpler : public Util::Thread,public Executor
   {
     // attacker_skills->setbotID(botID);
     
-    if (Vec2D::dist(state->homePos[botID], state->ballPos) < BOT_RADIUS && state->ballPos.x > state->homePos[botID].x)
+    if (Vec2D::dist(state->homePos[botID], state->ballPos) < BOT_RADIUS*1.1 )
     {
 
         if (state->homePos[botID].y < 0)
-            Spin(botID, -500.0);
+            Spin(botID, -150.0);
         if (state->homePos[botID].y > 0)
-            Spin(botID, 500.0);
+            Spin(botID, 150.0);
     }
     else
     {
@@ -61,10 +61,11 @@ class Simpler : public Util::Thread,public Executor
 public:
   bool &running;
   BeliefState &ustate;
+  Simulator::TeamColor color;
 	// SkillSet* attacker_skills,defender_skills,goalkeeper_skills;
   // Executor* sexec;
-  Simpler(bool &running_, BeliefState &state_):
-  running(running_),ustate(state_),Executor(&state_) {
+  Simpler(bool &running_, BeliefState &state_,Simulator::TeamColor color):
+  running(running_),ustate(state_),Executor(&state_,color),color(color) {
   }
   void game(BeliefState* state);
   void run();

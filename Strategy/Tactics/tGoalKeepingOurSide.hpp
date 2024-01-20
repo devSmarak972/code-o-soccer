@@ -37,7 +37,7 @@ namespace Strategy
 
     int chooseBestBot(std::list<int>& freeBots, const Tactic::Param* tParam, int prevID) const
     { 
-	  //sleep(3);
+	  // sleep(3);
 	  static int counter = 0 ;
       int minv = *(freeBots.begin());
       int mindis = 1000000000;

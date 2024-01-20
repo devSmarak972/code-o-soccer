@@ -31,7 +31,7 @@ const float RFACTOR_SMALL              = SELECT(0.6, 0.15);
 
 const int CLEARANCE_PATH_PLANNER       = SELECT(500, 400);              //mm
 const int MID_FIELD_THRESH             = SELECT(10, 150);                       // mm
-const float BOT_RADIUS                 = SELECT(70, 50);                       // mm
+const float BOT_RADIUS                 = SELECT(70, 100);                       // mm
 const float BALL_RADIUS                = SELECT(40, 21);                       // mm
 const float SAFE_RADIUS                = (BOT_RADIUS * 2);
 const float COLLISION_DIST             = (BOT_RADIUS * 7);

@@ -70,6 +70,7 @@
         "memory_resource": "cpp",
         "random": "cpp",
         "string": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "queue": "cpp"
     }
 }

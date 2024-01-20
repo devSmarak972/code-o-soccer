@@ -83,9 +83,11 @@ namespace HAL
     static float angle;
 
     FIRAComm();
+    FIRAComm(Simulator::TeamColor color);
     ~FIRAComm();
 
     virtual void getSentData(int botid, int &vl, int &vr);
+     void initialisedOnce(Simulator::TeamColor color);
     void whenBotSendsData(int ourV_l, int ourV_r);
 
     void sendCommand(int   botID,

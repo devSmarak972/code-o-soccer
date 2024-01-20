@@ -129,7 +129,7 @@ namespace HAL
 
   }
 
-  FIRAComm::FIRAComm()
+  FIRAComm::FIRAComm(Simulator::TeamColor color)
   {
     // std::cout<<"Inside firacomm 1"<<std::endl;
     debug_cs = new CS();
@@ -149,8 +149,20 @@ namespace HAL
 
     // BOT ID - 1
 
-    int blue_team = 1;
 
+    this->initialisedOnce(color);
+
+  }
+
+  FIRAComm::FIRAComm(){
+    
+  }
+
+  FIRAComm::~FIRAComm()
+  {}
+
+
+void FIRAComm::initialisedOnce(Simulator::TeamColor color){
       this->dgram_socket[0] = socket(PF_INET, SOCK_DGRAM, 0);
       this->dgram_socket[1] = socket(PF_INET, SOCK_DGRAM, 0);
       this->dgram_socket[2] = socket(PF_INET, SOCK_DGRAM, 0);
@@ -161,29 +173,24 @@ namespace HAL
       this->dest[i].sin_family = AF_INET;
     }
 
-    if(blue_team)
-    {
-      inet_aton("10.42.0.40", &this->dest[0].sin_addr);
-      this->dest[0].sin_port = htons(4210);
-      inet_aton("10.42.0.238", &this->dest[1].sin_addr);
-      this->dest[1].sin_port = htons(4220);
-      inet_aton("10.42.0.189", &this->dest[2].sin_addr);
-      this->dest[2].sin_port = htons(4230);
-    }
-    else
-    {
-      inet_aton("192.168.137.120", &this->dest[0].sin_addr);
-      this->dest[0].sin_port = htons(4220);
+
+    if(color == Simulator::BLUE_TEAM){
+      inet_aton("10.42.0.170", &this->dest[0].sin_addr);
+      this->dest[0].sin_port = htons(4250);
+      inet_aton("10.42.0.170", &this->dest[1].sin_addr);
+      this->dest[1].sin_port = htons(4250);
+      inet_aton("10.42.0.30", &this->dest[2].sin_addr);
+      this->dest[2].sin_port = htons(4260);
+    } 
+    else{
+      inet_aton("10.42.0.30", &this->dest[0].sin_addr);
+      this->dest[0].sin_port = htons(4260);
       inet_aton("192.168.137.120", &this->dest[1].sin_addr);
       this->dest[1].sin_port = htons(4220);
       inet_aton("192.168.137.120", &this->dest[2].sin_addr);
       this->dest[2].sin_port = htons(4220);
     }
 
-
-
-    
-    
 
     for(int i = 0; i < 3; i++)
     {
@@ -198,9 +205,6 @@ namespace HAL
     // openLoop[3] = false;
     // openLoop[4] = false;
   }
-
-  FIRAComm::~FIRAComm()
-  {}
   
   void FIRAComm::whenBotSendsData(int ourV_l, int ourV_r)
   {
@@ -237,6 +241,16 @@ namespace HAL
     int v_r1 = v_r;
     v_l = v_r1;
     v_r = v_l1;
+
+    
+    if(v_l>100)v_l=100;
+    else if(v_l<-100)v_l=-100;
+
+    
+if(v_r>100)v_r=100;
+    else if(v_l<-100)v_l=-100;
+
+    
     // #ifdef BOT_COMM
         cout<<"Bot Velocity(firacomm) "<<botID<<": "<<(int)v_l<<" "<<(int)v_r<<endl;
         const int max_vel = (1<<10) - 1;

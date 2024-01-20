@@ -51,14 +51,15 @@ typedef Vector2D<int> Vec2D;
     // Go to a point with obstacle avoidance.
     public:
     SkillSet* s[3];
-    Comm*  refComm = new FIRAComm();
+    Comm*  refComm ;
 
-    Executor(const BeliefState* state) {
+    Executor(const BeliefState* state,Simulator::TeamColor color) {
            s[0]=new SkillSet(state,0); 
             s[1]=new SkillSet(state,1); 
 
            s[2]=new SkillSet(state,2); 
 
+            refComm = new FIRAComm(color);
         
     };
 

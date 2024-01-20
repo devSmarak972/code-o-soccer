@@ -483,10 +483,17 @@ namespace Strategy
     {
       // Home Yellow robot info
       uniqueBotIDs.clear();
-      for (int i = 0; i < yellowNum; ++i)
+        vector<SSL_DetectionRobot> bluebots;
+      for (int i = 0; i < blueNum; ++i)
       {
-        SSL_DetectionRobot robot = detection.robots_yellow(i);
+        SSL_DetectionRobot robot = detection.robots_blue(i);
         int id    = HAL::YellowMarkerMap[robot.robot_id()];
+        if(id==-1)
+        {
+          bluebots.push_back(robot);
+          yellowNum++;
+          continue;
+        }
         if(uniqueBotIDs.find(id) != uniqueBotIDs.end())
           continue;
         uniqueBotIDs.insert(id);
@@ -498,7 +505,7 @@ namespace Strategy
 		else
 			newangle = 0;
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -541,14 +548,14 @@ namespace Strategy
 	  
       // Blue robot info
       uniqueBotIDs.clear();
-      for (int i = 0; i < blueNum; ++i)
+      for (int i = 0; i < yellowNum ;++i)
       {        
-        SSL_DetectionRobot robot = detection.robots_blue(i);        
+        SSL_DetectionRobot robot = bluebots[i];        
         double newx = robot.x() - CENTER_X;
         double newy = robot.y() - CENTER_Y;
         float newangle = robot.orientation();
         #if GR_SIM_COMM || FIRASSL_COMM
-        linearTransform(newx, newy, newangle);
+        // linearTransform(newx, newy, newangle);
         #endif
         #if FIRASSL_COMM
         botcenterTransform(newx, newy, newangle);
@@ -557,10 +564,10 @@ namespace Strategy
 				 * Randomly assigning IDs to each bot. if less no. of bots know, then 0...i ids will be populated, 
 				 * i+1...4 ids will not be used. 
 				 */
-		int id_ = getClosestBotID(newx, newy, newangle, uniqueBotIDs);
-		if(id_ == -1) //means all bots already populated
-				continue;
-		int id = HAL::BlueMarkerMap[id_];
+		// int id_ = getClosestBotID(newx, newy, newangle, uniqueBotIDs);
+		// if(id_ == -1) //means all bots already populated
+				// continue;
+		int id = HAL::BlueMarkerMap[robot.robot_id()];
 		uniqueBotIDs.insert(id);
         //printf("ID = %d, loc = %d, %d\n", id, newx, newy);
 				

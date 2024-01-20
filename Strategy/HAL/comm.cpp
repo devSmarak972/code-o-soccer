@@ -28,10 +28,6 @@ namespace HAL
   {
     //grSim only functionality. not implemented in firacomm
   }
- void Comm::initialisedOnce(Simulator::TeamColor color){
-
- };
-
   
   void Comm::addArrow(int to_x, int to_y, int from_x, int from_y, unsigned int color)
   {

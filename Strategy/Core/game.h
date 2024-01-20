@@ -61,11 +61,11 @@ class Simpler : public Util::Thread,public Executor
 public:
   bool &running;
   BeliefState &ustate;
-  Simulator::TeamColor color;
+  // Simulator::TeamColor color;
 	// SkillSet* attacker_skills,defender_skills,goalkeeper_skills;
   // Executor* sexec;
-  Simpler(bool &running_, BeliefState &state_,Simulator::TeamColor color):
-  running(running_),ustate(state_),Executor(&state_,color),color(color) {
+  Simpler(bool &running_, BeliefState &state_):
+  running(running_),ustate(state_),Executor(&state_) {
   }
   void game(BeliefState* state);
   void run();

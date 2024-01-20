@@ -114,7 +114,7 @@ int startgame(bool usePositiveXSide, Simulator::TeamColor color)
   }
   else 
   {
-    Simpler s(run, state,color);
+    Simpler s(run, state);
     if(qtdebug) 
     {
       s.start();
@@ -131,25 +131,13 @@ int startgame(bool usePositiveXSide, Simulator::TeamColor color)
 
 int main(int argc, char* argv[])
 {
-
-
-  
   cout<<"Inside main"<<endl;
   if(qtdebug)
   {
     a = new QApplication(argc, argv);
   }
       
-  Simulator::TeamColor color ;
-  if(argv[1][0] == 'B'){
-      color = Simulator::BLUE_TEAM;
-  }
-  else{
-    color = Simulator::YELLOW_TEAM;
-  }
-
-  Strategy::SkillSet::comm->initialisedOnce(color);
-  
+  Simulator::TeamColor color = Simulator::BLUE_TEAM;
   
   return startgame(false, color);
 } // main

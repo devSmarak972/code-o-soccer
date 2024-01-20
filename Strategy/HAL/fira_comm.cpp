@@ -129,7 +129,7 @@ namespace HAL
 
   }
 
-  FIRAComm::FIRAComm(Simulator::TeamColor color)
+  FIRAComm::FIRAComm()
   {
     // std::cout<<"Inside firacomm 1"<<std::endl;
     debug_cs = new CS();
@@ -150,19 +150,6 @@ namespace HAL
     // BOT ID - 1
 
 
-    this->initialisedOnce(color);
-
-  }
-
-  FIRAComm::FIRAComm(){
-    
-  }
-
-  FIRAComm::~FIRAComm()
-  {}
-
-
-void FIRAComm::initialisedOnce(Simulator::TeamColor color){
       this->dgram_socket[0] = socket(PF_INET, SOCK_DGRAM, 0);
       this->dgram_socket[1] = socket(PF_INET, SOCK_DGRAM, 0);
       this->dgram_socket[2] = socket(PF_INET, SOCK_DGRAM, 0);
@@ -173,24 +160,29 @@ void FIRAComm::initialisedOnce(Simulator::TeamColor color){
       this->dest[i].sin_family = AF_INET;
     }
 
+    int blue = 1;
 
-    if(color == Simulator::BLUE_TEAM){
+    if(blue){
       inet_aton("10.42.0.170", &this->dest[0].sin_addr);
       this->dest[0].sin_port = htons(4250);
-      inet_aton("10.42.0.170", &this->dest[1].sin_addr);
-      this->dest[1].sin_port = htons(4250);
+      inet_aton("10.42.0.238", &this->dest[1].sin_addr);
+      this->dest[1].sin_port = htons(4220);
       inet_aton("10.42.0.30", &this->dest[2].sin_addr);
       this->dest[2].sin_port = htons(4260);
-    } 
+    }
     else{
-      inet_aton("10.42.0.30", &this->dest[0].sin_addr);
-      this->dest[0].sin_port = htons(4260);
+      inet_aton("192.168.137.120", &this->dest[0].sin_addr);
+      this->dest[0].sin_port = htons(4220);
       inet_aton("192.168.137.120", &this->dest[1].sin_addr);
       this->dest[1].sin_port = htons(4220);
       inet_aton("192.168.137.120", &this->dest[2].sin_addr);
       this->dest[2].sin_port = htons(4220);
     }
 
+
+
+    
+    
 
     for(int i = 0; i < 3; i++)
     {
@@ -205,6 +197,9 @@ void FIRAComm::initialisedOnce(Simulator::TeamColor color){
     // openLoop[3] = false;
     // openLoop[4] = false;
   }
+
+  FIRAComm::~FIRAComm()
+  {}
   
   void FIRAComm::whenBotSendsData(int ourV_l, int ourV_r)
   {

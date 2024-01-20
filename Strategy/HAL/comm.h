@@ -6,9 +6,6 @@
 #include <list>
 #include "cs.hpp"
 #include "common.pb.h"
-#include "config.h"
-#include "comdef.h"
-
 // Forward Declarations
 namespace Util
 {
@@ -41,8 +38,6 @@ namespace HAL
      * may break down
      */
      //Making addCircle and addLine as purely virtual, since these debug symbols really 
-
-    virtual void initialisedOnce(Simulator::TeamColor color);
     virtual void addCircle(int x, int y, unsigned int radius, unsigned int color = 0xFFFFFFFF)= 0;
     virtual void addLine(int x1, int y1, int x2, int y2, unsigned int color = 0xFFFFFFFF)=0;
     virtual void addAdjustBot(int team ,int id, int x, int y, float dir, int vx, int vy, int vz);

@@ -102,16 +102,10 @@ void Simpler::game(BeliefState* state)
 			cout<<"Inside not haulted"<<endl;
      
 
-     if(color == Simulator::BLUE_TEAM){
-
           attacker(state,1);
           // defender(state,1);
           // goalkeeper(state,1);
           // GoToBall(2,true);
-     }
-     else{
-        goalkeeper(state,0);
-     }
       
 
 
